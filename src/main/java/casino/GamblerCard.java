@@ -15,43 +15,75 @@ public class GamblerCard {
 	private boolean assignedStatus;
 	private double credit;
 
+	/**
+	 * A getter method for taking InitialAmount that card has been created with
+	 * @return The initial amount that gambler charge on its assignment
+	 */
 	public double getInitialAmount() {
 		return this.initialAmount;
 	}
 
+	/**
+	 * A getter method for taking the timeStamp of the moment that card has been given to a Gambler
+	 * @return The last moment that the card has been assigned to a gambler
+	 */
 	public Date getTimeStamp() {
 		return this.timeStamp;
 	}
 
+	/**
+	 * A getter method for accessing the list of bets that gambler has been made
+	 * @return List of bets that the Gambler has been made with card
+	 */
 	public List<String> getListOfBet() {
 		return this.listOfBet;
 	}
 
-	public void operation() {
-		// TODO - implement GamblerCard.operation
-		throw new UnsupportedOperationException();
-	}
-
+	/**
+	 * A getter method for accessing the unique id of gambler card
+	 * @return The unique ID of gambler card
+	 */
 	public String getCardID() {
 		return this.cardID;
 	}
 
-	public void checkOut() {
-		// TODO - implement GamblerCard.checkOut
-		throw new UnsupportedOperationException();
-	}
-
+	/**
+	 * A getter method for checking if the card has been assigned to a person or not
+	 * @return boolean status of card assignment to a gambler
+	 */
 	public boolean getAssignedStatus() {
 		return this.assignedStatus;
 	}
 
+	/**
+	 * A getter method for retrieving the current balance of gambler card
+	 * @return the current balance of gamblerCard
+	 */
 	public double getCredit() {
 		return this.credit;
 	}
 
 	/**
-	 * 
-	 * @param amount
+	 * Check out the gambler card to make it ready for new assignment
+	 *
+	 * <p>
+	 *     Reset the timestamp, initial amount and credit to zero
+	 *     and clear list of bets.
+	 * </p>
+	 */
+	public void checkOut() {
+		// TODO - implement GamblerCard.checkOut
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * Change the current Balance of card
+	 *
+	 * <p>
+	 *     Throws an IllegalArgumentException on providing negative amount
+	 * </p>
+	 *
+	 * @param amount should be positive value.
 	 */
 	public boolean setCredit(double amount) {
 		// TODO - implement GamblerCard.setCredit
@@ -59,7 +91,12 @@ public class GamblerCard {
 	}
 
 	/**
-	 * 
+	 * Add a new bet to BetList of gambler card
+	 *
+	 * <p>
+	 *     It will check if the gamblerCard has not the given bet Id in its betList
+	 *     On not having that, it will
+	 * </p>
 	 * @param betId
 	 */
 	public void addBet(String betId) {
@@ -67,6 +104,11 @@ public class GamblerCard {
 		throw new UnsupportedOperationException();
 	}
 
+
+	/**
+	 * Generate a statement including all the information upon the status of GamblerCard
+	 * @return status of of gambler card
+	 */
 	public String ToString() {
 		// TODO - implement GamblerCard.ToString
 		throw new UnsupportedOperationException();
