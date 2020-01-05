@@ -14,6 +14,7 @@ public class GamblerCardTest {
      * If a gambler card that has not been assigned to an gambler wants to checkout
      * a IllegalOperation should be thrown
      */
+    //Direct Inputs
     @Test
     public void checkOut_CheckOutAnUnassignedCard_ThrowsIllegalOperationException(){
 
@@ -28,6 +29,7 @@ public class GamblerCardTest {
      * </p>
      */
     @Test
+    //Direct Inputs
     public void checkOut_CheckOutCardSuccessfully_ResetItsDetails(){
 
     }
@@ -41,6 +43,7 @@ public class GamblerCardTest {
      * </p>
      */
     @Test
+    //Indirect Inputs
     public void setCredit_OnValidAmount_CreditChangeAndReturnTrue(){
 
     }
@@ -49,6 +52,7 @@ public class GamblerCardTest {
      * On Calling setCredit Method Invalid Amount (negative), throw a IllegalExceptionOperation
      */
     @Test
+    //Indirect Inputs
     public void setCredit_OvInvalidAmount_ThrowIllegalOperationException(){
 
     }
@@ -59,6 +63,7 @@ public class GamblerCardTest {
      * Check if the number of items in betList has been increased our not.
      */
     @Test
+    //Indirect Inputs
     public void addBet_OnAddingNonDuplicateBet_TheBetWouldBeAddedToBetList(){
 
     }
@@ -67,6 +72,7 @@ public class GamblerCardTest {
      * On Adding Duplicate Bet Throw Illegal Operation
      */
     @Test
+    //Indirect Inputs
     public void addBet_OnAddingDuplicateBet_ThrowIllegalOperation(){
 
     }
