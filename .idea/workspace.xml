@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,9 @@
       <updated>1578225068876</updated>
       <workItem from="1578225072770" duration="684000" />
       <workItem from="1578233652946" duration="1297000" />
-      <workItem from="1578257041224" duration="3306000" />
+      <workItem from="1578257041224" duration="3706000" />
+      <workItem from="1578315328157" duration="5000" />
+      <workItem from="1578333776525" duration="2707000" />
     </task>
     <servers />
   </component>
@@ -96,10 +97,10 @@
       <screen x="70" y="0" width="1530" height="900" />
     </state>
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
-    <state x="531" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578233666943">
+    <state x="531" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578315328150">
       <screen x="70" y="0" width="1530" height="900" />
     </state>
-    <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1578233666943" />
+    <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1578315328150" />
     <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1578225709565">
       <screen x="70" y="0" width="1530" height="900" />
     </state>
