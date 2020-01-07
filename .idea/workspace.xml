@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casino/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/Bet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblerCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblerCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casino/IBetTokenAuthority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/IBetTokenAuthority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casino/IGamblingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/IGamblingMachine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +91,9 @@
       <workItem from="1578233652946" duration="1297000" />
       <workItem from="1578257041224" duration="3706000" />
       <workItem from="1578315328157" duration="5000" />
-      <workItem from="1578333776525" duration="2707000" />
+      <workItem from="1578333776525" duration="3665000" />
+      <workItem from="1578337995955" duration="669000" />
+      <workItem from="1578395740697" duration="2109000" />
     </task>
     <servers />
   </component>
@@ -93,14 +101,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser" timestamp="1578403683259">
+      <screen x="0" y="40" width="1600" height="860" />
+    </state>
+    <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1578403683259" />
     <state x="617" y="206" key="FileChooserDialogImpl" timestamp="1578259030303">
       <screen x="70" y="0" width="1530" height="900" />
     </state>
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
-    <state x="531" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578315328150">
+    <state x="531" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578395739967">
       <screen x="70" y="0" width="1530" height="900" />
     </state>
-    <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1578315328150" />
+    <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1578395739967" />
     <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1578225709565">
       <screen x="70" y="0" width="1530" height="900" />
     </state>

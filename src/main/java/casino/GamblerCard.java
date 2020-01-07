@@ -9,7 +9,13 @@ public class GamblerCard {
 	 * The Initial amount is determined on the assignment of the card to gambler by bank teller
 	 */
 	private double initialAmount;
+	/**
+	 * initial amount is stored on the card, together with a timestamp
+	 */
 	private Date timeStamp;
+	/**
+	 * list of all generated betIDs is stored on the card
+	 */
 	private List<String> listOfBet;
 	private String cardID;
 	private boolean assignedStatus;
@@ -27,49 +33,62 @@ public class GamblerCard {
 		return this.listOfBet;
 	}
 
-	public void operation() {
-		// TODO - implement GamblerCard.operation
-		throw new UnsupportedOperationException();
-	}
-
+	/**
+	 * Get the gambler card's id
+	 */
 	public String getCardID() {
-		return this.cardID;
-	}
-
-	public void checkOut() {
-		// TODO - implement GamblerCard.checkOut
-		throw new UnsupportedOperationException();
-	}
-
-	public boolean getAssignedStatus() {
-		return this.assignedStatus;
-	}
-
-	public double getCredit() {
-		return this.credit;
+		return null; // to satisfy the compiler
 	}
 
 	/**
-	 * 
+	 * The stored betID's on the card are also removed. The card become anonymous and can be reused.
+	 */
+	public void checkOut() {
+
+	}
+
+	/**
+	 * check the status of the card
+	 */
+	public boolean getAssignedStatus() {
+		return true; // to satisfy the compiler
+	}
+
+	/**
+	 * total amount of money credit handed to gambler
+	 */
+	public double getCredit() {
+		return 0.0; // to satisfy the compiler
+	}
+
+	/**
+	 * top up the money to the card
 	 * @param amount
 	 */
 	public boolean setCredit(double amount) {
-		// TODO - implement GamblerCard.setCredit
-		throw new UnsupportedOperationException();
+		return true; // to satisfy the compiler
 	}
 
 	/**
-	 * 
+	 * the person who makes the bet with unique bet id
 	 * @param betId
 	 */
 	public void addBet(String betId) {
-		// TODO - implement GamblerCard.addBet
-		throw new UnsupportedOperationException();
+
 	}
 
-	public String ToString() {
-		// TODO - implement GamblerCard.ToString
-		throw new UnsupportedOperationException();
+	/**
+	 * returns the string with all the information in order to log it.
+	 */
+	@Override
+	public String toString() {
+		return "GamblerCard{" +
+				"initialAmount=" + initialAmount +
+				", timeStamp=" + timeStamp +
+				", listOfBet=" + listOfBet +
+				", cardID='" + cardID + '\'' +
+				", assignedStatus=" + assignedStatus +
+				", credit=" + credit +
+				'}';
 	}
-
 }

@@ -6,7 +6,7 @@ public class GamblingMachine implements IGamblingMachine {
 
 	private BankTeller bankTeller;
 	private String machineID;
-	private Map<Bet, String> listOfBetsofCurrentRound;
+	private Map<Bet, String> listOfBetsOfCurrentRound;
 	private Game game;
 
 	/**
