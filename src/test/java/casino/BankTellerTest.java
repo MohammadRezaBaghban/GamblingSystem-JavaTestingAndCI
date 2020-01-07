@@ -14,6 +14,7 @@ public class BankTellerTest {
     /**
      *This method should return true if it has enough amount with the valid Card number.
      * It uses the mock object of GamblerCard which returns valid card number and amount as specified.
+     * Type: indirect input
      */
     @Test
     public void ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber() {
@@ -25,6 +26,7 @@ public class BankTellerTest {
     /**
      *This method should return false if it has enough amount with the valid Card number.
      * It uses the mock object of GamblerCard which returns valid card number and amount as specified.
+     * Type: indirect input
      */
     @Test
     public void ShouldReturnFalseIfCardDoesNotHaveEnoughAmountWithValidCardNumber() {
@@ -36,6 +38,7 @@ public class BankTellerTest {
     /**
      * This method checks if the given card number is invalid it should throw an exception.
      * It uses the mock object of GamblerCard which returns valid card number.
+     * Type: indirect input
      * @throws Exception
      */
     @Test
@@ -48,6 +51,7 @@ public class BankTellerTest {
     /**
      * While Gambler checks out at the Bank Teller. It should clear the amount of the card and set it to zero so the card can
      * be reused.
+     * Type: indirect input
      */
     @Test
     public void CardAmountShouldBeZeroAfterCheckingOut() {
@@ -59,6 +63,7 @@ public class BankTellerTest {
     /**
      * This method will assure if the amount is added to the card
      * after the gambler deposit certain amount.
+     * Type: indirect input
      */
     @Test
     public void GamblerShouldBeAbleToDepositAmountToTheCard() {
@@ -70,6 +75,7 @@ public class BankTellerTest {
     /**
      * This method will assure if the amount is deducted from the card
      * after the gambler withdraw certain amount.
+     * Type: indirect input
      */
     @Test
     public void GamblerShouldBeAbleToWithdrawAmountFromTheCard() {
@@ -80,6 +86,7 @@ public class BankTellerTest {
     /**
      * At calling the withdraw() method with higher amount It should throw Exception.
      * It also should not deduct the amount If the amount is more than the amount it has.
+     * Type: indirect input
      */
     @Test
     public void GamblerShouldNotBeAbleToWithdrawHigherAmountThanItHas() {
@@ -91,6 +98,7 @@ public class BankTellerTest {
     /**
      * At calling this test method, It will assure if the addBet method is called with right parameter.
      * Mocked objects of Bet and GamblerCard will be used in this case.
+     * Type: indirect output
      */
     @Test
     public void BankTellerShouldBeAbleToAddBetIntoTheCard() {
@@ -101,6 +109,7 @@ public class BankTellerTest {
 
     /**
      * At calling this method, If the card is already assigned It should throw exception.
+     * Type: indirect input
      */
     @Test
     public void BankTellerMustNotBeAbleToAssignedCardWhichIsAlreadyAssigned() {

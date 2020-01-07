@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/Bet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblerCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblerCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/IBetTokenAuthority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/IBetTokenAuthority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/IGamblingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/IGamblingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +88,7 @@
       <workItem from="1578315328157" duration="5000" />
       <workItem from="1578333776525" duration="3665000" />
       <workItem from="1578337995955" duration="669000" />
-      <workItem from="1578395740697" duration="2109000" />
+      <workItem from="1578395740697" duration="3384000" />
     </task>
     <servers />
   </component>
