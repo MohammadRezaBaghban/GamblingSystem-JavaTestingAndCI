@@ -8,22 +8,24 @@ public class Game {
 	private GamblingAuthority gamblingAuthority;
 	private BettingRound currentBetRound;
 	private Map<Bet, String> listOfBets;
+	private int nrOfWinNumber;
+
 
 	/**
-	 * 
-	 * @param listOfBets
+	 * constructe of the betting round
+	 * @param gamblingAuthority
 	 */
-	public BettingRound createBetRound(Map<Bet, String> listOfBets) {
-		// TODO - implement Game.createBetRound
+	public Game(GamblingAuthority gamblingAuthority, int nrOfWinNumber) {
+		// TODO - implement Game.Game
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * 
-	 * @param gamblingAuthority
+	 *Create the bettinground method
+	 * @param listOfBets
 	 */
-	public Game(GamblingAuthority gamblingAuthority) {
-		// TODO - implement Game.Game
+	public BettingRound createBetRound(Map<Bet, String> listOfBets) {
+		// TODO - implement Game.createBetRound
 		throw new UnsupportedOperationException();
 	}
 
@@ -37,6 +39,7 @@ public class Game {
 
 	/**
 	 * it should check the token status.
+	 * this method also logging the betting round with timestamp
 	 * @param betRound
 	 */
 	public void requestWinNumber(BettingRound betRound) {
@@ -52,6 +55,11 @@ public class Game {
 		// TODO - implement Game.setWinNumber
 		throw new UnsupportedOperationException();
 	}
+
+	/**
+	 * it should check the update method
+	 *this method also logging the betting round with timestamp
+	 */
 
 	public void updateOutValueOfTheBet() {
 		// TODO - implement Game.updateOutValueOfTheBet

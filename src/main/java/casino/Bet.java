@@ -14,7 +14,7 @@ public class Bet {
 	private Integer selecedNumber;
 
 	/**
-	 * 
+	 * Construte of the class
 	 * @param inValue
 	 * @param selectedNumber
 	 * @param cardInfo
@@ -24,34 +24,51 @@ public class Bet {
 		throw new UnsupportedOperationException();
 	}
 
+	/**
+	 *Get the put in value
+	 * @return
+	 */
 	public double getInValue() {
 		return this.inValue;
 	}
 
 	/**
-	 * 
+	 * Set the put in value
 	 * @param inValue
 	 */
 	public void setInValue(double inValue) {
 		this.inValue = inValue;
 	}
 
+	/**
+	 *Show the selectedNumber
+	 * @return
+	 */
+
 	public Integer getSelecedNumber() {
 		return this.selecedNumber;
 	}
 
+	/**
+	 * Get the output value
+	 * @return
+	 */
 	public double getOutValue() {
 		return this.outValue;
 	}
 
 	/**
-	 * 
+	 * Set output value
 	 * @param outValue
 	 */
 	public void setOutValue(double outValue) {
 		this.outValue = outValue;
 	}
 
+	/**
+	 * Get the cardInformation
+	 * @return
+	 */
 	public String getCardInformation() {
 		return this.cardInformation;
 	}
