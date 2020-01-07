@@ -1,15 +1,9 @@
 package casino;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 public class BankTellerTest {
 
-    @Before
-    public void setUp() throws Exception {
-    }
 
     /**
      *This method should return true if it has enough amount with the valid Card number.
