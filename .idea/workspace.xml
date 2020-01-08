@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/casino/NotificationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +17,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -52,6 +50,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -147,13 +146,34 @@
     </state>
     <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1578403683259" />
     <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1578480235180" />
+    <state x="550" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1578482661759">
+      <screen x="62" y="0" width="1538" height="900" />
+    </state>
+    <state x="550" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/62.0.1538.900@62.0.1538.900" timestamp="1578482661759" />
     <state x="617" y="206" key="FileChooserDialogImpl" timestamp="1578259030303">
       <screen x="70" y="0" width="1530" height="900" />
     </state>
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
-    <state x="531" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578395739967">
-      <screen x="70" y="0" width="1530" height="900" />
+    <state width="1371" height="236" key="GridCell.Tab.0.bottom" timestamp="1578483014164">
+      <screen x="62" y="0" width="1538" height="900" />
     </state>
+    <state width="1371" height="236" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1578483014164" />
+    <state width="1371" height="236" key="GridCell.Tab.0.center" timestamp="1578483014164">
+      <screen x="62" y="0" width="1538" height="900" />
+    </state>
+    <state width="1371" height="236" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1578483014164" />
+    <state width="1371" height="236" key="GridCell.Tab.0.left" timestamp="1578483014164">
+      <screen x="62" y="0" width="1538" height="900" />
+    </state>
+    <state width="1371" height="236" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1578483014164" />
+    <state width="1371" height="236" key="GridCell.Tab.0.right" timestamp="1578483014164">
+      <screen x="62" y="0" width="1538" height="900" />
+    </state>
+    <state width="1371" height="236" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1578483014164" />
+    <state x="525" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578483074481">
+      <screen x="62" y="0" width="1538" height="900" />
+    </state>
+    <state x="525" y="276" key="com.intellij.ide.util.TipDialog/62.0.1538.900@62.0.1538.900" timestamp="1578483074481" />
     <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1578395739967" />
     <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1578225709565">
       <screen x="70" y="0" width="1530" height="900" />
