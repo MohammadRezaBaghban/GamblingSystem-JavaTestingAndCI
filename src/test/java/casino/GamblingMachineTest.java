@@ -1,10 +1,6 @@
 package casino;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
-import java.util.Date;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.Test;
 
 public class GamblingMachineTest {
 

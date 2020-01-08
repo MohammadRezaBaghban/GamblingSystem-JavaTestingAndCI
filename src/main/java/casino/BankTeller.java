@@ -1,100 +1,105 @@
 package casino;
-
-
+import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ */
 public class BankTeller implements IBetLoggingAuthority {
 
 	private List<GamblerCard> listOfGamblerCard;
 	private IBetLoggingAuthority logger;
-
-	public void CashOut() {
-		// TODO - implement BankTeller.CashOut
-		throw new UnsupportedOperationException();
-	}
-
-	public List<GamblerCard> getListOfGamblerCard() {
-		return this.listOfGamblerCard;
+	private GamblingAuthority gamblingAuthority;
+	/**
+	 * This class is responsible for managing gambling card information and logging all the activities.
+	 */
+	public BankTeller(IBetLoggingAuthority logger, GamblingAuthority gamblingAuthority) {
+		this.logger = logger;
+		this.gamblingAuthority = gamblingAuthority;
+		this.listOfGamblerCard = new ArrayList<>();
 	}
 
 	/**
-	 * 
+	 * The total amount of money credit is physically handed to the gambler
+	 * This method also logs the GamblingCard information.
+	 */
+	public void CashOut(String gamblerCardID) {
+
+	}
+
+	/**
+	 * Get the list of all gambler cards
+	 */
+	public List<GamblerCard> getListOfGamblerCard() {
+		return null; // to satisfy the compiler
+	}
+
+	/**
+	 *
 	 * @param listOfGamblerCard
 	 */
 	public void setListOfGamblerCard(List<GamblerCard> listOfGamblerCard) {
 		this.listOfGamblerCard = listOfGamblerCard;
 	}
 
-	public void getAttribute() {
-		// TODO - implement BankTeller.getAttribute
-		throw new UnsupportedOperationException();
-	}
-
 	/**
-	 * 
-	 * @param attribute
-	 */
-	public void setAttribute(int attribute) {
-		// TODO - implement BankTeller.setAttribute
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
+	 * Check if the amount is assigned
 	 * @param amount
 	 */
 	public boolean assignCard(double amount) {
-		// TODO - implement BankTeller.assignCard
-		throw new UnsupportedOperationException();
+		return true; // to satisfy the compiler
 	}
 
 	/**
-	 * 
+	 * This method clears the betID's stored in it  and the amount making card anonymous, and can be reused.
 	 * @param gamblerCardID
 	 */
 	public void clearCard(String gamblerCardID) {
-		// TODO - implement BankTeller.clearCard
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**
-	 * 
+	 * check the current amount for specific person
 	 * @param gamblerCardID
 	 * @param amount
 	 */
 	public boolean checkCredit(String gamblerCardID, double amount) {
-		// TODO - implement BankTeller.checkCredit
-		throw new UnsupportedOperationException();
+		return true; // to satisfy the compiler
 	}
 
 	/**
-	 * 
+	 * tops up the card with amount
 	 * @param gamblerCardID
 	 * @param amount
 	 */
 	public void deposit(String gamblerCardID, double amount) {
-		// TODO - implement BankTeller.deposit
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**
-	 * 
+	 * withdraw amount from the card by cashier.
 	 * @param gamblerCardID
 	 * @param amount
 	 */
 	public void withdraw(String gamblerCardID, double amount) {
-		// TODO - implement BankTeller.withdraw
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**
-	 * 
+	 * Add bet to the Gambler card
 	 * @param gamblerCardID
 	 * @param bet
 	 */
 	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) {
-		// TODO - implement BankTeller.AddBet
-		throw new UnsupportedOperationException();
+
+	}
+
+	public Bet getBet(String betId){
+		return null; //to satisfy compiler
+	}
+
+	public boolean isGamblerCardValid(String gamblerCardID) {
+		return true;// to satisfy the compiler
 	}
 
 	@Override
