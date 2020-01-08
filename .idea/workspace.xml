@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/casino/NotificationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/Bet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/BettingRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BettingRound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BettingRoundTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BettingRoundTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,10 +19,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,8 +57,13 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/TCI/week2_mailcomposer/week2_mailcomposer" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -60,15 +76,41 @@
       <recent name="C:\Users\User\Desktop\TCI\Casino\src\main\java\casino" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RunManager">
+    <configuration name="TCI-Gambling [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <item itemvalue="Gradle.TCI-Gambling [dependencies]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -84,29 +126,35 @@
       <updated>1578225068876</updated>
       <workItem from="1578225072770" duration="684000" />
       <workItem from="1578233652946" duration="1297000" />
-      <workItem from="1578330598744" duration="19467000" />
+      <workItem from="1578257041224" duration="3706000" />
+      <workItem from="1578315328157" duration="5000" />
+      <workItem from="1578333776525" duration="3665000" />
+      <workItem from="1578337995955" duration="669000" />
+      <workItem from="1578395740697" duration="13603000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="WindowStateProjectService">
-    <state x="531" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578233666943">
+    <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1578478456346">
+      <screen x="62" y="0" width="1538" height="900" />
+    </state>
+    <state x="770" y="152" key="#File_and_Code_Templates/62.0.1538.900@62.0.1538.900" timestamp="1578478456346" />
+    <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1578480235180">
+      <screen x="62" y="0" width="1538" height="900" />
+    </state>
+    <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1578403683259" />
+    <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1578480235180" />
+    <state x="617" y="206" key="FileChooserDialogImpl" timestamp="1578259030303">
       <screen x="70" y="0" width="1530" height="900" />
     </state>
-    <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1578233666943" />
+    <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
+    <state x="531" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578395739967">
+      <screen x="70" y="0" width="1530" height="900" />
+    </state>
+    <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1578395739967" />
     <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1578225709565">
       <screen x="70" y="0" width="1530" height="900" />
     </state>
