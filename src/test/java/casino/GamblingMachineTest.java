@@ -4,70 +4,124 @@ import org.junit.jupiter.api.Test;
 
 public class GamblingMachineTest {
 
+
     /**
-     * Placing a bet when the betRound has been assigned throw BetExeption
+     * throw BetNotificationException on placing a bet when the betRound has already been assigned
      */
     @Test //Direct Input
-    public void PlaceBet_theBetRoundHasBeenAlreadyAssigned_ThrowBetException(){
+    public void placeBet_theBetRoundHasBeenAlreadyAssigned_ThrowNotificationException(){
 
     }
 
     /**
-     * When gamblerCard Is Not Valid then Throw Illegal Argument Exception
+     * When gamblerCard Is Not Valid then Throw NotificationException
      *
      * <p>
      *     Call the method in BankTeller and give it the inValid Card Credntials
-     *     And then an Illegal Argument Exception would be thrown.
+     *     And then an NotificationException  would be thrown.
      * </p>
      */
     @Test //Indirect Output
-    public void PlaceBet_gamblerCardIdIsNotValid_ThrowIllegalArgumentException(){
+    public void placeBet_gamblerCardIdIsNotValid_ThrowNotificationException(){
 
     }
 
     /**
-     * When the bet amount is more than the credit on gambler's card, throw exception
+     * A NotificationException should be throw, when a GamblerCard wants to put more than one Bet On the specific BetRound
      */
-    @Test //Indirect Output
-    public void PlaceBet_gamblerCardDoesNotHaveEnoughBalance_ThrowsBalanceInsufficientException(){
+    @Test
+    //Direct Outputs
+    public void placeBet_AGamblerCardPutMoreThanOneBetOnSpecificBetRound_ThrowNotificationException(){
 
     }
+
 
     /**
-     * Verify the amount of bet has been substractedFrom GamblerCard credit
+     * When the bet amount is more than the credit on gambler's card, throw NotificationException
+     *
      */
     @Test //Indirect Output
-    public void PlaceBet_OnHavingEnoughCredit_TheWithdrawMethodWouldBeCalled(){
+    public void placeBet_gamblerCardDoesNotHaveEnoughBalance_ThrowsBalanceInsufficientNotificationException(){
 
     }
+
+
+    /**
+     * Verify the amount of bet has been subtractedFrom GamblerCard credit
+     */
+    @Test //Indirect Output
+    public void placeBet_OnHavingEnoughCredit_TheWithdrawMethodWouldBeCalled(){
+
+    }
+
 
     /**
      * On Having All the requirements, A bet instance is created and be added to list of Bets
      */
     @Test //Indirect Output
-    public void PlaceBet_OnHavingValidCardAndEnoughCredit_CreateAndAddBetTotheRoundlistOfBet(){
+    public void placeBet_OnHavingValidCardAndEnoughCredit_CreateAndAddBetTotheRoundlistOfBet(){
 
     }
+
 
     /**
      * If the listOfBets Of Current Round be empty then it should not not be possible to create a Betting Round
      */
     @Test
     //Direct Input
-    public void createBetRound_OnEmptylistOfBetOfCurrentRound_ThrowBetException(){
+    public void createBetRound_OnEmptylistOfBetOfCurrentRound_ThrowBetNotificationException(){
 
     }
+
+
+    /**
+     *  the GamblingMachine createBetround method can not be called twice
+     *
+     *  <p>
+     *      when the current betRound of GamblingMachine has been assigned,
+     *      It should not be possible for requesting to create new one until
+     *      the betRound would processed by reward method and new round would be started.
+     *  </p>
+     */
+    @Test
+    public void createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException(){
+
+    }
+
 
     /**
      * As start the game round, the createBet Round of Game would be called with ListOfBets as its arguments
      */
     @Test
-    //Indirect Outpus
+    //Indirect Output
     public void createBetRound_OnHavingListOfBet_CallCreateBettingRoundOfGameWithListOfBets(){
 
     }
 
+
     /**
-     *
+     * throw notificationException on calling of reward method when the game round has not been closed.
      */
+    //Direct Output
+    public void reward_OnCallingWhenBetRoundHasNotBeenFinished_ThrowNotificationException(){
+
+    }
+
+
+    /**
+     * It will check the GamblingMachine roundStatus if it is true as representation of starting of new game round
+     */
+    //Direct Output
+    public void reward_OnCallForReward_theGameBecomeReadyForAnotherRound(){}
+
+
+    /**
+     * Check if the prize of betRound would be sent to gamblerCard by bankTeller
+     */
+    //Indirect Output
+    public void reward_OnCall_theBankTellerCallDepositMethodWithCorrectGamblerCardID(){
+
+    }
+
+
 }
