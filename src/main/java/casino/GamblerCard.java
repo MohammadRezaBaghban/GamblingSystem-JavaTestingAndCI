@@ -9,86 +9,109 @@ public class GamblerCard {
 	 * The Initial amount is determined on the assignment of the card to gambler by bank teller
 	 */
 	private double initialAmount;
-	/**
-	 * initial amount is stored on the card, together with a timestamp
-	 */
 	private Date timeStamp;
-	/**
-	 * list of all generated betIDs is stored on the card
-	 */
 	private List<String> listOfBet;
 	private String cardID;
 	private boolean assignedStatus;
 	private double credit;
 
+	/**
+	 * A getter method for taking InitialAmount that card has been created with
+	 * @return The initial amount that gambler charge on its assignment
+	 */
 	public double getInitialAmount() {
 		return this.initialAmount;
 	}
 
+	/**
+	 * A getter method for taking the timeStamp of the moment that card has been given to a Gambler
+	 * @return The last moment that the card has been assigned to a gambler
+	 */
 	public Date getTimeStamp() {
 		return this.timeStamp;
 	}
 
+	/**
+	 * A getter method for accessing the list of bets that gambler has been made
+	 * @return List of bets that the Gambler has been made with card
+	 */
 	public List<String> getListOfBet() {
 		return this.listOfBet;
 	}
 
 	/**
-	 * Get the gambler card's id
+	 * A getter method for accessing the unique id of gambler card
+	 * @return The unique ID of gambler card
 	 */
 	public String getCardID() {
-		return null; // to satisfy the compiler
+		return this.cardID;
 	}
 
 	/**
-	 * The stored betID's on the card are also removed. The card become anonymous and can be reused.
-	 */
-	public void checkOut() {
-
-	}
-
-	/**
-	 * check the status of the card
+	 * A getter method for checking if the card has been assigned to a person or not
+	 * @return boolean status of card assignment to a gambler
 	 */
 	public boolean getAssignedStatus() {
-		return true; // to satisfy the compiler
+		return this.assignedStatus;
 	}
 
 	/**
-	 * total amount of money credit handed to gambler
+	 * A getter method for retrieving the current balance of gambler card
+	 * @return the current balance of gamblerCard
 	 */
 	public double getCredit() {
-		return 0.0; // to satisfy the compiler
+		return this.credit;
 	}
 
 	/**
-	 * top up the money to the card
-	 * @param amount
+	 * Check out the gambler card to make it ready for new assignment
+	 *
+	 * <p>
+	 *     Reset the timestamp, initial amount and credit to zero
+	 *     and clear list of bets.
+	 * </p>
+	 */
+	public void checkOut() {
+		// TODO - implement GamblerCard.checkOut
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * Change the current Balance of card
+	 *
+	 * <p>
+	 *     Throws an IllegalArgumentException on providing negative amount
+	 * </p>
+	 *
+	 * @param amount should be positive value.
 	 */
 	public boolean setCredit(double amount) {
-		return true; // to satisfy the compiler
+		// TODO - implement GamblerCard.setCredit
+		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * the person who makes the bet with unique bet id
+	 * Add a new bet to BetList of gambler card
+	 *
+	 * <p>
+	 *     It will check if the gamblerCard has not the given bet Id in its betList
+	 *     On not having that, it will
+	 * </p>
 	 * @param betId
 	 */
 	public void addBet(String betId) {
-
+		// TODO - implement GamblerCard.addBet
+		throw new UnsupportedOperationException();
 	}
+
 
 	/**
-	 * returns the string with all the information in order to log it.
+	 * Generate a statement including all the information upon the status of GamblerCard
+	 * @return status of of gambler card
 	 */
-	@Override
-	public String toString() {
-		return "GamblerCard{" +
-				"initialAmount=" + initialAmount +
-				", timeStamp=" + timeStamp +
-				", listOfBet=" + listOfBet +
-				", cardID='" + cardID + '\'' +
-				", assignedStatus=" + assignedStatus +
-				", credit=" + credit +
-				'}';
+	public String ToString() {
+		// TODO - implement GamblerCard.ToString
+		throw new UnsupportedOperationException();
 	}
+
 }
