@@ -80,7 +80,7 @@ public class GamblerCard {
 	 * Change the current Balance of card
 	 *
 	 * <p>
-	 *     Throws an IllegalArgumentException on providing negative amount
+	 *     Throws an NotificationException on providing negative amount
 	 * </p>
 	 *
 	 * @param amount should be positive value.
