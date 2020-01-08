@@ -18,7 +18,7 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	private IBetLoggingAuthority logger;
 
 	/**
-	 * 
+	 * This method also logs this request.
 	 * @param bet
 	 */
 	public void addBet(Bet bet) {
@@ -28,6 +28,7 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 
 	/**
 	 * it returns the unique token for the betting round and it should check the token status.
+	 * This method also logs this request.
 	 * @param bettingRound
 	 */
 	public String getToken(BettingRound bettingRound) {
@@ -45,6 +46,7 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 
 	/**
 	 * it returns the whole integer as winning number. it should check the token status.
+	 * This method also logs this request.
 	 * @param bettingRound
 	 */
 	public int getWinNo(BettingRound bettingRound) {

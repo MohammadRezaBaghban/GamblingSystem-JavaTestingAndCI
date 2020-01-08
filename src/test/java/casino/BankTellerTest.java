@@ -3,6 +3,38 @@ package casino;
 import org.junit.jupiter.api.Test;
 
 public class BankTellerTest {
+    /**
+     * This test checks if CashOut method invokes the ClearCard() method with right parameter.
+     * Type: direct input
+     */
+    @Test
+    void CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour() {
+        //arrange
+        //act
+        //assert
+    }
+
+    /**
+     * If the card Id is not valid. It should throw an exception.
+     * @throws NotificationException
+     */
+    @Test
+    void CashOut_ShouldThrowExceptionIfCardIsInValid() throws NotificationException {
+        //arrange
+        //act
+        //assert
+    }
+
+    /**
+     *This test checks if the card information is logged.
+     * It will verify if the log method is called with right parameters.
+     * mocked object of GamblingAuthority class is used to spy the logging of card information.
+     * Type: indirect output
+     */
+    @Test
+    void CashOut_MethodShouldLogCardInformation() {
+
+    }
 
 
     /**
@@ -11,7 +43,7 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber() {
+    public void CheckCredit_ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber() {
         //arrange
         //act
         //assert
@@ -23,7 +55,7 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void ShouldReturnFalseIfCardDoesNotHaveEnoughAmountWithValidCardNumber() {
+    public void CheckCredit_ShouldReturnFalseIfCardDoesNotHaveEnoughAmountWithValidCardNumber() {
         //arrange
         //act
         //assert
@@ -33,22 +65,21 @@ public class BankTellerTest {
      * This method checks if the given card number is invalid it should throw an exception.
      * It uses the mock object of GamblerCard which returns valid card number.
      * Type: indirect input
-     * @throws Exception
+     * @throws NotificationException
      */
     @Test
-    public void ShouldThrowExceptionIfInvalidCardNumberIsSupplied() throws Exception {
+    public void isValid_ShouldThrowExceptionIfCardNumberIsInvalid() throws NotificationException {
         //arrange
         //act
         //assert
     }
 
     /**
-     * While Gambler checks out at the Bank Teller. It should clear the amount of the card and set it to zero so the card can
-     * be reused.
+     * While clearCard() method is invoked at the Bank Teller. It should clear the amount of the card and set it to zero.
      * Type: indirect input
      */
     @Test
-    public void CardAmountShouldBeZeroAfterCheckingOut() {
+    public void clearCard_CardAmountShouldBeZeroAfterCheckingOut() {
         //arrange
         //act
         //assert
@@ -60,7 +91,19 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void GamblerShouldBeAbleToDepositAmountToTheCard() {
+    public void deposit_GamblerShouldBeAbleToDepositAmountToTheCard() {
+        //arrange
+        //act
+        //assert
+    }
+
+    /**
+     * This test checks if it throws an exception when negative amount is supplied.
+     * @throws NotificationException
+     * Type: direct input
+     */
+    @Test
+    public void deposit_InputAmountMustNotBeZero_ThrowsException() throws NotificationException {
         //arrange
         //act
         //assert
@@ -72,7 +115,7 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void GamblerShouldBeAbleToWithdrawAmountFromTheCard() {
+    public void deposit_GamblerShouldBeAbleToWithdrawAmountFromTheCard() {
         //arrange
         //act
         //assert
@@ -81,9 +124,10 @@ public class BankTellerTest {
      * At calling the withdraw() method with higher amount It should throw Exception.
      * It also should not deduct the amount If the amount is more than the amount it has.
      * Type: indirect input
+     * @throws Exception
      */
     @Test
-    public void GamblerShouldNotBeAbleToWithdrawHigherAmountThanItHas() {
+    public void withdraw_GamblerShouldNotBeAbleToWithdrawHigherAmountThanItHas() throws Exception {
         //arrange
         //act
         //assert
@@ -95,7 +139,7 @@ public class BankTellerTest {
      * Type: indirect output
      */
     @Test
-    public void BankTellerShouldBeAbleToAddBetIntoTheCard() {
+    public void addBet_BankTellerShouldBeAbleToAddBetIntoTheCard() {
         //arrange
         //act
         //assert
@@ -106,9 +150,21 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void BankTellerMustNotBeAbleToAssignedCardWhichIsAlreadyAssigned() {
+    public void assignCard_BankTellerShouldNotBeAbleToAssignCardWhichIsAlreadyAssigned() {
         //arrange
         //act
         //assert
     }
+
+    /**
+     * At calling this method, It assigns the card to the gambler.
+     * Type: indirect input
+     */
+    @Test
+    public void assignCard_BankTellerShouldBeAbleToAssignCard() {
+        //arrange
+        //act
+        //assert
+    }
+
 }

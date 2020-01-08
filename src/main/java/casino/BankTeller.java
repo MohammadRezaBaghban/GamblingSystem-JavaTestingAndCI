@@ -9,18 +9,21 @@ public class BankTeller implements IBetLoggingAuthority {
 
 	private List<GamblerCard> listOfGamblerCard;
 	private IBetLoggingAuthority logger;
-
+	private GamblingAuthority gamblingAuthority;
 	/**
 	 * This class is responsible for managing gambling card information and logging all the activities.
 	 */
-	public BankTeller() {
+	public BankTeller(IBetLoggingAuthority logger, GamblingAuthority gamblingAuthority) {
+		this.logger = logger;
+		this.gamblingAuthority = gamblingAuthority;
 		this.listOfGamblerCard = new ArrayList<>();
 	}
 
 	/**
 	 * The total amount of money credit is physically handed to the gambler
+	 * This method also logs the GamblingCard information.
 	 */
-	public void CashOut() {
+	public void CashOut(String gamblerCardID) {
 
 	}
 
@@ -89,6 +92,14 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) {
 
+	}
+
+	public Bet getBet(String betId){
+		return null; //to satisfy compiler
+	}
+
+	public boolean isGamblerCardValid(String gamblerCardID) {
+		return true;// to satisfy the compiler
 	}
 
 	@Override
