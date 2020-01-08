@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BettingRoundTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BettingRoundTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,11 +132,15 @@
       <workItem from="1578333776525" duration="3665000" />
       <workItem from="1578337995955" duration="669000" />
       <workItem from="1578395740697" duration="13603000" />
+      <workItem from="1578483072891" duration="178000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1578478456346">

@@ -1,12 +1,9 @@
 package casino;
 
 import jdk.internal.jline.internal.TestAccessible;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Random;
-
-import static org.junit.Assert.*;
-
 public class BetTest {
 
     @Test
