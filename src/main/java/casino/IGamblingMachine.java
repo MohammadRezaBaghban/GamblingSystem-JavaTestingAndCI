@@ -10,11 +10,8 @@ public interface IGamblingMachine {
 	 */
 	boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber);
 
-    /**
-     * Gambling machine creates the betting round
-     * @return
-     */
-	public BettingRound createBetRound();
+	BettingRound createBetRound();
 
 	void reward();
+
 }

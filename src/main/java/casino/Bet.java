@@ -5,13 +5,13 @@ import java.util.Date;
 public class Bet {
 
 	private String id;
-	private Date Time;
+	private Date time;
 	private double inValue;
 	private double outValue;
 	private boolean inValueStatus = false;
 	private boolean outValueStatus = false;
 	private String cardInformation;
-	private Integer selecedNumber;
+	private Integer selectedNumber;
 
 	/**
 	 * 
@@ -36,8 +36,8 @@ public class Bet {
 		this.inValue = inValue;
 	}
 
-	public Integer getSelecedNumber() {
-		return this.selecedNumber;
+	public Integer getSelectedNumber() {
+		return this.selectedNumber;
 	}
 
 	public double getOutValue() {
