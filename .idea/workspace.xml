@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/casino/NotificationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +54,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/TCI/week2_mailcomposer/week2_mailcomposer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TCI-master/TCI-master/Web_Crawler" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -147,10 +144,11 @@
     </state>
     <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1578403683259" />
     <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1578480235180" />
-    <state x="617" y="206" key="FileChooserDialogImpl" timestamp="1578259030303">
-      <screen x="70" y="0" width="1530" height="900" />
+    <state x="618" y="206" key="FileChooserDialogImpl" timestamp="1579359222462">
+      <screen x="71" y="0" width="1529" height="900" />
     </state>
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
+    <state x="618" y="206" key="FileChooserDialogImpl/71.0.1529.900@71.0.1529.900" timestamp="1579359222462" />
     <state x="531" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578395739967">
       <screen x="70" y="0" width="1530" height="900" />
     </state>

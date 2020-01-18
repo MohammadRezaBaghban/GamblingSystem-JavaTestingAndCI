@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "com.palantir.jacoco-coverage" version "0.4.0"
 }
 
 group 'org.example'
@@ -21,3 +22,12 @@ test {
         events "passed", "skipped", "failed"
     }
 }
+jacocoCoverage {
+    // Enforce minimum code coverage of 50% for every Java file.
+    fileThreshold 0.5
+
+    // Whitelist files named MyClass.java from coverage requirements.
+    fileThreshold 0.0, "MyClass.java"
+}
+jacocoTestCoverageVerification{}
+jacocoTestReport{}
