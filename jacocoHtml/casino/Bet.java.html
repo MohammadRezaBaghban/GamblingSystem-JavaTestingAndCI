@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Bet.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">casino</a> &gt; <span class="el_source">Bet.java</span></div><h1>Bet.java</h1><pre class="source lang-java linenums">package casino;
+
+import java.util.Date;
+
+public class Bet {
+
+	private String id;
+	private Date time;
+	private double inValue;
+	private double outValue;
+<span class="nc" id="L11">	private boolean inValueStatus = false;</span>
+<span class="nc" id="L12">	private boolean outValueStatus = false;</span>
+	private String cardInformation;
+	private Integer selectedNumber;
+
+	/**
+	 * 
+	 * @param inValue
+	 * @param selectedNumber
+	 * @param cardInfo
+	 */
+<span class="nc" id="L22">	public Bet(double inValue, int selectedNumber, String cardInfo) {</span>
+		// TODO - implement Bet.Bet
+<span class="nc" id="L24">		throw new UnsupportedOperationException();</span>
+	}
+
+	public double getInValue() {
+<span class="nc" id="L28">		return this.inValue;</span>
+	}
+
+	/**
+	 * 
+	 * @param inValue
+	 */
+	public void setInValue(double inValue) {
+<span class="nc" id="L36">		this.inValue = inValue;</span>
+<span class="nc" id="L37">	}</span>
+
+	public Integer getSelectedNumber() {
+<span class="nc" id="L40">		return this.selectedNumber;</span>
+	}
+
+	public double getOutValue() {
+<span class="nc" id="L44">		return this.outValue;</span>
+	}
+
+	/**
+	 * 
+	 * @param outValue
+	 */
+	public void setOutValue(double outValue) {
+<span class="nc" id="L52">		this.outValue = outValue;</span>
+<span class="nc" id="L53">	}</span>
+
+	public String getCardInformation() {
+<span class="nc" id="L56">		return this.cardInformation;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

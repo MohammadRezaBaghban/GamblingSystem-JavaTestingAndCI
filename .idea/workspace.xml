@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BettingRoundTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BettingRoundTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +108,7 @@
       <recent name="C:\Users\User\Desktop\TCI\Casino\src\main\java\casino" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Repo [test]">
+  <component name="RunManager" selected="Gradle.Repo [build]">
     <configuration name="BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -339,22 +335,22 @@
     </state>
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
     <state x="618" y="206" key="FileChooserDialogImpl/71.0.1529.900@71.0.1529.900" timestamp="1579359222462" />
-    <state width="1486" height="297" key="GridCell.Tab.0.bottom" timestamp="1579368016950">
+    <state width="1486" height="297" key="GridCell.Tab.0.bottom" timestamp="1579369214881">
       <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state width="1486" height="297" key="GridCell.Tab.0.bottom/71.0.1529.900@71.0.1529.900" timestamp="1579368016950" />
-    <state width="1486" height="297" key="GridCell.Tab.0.center" timestamp="1579368016950">
+    <state width="1486" height="297" key="GridCell.Tab.0.bottom/71.0.1529.900@71.0.1529.900" timestamp="1579369214881" />
+    <state width="1486" height="297" key="GridCell.Tab.0.center" timestamp="1579369214881">
       <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state width="1486" height="297" key="GridCell.Tab.0.center/71.0.1529.900@71.0.1529.900" timestamp="1579368016950" />
-    <state width="1486" height="297" key="GridCell.Tab.0.left" timestamp="1579368016950">
+    <state width="1486" height="297" key="GridCell.Tab.0.center/71.0.1529.900@71.0.1529.900" timestamp="1579369214881" />
+    <state width="1486" height="297" key="GridCell.Tab.0.left" timestamp="1579369214881">
       <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state width="1486" height="297" key="GridCell.Tab.0.left/71.0.1529.900@71.0.1529.900" timestamp="1579368016950" />
-    <state width="1486" height="297" key="GridCell.Tab.0.right" timestamp="1579368016950">
+    <state width="1486" height="297" key="GridCell.Tab.0.left/71.0.1529.900@71.0.1529.900" timestamp="1579369214881" />
+    <state width="1486" height="297" key="GridCell.Tab.0.right" timestamp="1579369214881">
       <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state width="1486" height="297" key="GridCell.Tab.0.right/71.0.1529.900@71.0.1529.900" timestamp="1579368016950" />
+    <state width="1486" height="297" key="GridCell.Tab.0.right/71.0.1529.900@71.0.1529.900" timestamp="1579369214881" />
     <state x="338" y="94" key="SettingsEditor" timestamp="1579366590498">
       <screen x="71" y="0" width="1529" height="900" />
     </state>

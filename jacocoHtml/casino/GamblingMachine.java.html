@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GamblingMachine.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">casino</a> &gt; <span class="el_source">GamblingMachine.java</span></div><h1>GamblingMachine.java</h1><pre class="source lang-java linenums">package casino;
+
+import java.util.Map;
+
+public class GamblingMachine implements IGamblingMachine {
+	private BettingRound betRound;
+	private BankTeller bankTeller;
+	private String machineID;
+	private Map&lt;Bet, String&gt; listOfBetsOfCurrentRound;
+	private Game game;
+	private boolean roundStatus;
+
+
+
+	/**
+	 *
+	 * @param game
+	 * @param bankteller
+	 */
+<span class="nc" id="L20">	public GamblingMachine(Game game, BankTeller bankteller) {</span>
+		// TODO - implement GamblingMachine.GamblingMachine
+<span class="nc" id="L22">		throw new UnsupportedOperationException();</span>
+	}
+
+	/**
+	 * return true if
+	 */
+	public boolean IsRoundFinished() {
+<span class="nc" id="L29">		return roundStatus;</span>
+	}
+
+	/**
+	 * Place the bet on the current betRound of the game on the Game Machine
+	 *
+	 * &lt;p&gt;
+	 * On the placing the bet this method is going to be called to make the bet
+	 * &lt;ol&gt;
+	 *     &lt;li&gt;
+	 *         Check if the betRound is null as representation of the game has not been started
+	 *     &lt;/li&gt;
+	 *     &lt;li&gt;
+	 *     		Check if the GamblerCard is valid and assigned.
+	 *     &lt;/li&gt;
+	 *     &lt;li&gt;
+	 *      	Check if the Gambler has enough credit for the bet amount
+	 *     &lt;/li&gt;
+	 *     &lt;li&gt;
+	 *         	Withdraw the amount of bet from gamblerCard credit
+	 *     &lt;/li&gt;
+	 *     &lt;li&gt;
+	 *         	Create a Bet instance and add it to list of bets of current round.
+	 *     &lt;/li&gt;
+ *     &lt;/ol&gt;
+	 * &lt;/p&gt;
+	 * @param gamblerCardID the unique GamblerCardId that the bet is placing with it
+	 * @param amount the amount of money that gambler want to put on the bet
+	 * @param selectedNumber the selected number among options that the gambler put the bet on it.
+	 * @exception throw NotificationException &lt;p&gt; if the betRound has already assigned as a representation of valid time
+	 * to place a bet has already finished&lt;/p&gt;
+	 * @exception throw NotificationException when the gambler card is not valid or assigned
+	 * @exception throw NotificationException when the user does not have enough credit for bet amount
+	 * @exception throw NotificationException when a GamblerCard want to put more than one bet on a BetRound
+	 */
+	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) {
+		// TODO - implement GamblingMachine.placeBet
+<span class="nc" id="L66">		throw new UnsupportedOperationException();</span>
+	}
+
+	/**
+	 * Create the Bet Round as the representation of Start the Game by passing the list of Bet to game of Machine
+	 * @return Betting Round that has been created and its winned would be determined
+	 * @exception throws NotificationException on the empty list of bets of current round
+	 * @exception throws NotificationException if the betRound Object of the Gambling machine has already been assigned
+	 */
+	public BettingRound createBetRound() {
+		// TODO - implement GamblingMachine.createBetRound
+<span class="nc" id="L77">		throw new UnsupportedOperationException();</span>
+	}
+
+
+	/**
+	 * On the finishing of the Game round and generation of BetRound, it will process it and renew the game
+	 *
+	 * &lt;p&gt;
+	 *     This method is responsible for doing following actions:
+	 *     &lt;ol&gt;
+	 *         &lt;li&gt;It will loop for the each  bets in the current round and check if the outValue is positive in order to deposit the prize to gambler card&lt;/li&gt;
+	 *         &lt;li&gt; Reinitialize the list of bets of current round and assign null to the current betroundObject attribute&lt;/li&gt;
+	 *     &lt;/ol&gt;
+	 *
+	 * &lt;/p&gt;
+	 * @exception throw NotificationException when the BetRound object has not been assigned.
+	 */
+	public void reward() {
+		// TODO - implement GamblingMachine.reward
+<span class="nc" id="L96">		throw new UnsupportedOperationException();</span>
+	}
+
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
