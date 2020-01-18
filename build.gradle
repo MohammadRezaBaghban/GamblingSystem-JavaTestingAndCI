@@ -1,11 +1,16 @@
 plugins {
     id 'java'
+    id "com.palantir.jacoco-full-report" version "0.4.0"
+    id "com.palantir.jacoco-coverage" version "0.4.0"
 }
 
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+apply plugin: 'jacoco'
+test.finalizedBy jacocoTestReport
+test.outputs.upToDateWhen {false}
+sourceCompatibility = 1.11
 
 repositories {
     mavenCentral()
@@ -13,11 +18,51 @@ repositories {
 
 dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter:5.5.2')
 }
 
 test {
     useJUnitPlatform()
     testLogging {
         events "passed", "skipped", "failed"
+    }
+    jacoco {
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+        classDumpDir = file("$buildDir/jacoco/classpathdumps")
+    }
+}
+jacoco {
+    toolVersion = "0.8.5"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
+//Configuring violation rules
+/*jacocoTestCoverageVerification{
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.5
+            }
+        }
+
+        rule {
+            enabled = false
+            element = 'CLASS'
+            includes = ['org.gradle.*']
+
+            limit {
+                counter = 'LINE'
+                value = 'TOTALCOUNT'
+                maximum = 0.3
+            }
+        }
+    }
+}*/
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
     }
 }
