@@ -2,6 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Whole_project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/casino/BankTeller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/casino/BankTeller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/casino/Bet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/casino/Bet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/casino/GamblingAuthority.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/casino/GamblingAuthority.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/casino/GamblingMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/casino/GamblingMachine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/BankTellerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/casino/BankTellerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/BetTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/BettingRoundTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/casino/BettingRoundTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/GamblerCardTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/casino/GamblerCardTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/GamblingAuthorityTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/casino/GamblingAuthorityTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/GamblingMachineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/casino/GamblingMachineTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/GameTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/casino/BetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BetTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/casino/BettingRoundTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BettingRoundTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/casino/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GameTest.java" afterDir="false" />
@@ -20,11 +36,39 @@
     <system id="GRADLE">
       <state>
         <task path="$PROJECT_DIR$">
-          <activation />
+          <activation>
+            <after_sync>
+              <task name="build" />
+            </after_sync>
+            <after_compile>
+              <task name="build" />
+            </after_compile>
+          </activation>
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Casino" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Casino" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Casino" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Casino" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -54,17 +98,22 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/TCI/week2_mailcomposer/week2_mailcomposer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -77,8 +126,36 @@
       <recent name="C:\Users\User\Desktop\TCI\Casino\src\main\java\casino" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="TCI-Gambling [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.MohammadTDD [build]">
+    <configuration name="MohammadTDD [build]" type="GradleRunConfiguration" factoryName="Gradle" editBeforeRun="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <extension name="coverage" track_test_folders="true" runner="jacoco">
+        <pattern>
+          <option name="PATTERN" value="casino.BankTellerTest" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2">
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Whole project" run_configuration_type="JUnit" />
+        <option name="Gradle.BeforeRunTask" enabled="true" tasks="" externalProjectPath="$PROJECT_DIR$" vmOptions="" scriptParameters="" />
+      </method>
+    </configuration>
+    <configuration name="TCI-Gambling [dependencies]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -97,11 +174,11 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.TCI-Gambling [dependencies]" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="Gradle.TCI-Gambling [dependencies]" />
+      <item itemvalue="Gradle.MohammadTDD [build]" />
+      <item itemvalue="JUnit.Whole project" />
+    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -133,57 +210,96 @@
       <workItem from="1578337995955" duration="669000" />
       <workItem from="1578395740697" duration="13603000" />
       <workItem from="1578483072891" duration="178000" />
+      <workItem from="1579203461995" duration="7200000" />
+      <workItem from="1579360905110" duration="7196000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1578478456346">
-      <screen x="62" y="0" width="1538" height="900" />
+    <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1579361026116" />
+    <state x="770" y="152" key="#File_and_Code_Templates/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
+    <state x="593" y="309" key="#Project_Structure" timestamp="1579361678745">
+      <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state x="770" y="152" key="#File_and_Code_Templates/62.0.1538.900@62.0.1538.900" timestamp="1578478456346" />
-    <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1578480235180">
-      <screen x="62" y="0" width="1538" height="900" />
+    <state x="593" y="309" key="#Project_Structure/0.0.2000.1293@0.0.2000.1293" timestamp="1579361678745" />
+    <state x="456" y="306" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579365594081">
+      <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1578403683259" />
-    <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1578480235180" />
-    <state x="550" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1578482661759">
-      <screen x="62" y="0" width="1538" height="900" />
+    <state x="456" y="306" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579365594081" />
+    <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1579361026118" />
+    <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1579361026118" />
+    <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
+    <state x="731" y="429" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1579365298078">
+      <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state x="550" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/62.0.1538.900@62.0.1538.900" timestamp="1578482661759" />
-    <state x="617" y="206" key="FileChooserDialogImpl" timestamp="1578259030303">
-      <screen x="70" y="0" width="1530" height="900" />
+    <state x="731" y="429" key="#com.intellij.ide.util.PackageChooserDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579365298078" />
+    <state x="731" y="438" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1579365321049">
+      <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
-    <state width="1371" height="236" key="GridCell.Tab.0.bottom" timestamp="1578483014164">
-      <screen x="62" y="0" width="1538" height="900" />
+    <state x="731" y="438" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579365321049" />
+    <state x="550" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579361026118" />
+    <state x="550" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
+    <state x="617" y="206" key="FileChooserDialogImpl" timestamp="1579363175475">
+      <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1371" height="236" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1578483014164" />
-    <state width="1371" height="236" key="GridCell.Tab.0.center" timestamp="1578483014164">
-      <screen x="62" y="0" width="1538" height="900" />
+    <state x="617" y="206" key="FileChooserDialogImpl/0.0.2000.1293@0.0.2000.1293" timestamp="1579363175475" />
+    <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
+    <state width="1957" height="332" key="GridCell.Tab.0.bottom" timestamp="1579366670124">
+      <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1371" height="236" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1578483014164" />
-    <state width="1371" height="236" key="GridCell.Tab.0.left" timestamp="1578483014164">
-      <screen x="62" y="0" width="1538" height="900" />
+    <state width="1957" height="332" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579366670124" />
+    <state width="1371" height="236" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
+    <state width="1957" height="332" key="GridCell.Tab.0.center" timestamp="1579366670124">
+      <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1371" height="236" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1578483014164" />
-    <state width="1371" height="236" key="GridCell.Tab.0.right" timestamp="1578483014164">
-      <screen x="62" y="0" width="1538" height="900" />
+    <state width="1957" height="332" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579366670124" />
+    <state width="1371" height="236" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
+    <state width="1957" height="332" key="GridCell.Tab.0.left" timestamp="1579366670123">
+      <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1371" height="236" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1578483014164" />
-    <state x="525" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578483074481">
-      <screen x="62" y="0" width="1538" height="900" />
+    <state width="1957" height="332" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579366670123" />
+    <state width="1371" height="236" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
+    <state width="1957" height="332" key="GridCell.Tab.0.right" timestamp="1579366670124">
+      <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state x="525" y="276" key="com.intellij.ide.util.TipDialog/62.0.1538.900@62.0.1538.900" timestamp="1578483074481" />
-    <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1578395739967" />
-    <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1578225709565">
-      <screen x="70" y="0" width="1530" height="900" />
+    <state width="1957" height="332" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579366670124" />
+    <state width="1371" height="236" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
+    <state x="504" y="293" key="SettingsEditor" timestamp="1579362559659">
+      <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog/70.0.1530.900@70.0.1530.900" timestamp="1578225709565" />
+    <state x="504" y="293" key="SettingsEditor/0.0.2000.1293@0.0.2000.1293" timestamp="1579362559659" />
+    <state x="525" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1579361026118" />
+    <state x="525" y="276" key="com.intellij.ide.util.TipDialog/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
+    <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
+    <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1579361026118" />
+    <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
+    <state x="663" y="289" width="672" height="678" key="search.everywhere.popup" timestamp="1579362550346">
+      <screen x="0" y="0" width="2000" height="1293" />
+    </state>
+    <state x="663" y="289" width="672" height="678" key="search.everywhere.popup/0.0.2000.1293@0.0.2000.1293" timestamp="1579362550346" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Casino$Whole_project.exec" NAME="Whole project Coverage Results" MODIFIED="1579363062891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>casino.*</FILTER>
+    </SUITE>
   </component>
 </project>

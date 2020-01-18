@@ -1,23 +1,37 @@
 plugins {
     id 'java'
+
 }
 
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+apply plugin: 'jacoco'
+test.finalizedBy jacocoTestReport
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+
 }
 
 dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.5.2')
 }
 
 test {
     useJUnitPlatform()
     testLogging {
+
         events "passed", "skipped", "failed"
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
     }
 }

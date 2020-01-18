@@ -11,15 +11,16 @@ public class BettingRoundTest {
     /**
      * get the list of all betting round
      */
+    /*
     public List<Bet> BettingRound()
     {
 
-    }
+    }*/
 
     /**
      * check the list is initialized
      */
-    @Test
+    //@Test
     public void Check_If_BettingRound_List_Is_Empty()
     {
 
@@ -30,20 +31,21 @@ public class BettingRoundTest {
      * @return
      * @throws TokenExceptions
      */
+    /*
     @Test
-    public boolean Set_Token() throws TokenExceptions
+    public boolean Set_Token() throws TokenExceptions0
     {
 
-    }
+    }*/
 
     /**
      * get the unique betting number for each round
      * @param winNumber
      * @return
      */
-    @Test
+    /*@Test
     public boolean Get_Win_Number_Of_Betting_Round(int winNumber)
     {
 
-    }
+    }*/
 }
