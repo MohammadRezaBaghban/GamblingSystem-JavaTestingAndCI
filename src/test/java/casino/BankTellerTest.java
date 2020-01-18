@@ -12,6 +12,8 @@ public class BankTellerTest {
         //arrange
         //act
         //assert
+        BankTeller bankTeller = new BankTeller();
+        bankTeller.clearCard("ASD");
     }
 
     /**

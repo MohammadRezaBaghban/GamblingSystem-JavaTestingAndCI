@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +21,40 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Casino" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Casino" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Casino" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Casino" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Casino" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -61,6 +94,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -73,29 +110,131 @@
       <recent name="C:\Users\User\Desktop\TCI\Casino\src\main\java\casino" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="TCI-Gambling [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Repo [test]">
+    <configuration name="BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;casino.BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="dependencies" />
+            <option value=":cleanTest" />
+            <option value=":test" />
           </list>
         </option>
-        <option name="vmOptions" />
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Repo [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Repo [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jacocoTestReport" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Repo [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Whole project" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <extension name="coverage" runner="jacoco" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <fork_mode value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.Whole project" />
+      <item itemvalue="Gradle.Repo [test]" />
+      <item itemvalue="Gradle.Repo [build]" />
+      <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour" />
+      <item itemvalue="Gradle.Repo [jacocoTestReport]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TCI-Gambling [dependencies]" />
+        <item itemvalue="Gradle.Repo [test]" />
+        <item itemvalue="Gradle.Repo [jacocoTestReport]" />
+        <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour" />
+        <item itemvalue="Gradle.Repo [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -129,26 +268,94 @@
       <workItem from="1578337995955" duration="669000" />
       <workItem from="1578395740697" duration="13603000" />
     </task>
+    <task id="LOCAL-00001" summary="jacoco plugin added to the build.gradle">
+      <created>1579360693771</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579360693771</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="jacoco plugin added to the build.gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="jacoco plugin added to the build.gradle" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1578478456346">
       <screen x="62" y="0" width="1538" height="900" />
     </state>
     <state x="770" y="152" key="#File_and_Code_Templates/62.0.1538.900@62.0.1538.900" timestamp="1578478456346" />
+    <state x="429" y="110" key="#Project_Structure" timestamp="1579361794758">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state x="429" y="110" key="#Project_Structure/71.0.1529.900@71.0.1529.900" timestamp="1579361794758" />
+    <state x="555" y="78" key="#Repo_[build]" timestamp="1579362650128">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state x="555" y="78" key="#Repo_[build]/71.0.1529.900@71.0.1529.900" timestamp="1579362650128" />
+    <state x="555" y="78" key="#Repo_[build]_(1)" timestamp="1579362708105">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state x="555" y="78" key="#Repo_[build]_(1)/71.0.1529.900@71.0.1529.900" timestamp="1579362708105" />
+    <state x="555" y="78" key="#Repo_[build]_(2)" timestamp="1579362731967">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state x="555" y="78" key="#Repo_[build]_(2)/71.0.1529.900@71.0.1529.900" timestamp="1579362731967" />
+    <state x="555" y="78" key="#Repo_[test]" timestamp="1579365570460">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state x="555" y="78" key="#Repo_[test]/71.0.1529.900@71.0.1529.900" timestamp="1579365570460" />
+    <state x="555" y="78" key="#Repo_[test]_(1)" timestamp="1579365790165">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state x="555" y="78" key="#Repo_[test]_(1)/71.0.1529.900@71.0.1529.900" timestamp="1579365790165" />
+    <state x="292" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579366611964">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state x="292" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog/71.0.1529.900@71.0.1529.900" timestamp="1579366611964" />
     <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1578480235180">
       <screen x="62" y="0" width="1538" height="900" />
     </state>
     <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1578403683259" />
     <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1578480235180" />
+    <state x="458" y="46" key="CommitChangelistDialog2" timestamp="1579360692881">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state x="458" y="46" key="CommitChangelistDialog2/71.0.1529.900@71.0.1529.900" timestamp="1579360692881" />
+    <state x="571" y="214" key="EnvironmentVariablesDialog" timestamp="1579366533163">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state x="571" y="214" key="EnvironmentVariablesDialog/71.0.1529.900@71.0.1529.900" timestamp="1579366533163" />
     <state x="618" y="206" key="FileChooserDialogImpl" timestamp="1579359222462">
       <screen x="71" y="0" width="1529" height="900" />
     </state>
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
     <state x="618" y="206" key="FileChooserDialogImpl/71.0.1529.900@71.0.1529.900" timestamp="1579359222462" />
+    <state width="1486" height="297" key="GridCell.Tab.0.bottom" timestamp="1579368016950">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state width="1486" height="297" key="GridCell.Tab.0.bottom/71.0.1529.900@71.0.1529.900" timestamp="1579368016950" />
+    <state width="1486" height="297" key="GridCell.Tab.0.center" timestamp="1579368016950">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state width="1486" height="297" key="GridCell.Tab.0.center/71.0.1529.900@71.0.1529.900" timestamp="1579368016950" />
+    <state width="1486" height="297" key="GridCell.Tab.0.left" timestamp="1579368016950">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state width="1486" height="297" key="GridCell.Tab.0.left/71.0.1529.900@71.0.1529.900" timestamp="1579368016950" />
+    <state width="1486" height="297" key="GridCell.Tab.0.right" timestamp="1579368016950">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state width="1486" height="297" key="GridCell.Tab.0.right/71.0.1529.900@71.0.1529.900" timestamp="1579368016950" />
+    <state x="338" y="94" key="SettingsEditor" timestamp="1579366590498">
+      <screen x="71" y="0" width="1529" height="900" />
+    </state>
+    <state x="338" y="94" key="SettingsEditor/71.0.1529.900@71.0.1529.900" timestamp="1579366590498" />
     <state x="531" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578395739967">
       <screen x="70" y="0" width="1530" height="900" />
     </state>
