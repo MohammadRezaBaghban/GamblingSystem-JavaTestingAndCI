@@ -136,7 +136,7 @@ public class GamblerCardTest {
      */
     @Test
     //direct Input and direct output
-    public void setCredit_OnValidAmount_CreditChangeAndReturnTrue(){
+    public void setCredit_OnValidAmount_CreditChangeAndReturnTrue() throws NotificationException {
 
         //Arrange
         GamblerCard_SUT_Object = new GamblerCard();

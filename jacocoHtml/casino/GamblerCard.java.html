@@ -101,9 +101,14 @@ public class GamblerCard {
 	 *
 	 * @param amount should be positive value.
 	 */
-	public boolean setCredit(double amount) {
-		// TODO - implement GamblerCard.setCredit
-<span class="fc" id="L106">		throw new UnsupportedOperationException();</span>
+	public boolean setCredit(double amount) throws NotificationException {
+<span class="fc bfc" id="L105" title="All 2 branches covered.">		if(amount &lt;0){</span>
+<span class="fc" id="L106">			throw new NotificationException(&quot;It is not possible to set credit to a negative value&quot;);</span>
+
+		}else {
+<span class="fc" id="L109">			credit = amount;</span>
+<span class="fc" id="L110">			return true;</span>
+		}
 	}
 
 	/**
@@ -115,10 +120,14 @@ public class GamblerCard {
 	 * &lt;/p&gt;
 	 * @param betId
 	 */
-	public void addBet(String betId) {
-		// TODO - implement GamblerCard.addBet
-<span class="fc" id="L120">		throw new UnsupportedOperationException();</span>
-	}
+	public void addBet(String betId) throws NotificationException {
+
+<span class="fc bfc" id="L125" title="All 2 branches covered.">		if(listOfBet.contains(betId)){</span>
+<span class="fc" id="L126">			throw new NotificationException(&quot;It is not possible to add duplicate bets to GamblerCard&quot;);</span>
+		}else{
+<span class="fc" id="L128">			listOfBet.add(betId);</span>
+		}
+<span class="fc" id="L130">	}</span>
 
 
 	/**
@@ -127,7 +136,7 @@ public class GamblerCard {
 	 */
 	public String ToString() {
 		// TODO - implement GamblerCard.ToString
-<span class="nc" id="L130">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L139">		throw new UnsupportedOperationException();</span>
 	}
 
 	/**
@@ -137,18 +146,18 @@ public class GamblerCard {
 	 * @throws NotificationException on requesting for an assigned card or initial amount less 5
 	 */
 	public void AssignCard(double initialAmount, Timestamp assignmentMoment) throws NotificationException {
-<span class="fc bfc" id="L140" title="All 2 branches covered.">		if(assignedStatus){</span>
-<span class="fc" id="L141">			throw new NotificationException(&quot;An Assigned Card can not be reassign before checkout&quot;);</span>
+<span class="fc bfc" id="L149" title="All 2 branches covered.">		if(assignedStatus){</span>
+<span class="fc" id="L150">			throw new NotificationException(&quot;An Assigned Card can not be reassign before checkout&quot;);</span>
 		}
-<span class="fc bfc" id="L143" title="All 2 branches covered.">		else if(initialAmount&lt;5){</span>
-<span class="fc" id="L144">			throw new NotificationException(&quot;The initial amount can not be less than 5 euros&quot;);</span>
+<span class="fc bfc" id="L152" title="All 2 branches covered.">		else if(initialAmount&lt;5){</span>
+<span class="fc" id="L153">			throw new NotificationException(&quot;The initial amount can not be less than 5 euros&quot;);</span>
 		}else{
-<span class="fc" id="L146">			this.initialAmount = initialAmount;</span>
-<span class="fc" id="L147">			this.credit = initialAmount;</span>
-<span class="fc" id="L148">			timeStamp = assignmentMoment;</span>
-<span class="fc" id="L149">			listOfBet = new HashSet&lt;String&gt;();</span>
-<span class="fc" id="L150">			assignedStatus = true;</span>
+<span class="fc" id="L155">			this.initialAmount = initialAmount;</span>
+<span class="fc" id="L156">			this.credit = initialAmount;</span>
+<span class="fc" id="L157">			timeStamp = assignmentMoment;</span>
+<span class="fc" id="L158">			listOfBet = new HashSet&lt;String&gt;();</span>
+<span class="fc" id="L159">			assignedStatus = true;</span>
 		}
-<span class="fc" id="L152">	}</span>
+<span class="fc" id="L161">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

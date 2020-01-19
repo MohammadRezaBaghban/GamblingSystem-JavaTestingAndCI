@@ -101,9 +101,14 @@ public class GamblerCard {
 	 *
 	 * @param amount should be positive value.
 	 */
-	public boolean setCredit(double amount) {
-		// TODO - implement GamblerCard.setCredit
-		throw new UnsupportedOperationException();
+	public boolean setCredit(double amount) throws NotificationException {
+		if(amount <0){
+			throw new NotificationException("It is not possible to set credit to a negative value");
+
+		}else {
+			credit = amount;
+			return true;
+		}
 	}
 
 	/**
@@ -115,9 +120,13 @@ public class GamblerCard {
 	 * </p>
 	 * @param betId
 	 */
-	public void addBet(String betId) {
-		// TODO - implement GamblerCard.addBet
-		throw new UnsupportedOperationException();
+	public void addBet(String betId) throws NotificationException {
+
+		if(listOfBet.contains(betId)){
+			throw new NotificationException("It is not possible to add duplicate bets to GamblerCard");
+		}else{
+			listOfBet.add(betId);
+		}
 	}
 
 
