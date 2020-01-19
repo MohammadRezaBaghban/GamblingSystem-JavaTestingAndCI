@@ -54,9 +54,13 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * This method clears the betID's stored in it  and the amount making card anonymous, and can be reused.
 	 * @param gamblerCardID
 	 */
-	public void clearCard(String gamblerCardID) {
-		GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);
-		gamblerCard.setCredit(0.0);
+	public void clearCard(String gamblerCardID) throws NotificationException {
+		if(isGamblerCardValid(gamblerCardID)){
+			GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);
+			gamblerCard.setCredit(0.0);
+		}
+		else
+			throw new NotificationException("gamblerCard is not Valid.");
 	}
 
 	/**

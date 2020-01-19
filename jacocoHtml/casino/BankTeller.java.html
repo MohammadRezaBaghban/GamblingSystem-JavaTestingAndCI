@@ -54,10 +54,14 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * This method clears the betID's stored in it  and the amount making card anonymous, and can be reused.
 	 * @param gamblerCardID
 	 */
-	public void clearCard(String gamblerCardID) {
-<span class="fc" id="L58">		GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);</span>
-<span class="fc" id="L59">		gamblerCard.setCredit(0.0);</span>
-<span class="fc" id="L60">	}</span>
+	public void clearCard(String gamblerCardID) throws NotificationException {
+<span class="pc bpc" id="L58" title="1 of 2 branches missed.">		if(isGamblerCardValid(gamblerCardID)){</span>
+<span class="fc" id="L59">			GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);</span>
+<span class="fc" id="L60">			gamblerCard.setCredit(0.0);</span>
+<span class="fc" id="L61">		}</span>
+		else
+<span class="nc" id="L63">			throw new NotificationException(&quot;gamblerCard is not Valid.&quot;);</span>
+<span class="fc" id="L64">	}</span>
 
 	/**
 	 * returns the GamblingCard object if the gamblerCardID exists in the gamblingCardList.
@@ -66,11 +70,11 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @return
 	 */
 	private GamblerCard getGamblingCard(String gamblerCardID) {
-<span class="fc" id="L69">		GamblerCard card = null;</span>
-<span class="fc bfc" id="L70" title="All 2 branches covered.">		for(GamblerCard c : listOfGamblerCard)</span>
-<span class="pc bpc" id="L71" title="1 of 2 branches missed.">			if (c.getCardID().equals(gamblerCardID))</span>
-<span class="fc" id="L72">				card = c;</span>
-<span class="fc" id="L73">		return card;</span>
+<span class="fc" id="L73">		GamblerCard card = null;</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">		for(GamblerCard c : listOfGamblerCard)</span>
+<span class="pc bpc" id="L75" title="1 of 2 branches missed.">			if (c.getCardID().equals(gamblerCardID))</span>
+<span class="fc" id="L76">				card = c;</span>
+<span class="fc" id="L77">		return card;</span>
 	}
 
 	/**
@@ -79,7 +83,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public boolean checkCredit(String gamblerCardID, double amount) {
-<span class="nc" id="L82">		return true; // to satisfy the compiler</span>
+<span class="nc" id="L86">		return true; // to satisfy the compiler</span>
 	}
 
 	/**
@@ -89,7 +93,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void deposit(String gamblerCardID, double amount) {
 
-<span class="nc" id="L92">	}</span>
+<span class="nc" id="L96">	}</span>
 
 	/**
 	 * withdraw amount from the card by cashier.
@@ -98,7 +102,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void withdraw(String gamblerCardID, double amount) {
 
-<span class="nc" id="L101">	}</span>
+<span class="nc" id="L105">	}</span>
 
 	/**
 	 * Add bet to the Gambler card
@@ -107,23 +111,23 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) {
 
-<span class="nc" id="L110">	}</span>
+<span class="nc" id="L114">	}</span>
 
 	public Bet getBet(String betId){
-<span class="nc" id="L113">		return null; //to satisfy compiler</span>
+<span class="nc" id="L117">		return null; //to satisfy compiler</span>
 	}
 
 	public boolean isGamblerCardValid(String gamblerCardID) {
-<span class="nc" id="L117">		return true;// to satisfy the compiler</span>
+<span class="fc" id="L121">		return true;// to satisfy the compiler</span>
 	}
 
 	@Override
 	public void Log(String filePath, String info) {
 
-<span class="nc" id="L123">	}</span>
+<span class="nc" id="L127">	}</span>
 
 	public void addCard(GamblerCard gamblerCard) {
-<span class="fc" id="L126">		this.listOfGamblerCard.add(gamblerCard);</span>
-<span class="fc" id="L127">	}</span>
+<span class="fc" id="L130">		this.listOfGamblerCard.add(gamblerCard);</span>
+<span class="fc" id="L131">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

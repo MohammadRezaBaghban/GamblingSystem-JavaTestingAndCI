@@ -7,14 +7,15 @@ import static org.mockito.Mockito.*;
 public class BankTellerTest {
     /**
      * This test checks if CashOut method invokes the ClearCard() method with right parameter.
-     * Type: direct input
+     * GamblerCard object is mocked and added to the SUT.(Type: indirect input)
      */
     @Test
-    void CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour() {
+    void CashOut_ShouldSetAmountToZeroWhenGamblerCashOut() throws NotificationException {
         //arrange
         IBetLoggingAuthority iBetLoggingAuthority = mock(IBetLoggingAuthority.class);
         GamblingAuthority gamblingAuthority = mock(GamblingAuthority.class);
         BankTeller bankTeller = new BankTeller(iBetLoggingAuthority,gamblingAuthority);
+
         String gamblerCardId = "a2u7wqe3r4";
         GamblerCard gamblerCard = mock(GamblerCard.class);
         when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
