@@ -25,6 +25,7 @@ public class GamblerCardTest {
     public void checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException(){
         // Act & Assert
         Assertions.assertThrows(NotificationException.class,
+
                 ()->{GamblerCard_SUT_Object.checkOut();},
                 "A Gambler Card cannot be checkout if it was not be assigned"
         );
