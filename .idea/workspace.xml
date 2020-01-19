@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblerCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblerCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,10 +246,10 @@
     <list>
       <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldReturnFalseIfCardIsInValid" />
       <item itemvalue="Gradle.BankTellerTest.CashOut_MethodShouldLogCardInformation" />
-      <item itemvalue="JUnit.Whole project" />
       <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldThrowExceptionIfCardIsNotValid" />
       <item itemvalue="Gradle.BankTellerTest.CheckCredit_ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber" />
       <item itemvalue="Gradle.BankTellerTest.deposit_InputAmountMustNotBeZero_ThrowsException" />
+      <item itemvalue="JUnit.Whole project" />
     </list>
     <recent_temporary>
       <list>
@@ -293,7 +292,8 @@
       <workItem from="1578395740697" duration="13603000" />
       <workItem from="1578483072891" duration="178000" />
       <workItem from="1579419259006" duration="4210000" />
-      <workItem from="1579426428103" duration="7698000" />
+      <workItem from="1579426428103" duration="7776000" />
+      <workItem from="1579453483137" duration="288000" />
     </task>
     <task id="LOCAL-00001" summary="jacoco plugin added to the build.gradle">
       <created>1579360693771</created>
@@ -428,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579444467307</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Green PHASE: code implemented and test passed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard.">
+      <created>1579444594928</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1579444594928</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +461,9 @@
     <MESSAGE value="Red PHASE: test is defined and run and failed. TEST: BankTellerTest--&gt;deposit_InputAmountMustNotBeZero_ThrowsException." />
     <MESSAGE value="Green PHASE: changes done in deposit method and test passed . TEST: BankTellerTest--&gt;deposit_InputAmountMustNotBeZero_ThrowsException." />
     <MESSAGE value="Red PHASE: test introduced and test failed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard." />
-    <option name="LAST_COMMIT_MESSAGE" value="Red PHASE: test introduced and test failed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard." />
+    <MESSAGE value="Green PHASE: test introduced and test failed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard." />
+    <MESSAGE value="Green PHASE: code implemented and test passed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard." />
+    <option name="LAST_COMMIT_MESSAGE" value="Green PHASE: code implemented and test passed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard." />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1578478456346">
@@ -498,11 +507,11 @@
     </state>
     <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1578403683259" />
     <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1578480235180" />
-    <state x="64" y="93" key="CommitChangelistDialog2" timestamp="1579444466448">
-      <screen x="64" y="0" width="1536" height="900" />
+    <state x="1317" y="-936" key="CommitChangelistDialog2" timestamp="1579453800852">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state x="1373" y="-936" key="CommitChangelistDialog2/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427066766" />
-    <state x="64" y="93" key="CommitChangelistDialog2/64.0.1536.900@64.0.1536.900" timestamp="1579444466448" />
+    <state x="1317" y="-936" key="CommitChangelistDialog2/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579453800852" />
+    <state x="64" y="93" key="CommitChangelistDialog2/64.0.1536.900@64.0.1536.900" timestamp="1579444594174" />
     <state x="458" y="46" key="CommitChangelistDialog2/71.0.1529.900@71.0.1529.900" timestamp="1579360692881" />
     <state x="571" y="214" key="EnvironmentVariablesDialog" timestamp="1579366533163">
       <screen x="71" y="0" width="1529" height="900" />
@@ -513,29 +522,29 @@
     </state>
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
     <state x="618" y="206" key="FileChooserDialogImpl/71.0.1529.900@71.0.1529.900" timestamp="1579359222462" />
-    <state width="1493" height="267" key="GridCell.Tab.0.bottom" timestamp="1579444188619">
+    <state width="1493" height="267" key="GridCell.Tab.0.bottom" timestamp="1579444598644">
       <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.bottom/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
-    <state width="1493" height="267" key="GridCell.Tab.0.bottom/64.0.1536.900@64.0.1536.900" timestamp="1579444188619" />
+    <state width="1493" height="267" key="GridCell.Tab.0.bottom/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.bottom/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
-    <state width="1493" height="267" key="GridCell.Tab.0.center" timestamp="1579444188619">
+    <state width="1493" height="267" key="GridCell.Tab.0.center" timestamp="1579444598644">
       <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.center/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
-    <state width="1493" height="267" key="GridCell.Tab.0.center/64.0.1536.900@64.0.1536.900" timestamp="1579444188619" />
+    <state width="1493" height="267" key="GridCell.Tab.0.center/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.center/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
-    <state width="1493" height="267" key="GridCell.Tab.0.left" timestamp="1579444188619">
+    <state width="1493" height="267" key="GridCell.Tab.0.left" timestamp="1579444598644">
       <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.left/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
-    <state width="1493" height="267" key="GridCell.Tab.0.left/64.0.1536.900@64.0.1536.900" timestamp="1579444188619" />
+    <state width="1493" height="267" key="GridCell.Tab.0.left/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.left/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
-    <state width="1493" height="267" key="GridCell.Tab.0.right" timestamp="1579444188619">
+    <state width="1493" height="267" key="GridCell.Tab.0.right" timestamp="1579444598644">
       <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.right/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
-    <state width="1493" height="267" key="GridCell.Tab.0.right/64.0.1536.900@64.0.1536.900" timestamp="1579444188619" />
+    <state width="1493" height="267" key="GridCell.Tab.0.right/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.right/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
     <state x="338" y="94" key="SettingsEditor" timestamp="1579366590498">
       <screen x="71" y="0" width="1529" height="900" />

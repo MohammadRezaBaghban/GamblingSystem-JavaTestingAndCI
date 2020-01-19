@@ -122,12 +122,13 @@ public class BankTellerTest {
         //arrange
         String validGamblerCardId = "a2u7wqe3r4";
         Double validAmount = 20.0;
+        Double higherAmount = 25.0;
         GamblerCard gamblerCard = mock(GamblerCard.class);
         when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
         when(gamblerCard.getCredit()).thenReturn(validAmount);
         bankTeller.addCard(gamblerCard);
         //act
-        boolean result = bankTeller.checkCredit(validGamblerCardId, validAmount + 1); //amount greater than the validAmount is supplied.
+        boolean result = bankTeller.checkCredit(validGamblerCardId, higherAmount); //amount greater than the validAmount is supplied.
         //assert
         assertFalse(result, "return value false expected but true is returned.");
     }
@@ -215,13 +216,22 @@ public class BankTellerTest {
      * At calling the withdraw() method with higher amount It should throw Exception.
      * It also should not deduct the amount If the amount is more than the amount it has.
      * Type: indirect input
-     * @throws Exception
+     * @throws NotificationException
      */
     @Test
-    public void withdraw_GamblerShouldNotBeAbleToWithdrawHigherAmountThanItHas() throws Exception {
+    public void withdraw_GamblerShouldNotBeAbleToWithdrawHigherAmountThanItHas() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        Double higherAmount = 25.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        when(gamblerCard.getCredit()).thenReturn(validAmount);
+        bankTeller.addCard(gamblerCard);
+
         //act
         //assert
+        assertThrows(NotificationException.class, ()->bankTeller.withdraw(gamblerCardId,higherAmount));
     }
 
     /**
