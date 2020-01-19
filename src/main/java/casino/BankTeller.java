@@ -99,7 +99,9 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardID
 	 * @param amount
 	 */
-	public void deposit(String gamblerCardID, double amount) {
+	public void deposit(String gamblerCardID, double amount) throws NotificationException {
+		if(amount < 0.0)
+			throw new NotificationException("Amount cannot be negative.");
 		if(isGamblerCardValid(gamblerCardID)) {
 			GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
 			gamblerCard.setCredit(amount);

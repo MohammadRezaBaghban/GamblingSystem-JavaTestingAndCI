@@ -158,7 +158,7 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void deposit_GamblerShouldBeAbleToDepositAmountToTheCard() {
+    public void deposit_GamblerShouldBeAbleToDepositAmountToTheCard() throws NotificationException {
         //arrange
         String gamblerCardId = "a2u7wqe3r4";
         Double validAmount = 20.0;
