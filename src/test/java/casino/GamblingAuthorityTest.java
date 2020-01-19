@@ -67,10 +67,12 @@ public class GamblingAuthorityTest {
      *
      */
     @Test
-    void addBet_BetCannotBeNull_throwNotificationException() {
+    void addBet_BetCannotBeNull_throwNullPointerException() {
         //arrange
+        GamblingAuthority authority = new GamblingAuthority();
         //act
         //assert
+        assertThrows(NullPointerException.class, ()->authority.addBet(null),"Bet cannot be null.");
     }
 
     /**

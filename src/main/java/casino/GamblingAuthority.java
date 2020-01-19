@@ -31,6 +31,8 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 * @param bet
 	 */
 	public void addBet(Bet bet) {
+		if(bet==null)
+			throw new NullPointerException("Bet Can not be NUll");
 		this.listOfBets.add(bet);
 	}
 
@@ -41,7 +43,7 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 */
 	public String getToken(BettingRound bettingRound) throws NotificationException {
 		if(bettingRound==null)
-			throw new NotificationException("Betting Round Cannot be NUll");
+			throw new NotificationException("Betting Round Can not be NUll");
 		String id =  UUID.randomUUID().toString();
 		return id;
 	}
