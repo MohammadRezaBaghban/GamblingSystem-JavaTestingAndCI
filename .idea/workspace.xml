@@ -253,12 +253,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.Whole project" />
       <item itemvalue="Gradle.BankTellerTest.assignCard_BankTellerShouldNotBeAbleToAssignCardWhichIsAlreadyAssigned" />
       <item itemvalue="Gradle.Repo [jacocoTestReport]" />
       <item itemvalue="Gradle.Repo [jacocoTestCoverageVerification]" />
       <item itemvalue="Gradle.BankTellerTest.isGamblerCardValid_ShouldReturnFalseIfCardIsInValid" />
       <item itemvalue="Gradle.GamblingAuthorityTest.getWinNo_ShouldReturnWinNumber" />
+      <item itemvalue="JUnit.Whole project" />
     </list>
     <recent_temporary>
       <list>
