@@ -48,6 +48,19 @@ public class GamblingAuthorityTest {
     }
 
     /**
+     *
+     */
+    @Test
+    void getToken_itShouldLogTheRequest() {
+        //arrange
+        GamblingAuthority authority = new GamblingAuthority();
+
+        //act
+        //assert
+
+    }
+
+    /**
      * This method should check if addBet() method adds bet object to the list.
      */
     @Test
@@ -64,7 +77,8 @@ public class GamblingAuthorityTest {
     }
 
     /**
-     *
+     * Checks if the method throws exception when null value of Bet is submitted.
+     * @throws NullPointerException
      */
     @Test
     void addBet_BetCannotBeNull_throwNullPointerException() {
@@ -75,16 +89,6 @@ public class GamblingAuthorityTest {
         assertThrows(NullPointerException.class, ()->authority.addBet(null),"Bet cannot be null.");
     }
 
-    /**
-     * Checks if the method throws exception when null value of BettingRound is submitted.
-     * @throws NotificationException
-     */
-    @Test
-    public void addBet_BetMustNotBeNull() throws NotificationException {
-        //arrange
-        //act
-        //assert
-    }
 
     /**
      * This method should check if addBettingRound() method adds to the list.
@@ -93,19 +97,29 @@ public class GamblingAuthorityTest {
     @Test
     public void addBettingRound_ShouldAddBettingRoundToTheList() {
         //arrange
+        GamblingAuthority authority = new GamblingAuthority();
+        BettingRound bettingRound = mock(BettingRound.class);
+
         //act
+        authority.addBettingRound(bettingRound);
         //assert
+
     }
 
     /**
-     * This method should check if getWinNo() method returns the number.
+     * This method should check if getWinNo() method returns the whole number.
      * Type: direct output
      */
     @Test
     public void getWinNo_ShouldReturnWinNumber() {
         //arrange
+        GamblingAuthority authority = new GamblingAuthority();
+        BettingRound bettingRound = mock(BettingRound.class);
+
         //act
+        int result = authority.getWinNo(bettingRound);
         //assert
+        assertTrue(result >= 0);
     }
 
     /**

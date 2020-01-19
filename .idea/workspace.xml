@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblingAuthority.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +81,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
@@ -294,7 +294,7 @@
       <workItem from="1578483072891" duration="178000" />
       <workItem from="1579419259006" duration="4210000" />
       <workItem from="1579426428103" duration="7776000" />
-      <workItem from="1579453483137" duration="7403000" />
+      <workItem from="1579453483137" duration="8569000" />
     </task>
     <task id="LOCAL-00001" summary="jacoco plugin added to the build.gradle">
       <created>1579360693771</created>
@@ -499,14 +499,20 @@
       <option name="project" value="LOCAL" />
       <updated>1579465653377</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Refactor PHASE: changes done in addBet() method of GamblingAuthority class and test passed . TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList.">
+      <created>1579466107627</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1579466107627</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Green PHASE: code implemented and it Passed. TEST: BankTellerTest--&gt;CashOut_ShouldReturnFalseIfCardIsInValid." />
     <MESSAGE value="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;CashOut_MethodShouldLogCardInformation." />
     <MESSAGE value="Green PHASE: code implemented and it Passed.TEST: BankTellerTest--&gt;CashOut_MethodShouldLogCardInformation." />
     <MESSAGE value="Red PHASE: test is introduced and it failed.TEST: BankTellerTest--&gt;CashOut_ShouldThrowExceptionIfCardIsNotValid." />
@@ -531,7 +537,8 @@
     <MESSAGE value="Red PHASE: test defined and failed. TEST: GamblingAuthorityTest--&gt;getToken_ShouldReturnUniqueTokenString." />
     <MESSAGE value="Red PHASE: test defined and failed. TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList." />
     <MESSAGE value="Green PHASE: code implemented and test passed . TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList." />
-    <option name="LAST_COMMIT_MESSAGE" value="Green PHASE: code implemented and test passed . TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList." />
+    <MESSAGE value="Refactor PHASE: changes done in addBet() method of GamblingAuthority class and test passed . TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor PHASE: changes done in addBet() method of GamblingAuthority class and test passed . TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList." />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1578478456346">
@@ -577,13 +584,13 @@
     <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1578480235180" />
     <state x="1426" y="-902" key="#com.intellij.ide.util.MemberChooser/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579455477078" />
     <state x="1426" y="-902" key="#com.intellij.ide.util.MemberChooser/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579465508574" />
-    <state x="1170" y="-936" key="CommitChangelistDialog2" timestamp="1579465652512">
+    <state x="1142" y="-936" key="CommitChangelistDialog2" timestamp="1579467225390">
       <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
     <state x="1170" y="-936" key="CommitChangelistDialog2/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456723231" />
     <state x="64" y="93" key="CommitChangelistDialog2/64.0.1536.900@64.0.1536.900" timestamp="1579444594174" />
     <state x="458" y="46" key="CommitChangelistDialog2/71.0.1529.900@71.0.1529.900" timestamp="1579360692881" />
-    <state x="1170" y="-936" key="CommitChangelistDialog2/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579465652512" />
+    <state x="1142" y="-936" key="CommitChangelistDialog2/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579467225390" />
     <state x="571" y="214" key="EnvironmentVariablesDialog" timestamp="1579366533163">
       <screen x="71" y="0" width="1529" height="900" />
     </state>
@@ -659,5 +666,9 @@
     </state>
     <state x="1357" y="-911" key="refactoring.ChangeSignatureDialog/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579455645066" />
     <state x="1357" y="-911" key="refactoring.ChangeSignatureDialog/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579465512331" />
+    <state x="1373" y="-627" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579466789129">
+      <screen x="722" y="-1080" width="1858" height="1080" />
+    </state>
+    <state x="1373" y="-627" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579466789129" />
   </component>
 </project>
