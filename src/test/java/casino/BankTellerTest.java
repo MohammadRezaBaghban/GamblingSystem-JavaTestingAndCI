@@ -74,7 +74,7 @@ public class BankTellerTest {
     }
 
     /**
-     *
+     *if the card is not valid, NotificationException is expected.
      */
     @Test
     void CashOut_ShouldThrowExceptionIfCardIsNotValid() throws NotificationException {
@@ -86,8 +86,6 @@ public class BankTellerTest {
         bankTeller.addCard(gamblerCard);
 
         //act
-        ;
-
         //assert
         assertThrows(NotificationException.class, () -> {
            bankTeller.CashOut(InvalidGamblerCardId);

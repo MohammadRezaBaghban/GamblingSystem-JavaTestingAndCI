@@ -61,7 +61,7 @@ public class BankTeller implements IBetLoggingAuthority {
 			gamblerCard.setCredit(0.0);
 		}
 		else
-			throw new NotificationException("gamblerCard is not Valid.");
+			throw new NotificationException("gamblerCard is Invalid.");
 	}
 
 	/**
