@@ -132,28 +132,24 @@ public class BankTellerTest {
         assertFalse(result, "return value false expected but true is returned.");
     }
 
-    /**
-     * This method checks if the given card number is invalid it should throw an exception.
-     * It uses the mock object of GamblerCard which returns valid card number.
-     * Type: indirect input
-     * @throws NotificationException
-     */
-    @Test
-    public void isValid_ShouldThrowExceptionIfCardNumberIsInvalid() throws NotificationException {
-        //arrange
-        //act
-        //assert
-    }
 
     /**
      * While clearCard() method is invoked at the Bank Teller. It should clear the amount of the card and set it to zero.
      * Type: indirect input
      */
     @Test
-    public void clearCard_CardAmountShouldBeZeroAfterCheckingOut() {
+    public void clearCard_CardAmountShouldBeZeroAfterCheckingOut() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.clearCard(gamblerCardId);
+
         //assert
+        verify(gamblerCard).setCredit(0.0);
     }
 
     /**
@@ -164,8 +160,17 @@ public class BankTellerTest {
     @Test
     public void deposit_GamblerShouldBeAbleToDepositAmountToTheCard() {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.deposit(gamblerCardId, validAmount);
+
         //assert
+        verify(gamblerCard).setCredit(validAmount);
     }
 
     /**
