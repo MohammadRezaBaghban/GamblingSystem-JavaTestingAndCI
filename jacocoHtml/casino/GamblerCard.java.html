@@ -3,7 +3,7 @@
 import java.util.Date;
 import java.util.List;
 
-<span class="nc" id="L6">public class GamblerCard {</span>
+public class GamblerCard {
 
 	/**
 	 * The Initial amount is determined on the assignment of the card to gambler by bank teller
@@ -15,12 +15,17 @@ import java.util.List;
 	private boolean assignedStatus;
 	private double credit;
 
+<span class="fc" id="L18">	public GamblerCard(){</span>
+<span class="fc" id="L19">		assignedStatus = false;</span>
+
+<span class="fc" id="L21">	}</span>
+
 	/**
 	 * A getter method for taking InitialAmount that card has been created with
 	 * @return The initial amount that gambler charge on its assignment
 	 */
 	public double getInitialAmount() {
-<span class="nc" id="L23">		return this.initialAmount;</span>
+<span class="nc" id="L28">		return this.initialAmount;</span>
 	}
 
 	/**
@@ -28,7 +33,7 @@ import java.util.List;
 	 * @return The last moment that the card has been assigned to a gambler
 	 */
 	public Date getTimeStamp() {
-<span class="nc" id="L31">		return this.timeStamp;</span>
+<span class="nc" id="L36">		return this.timeStamp;</span>
 	}
 
 	/**
@@ -36,7 +41,7 @@ import java.util.List;
 	 * @return List of bets that the Gambler has been made with card
 	 */
 	public List&lt;String&gt; getListOfBet() {
-<span class="nc" id="L39">		return this.listOfBet;</span>
+<span class="nc" id="L44">		return this.listOfBet;</span>
 	}
 
 	/**
@@ -44,7 +49,7 @@ import java.util.List;
 	 * @return The unique ID of gambler card
 	 */
 	public String getCardID() {
-<span class="nc" id="L47">		return this.cardID;</span>
+<span class="nc" id="L52">		return this.cardID;</span>
 	}
 
 	/**
@@ -52,7 +57,7 @@ import java.util.List;
 	 * @return boolean status of card assignment to a gambler
 	 */
 	public boolean getAssignedStatus() {
-<span class="nc" id="L55">		return this.assignedStatus;</span>
+<span class="nc" id="L60">		return this.assignedStatus;</span>
 	}
 
 	/**
@@ -60,7 +65,7 @@ import java.util.List;
 	 * @return the current balance of gamblerCard
 	 */
 	public double getCredit() {
-<span class="nc" id="L63">		return this.credit;</span>
+<span class="nc" id="L68">		return this.credit;</span>
 	}
 
 	/**
@@ -71,10 +76,15 @@ import java.util.List;
 	 *     and clear list of bets.
 	 * &lt;/p&gt;
 	 */
-	public void checkOut() {
-		// TODO - implement GamblerCard.checkOut
-<span class="nc" id="L76">		throw new UnsupportedOperationException();</span>
-	}
+	public void checkOut() throws NotificationException {
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">		if(assignedStatus){</span>
+
+		}else{
+<span class="fc" id="L83">			throw new NotificationException(&quot;It is not possible to checkout an unassigned card&quot;);</span>
+		}
+<span class="nc" id="L85">	}</span>
+
+
 
 	/**
 	 * Change the current Balance of card
@@ -87,7 +97,7 @@ import java.util.List;
 	 */
 	public boolean setCredit(double amount) {
 		// TODO - implement GamblerCard.setCredit
-<span class="nc" id="L90">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L100">		throw new UnsupportedOperationException();</span>
 	}
 
 	/**
@@ -101,7 +111,7 @@ import java.util.List;
 	 */
 	public void addBet(String betId) {
 		// TODO - implement GamblerCard.addBet
-<span class="nc" id="L104">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L114">		throw new UnsupportedOperationException();</span>
 	}
 
 
@@ -111,8 +121,10 @@ import java.util.List;
 	 */
 	public String ToString() {
 		// TODO - implement GamblerCard.ToString
-<span class="nc" id="L114">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L124">		throw new UnsupportedOperationException();</span>
 	}
 
+	public void AssignCard(int i) {
+<span class="fc" id="L128">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

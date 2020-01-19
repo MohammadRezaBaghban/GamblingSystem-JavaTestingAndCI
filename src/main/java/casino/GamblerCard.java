@@ -15,6 +15,11 @@ public class GamblerCard {
 	private boolean assignedStatus;
 	private double credit;
 
+	public GamblerCard(){
+		assignedStatus = false;
+		cardID =  java.util.UUID.randomUUID().toString();
+	}
+
 	/**
 	 * A getter method for taking InitialAmount that card has been created with
 	 * @return The initial amount that gambler charge on its assignment
@@ -71,10 +76,15 @@ public class GamblerCard {
 	 *     and clear list of bets.
 	 * </p>
 	 */
-	public void checkOut() {
-		// TODO - implement GamblerCard.checkOut
-		throw new UnsupportedOperationException();
+	public void checkOut() throws NotificationException {
+		if(assignedStatus){
+
+		}else{
+			throw new NotificationException("It is not possible to checkout an unassigned card");
+		}
 	}
+
+
 
 	/**
 	 * Change the current Balance of card
@@ -114,4 +124,6 @@ public class GamblerCard {
 		throw new UnsupportedOperationException();
 	}
 
+	public void AssignCard(int i) {
+	}
 }

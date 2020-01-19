@@ -7,7 +7,8 @@ import org.junit.jupiter.api.Test;
 
 public class GamblerCardTest {
 
-    GamblerCard GamblerCard_SUT_Object;
+    public GamblerCard GamblerCard_SUT_Object;
+
     @Before
     public void Setup(){
         //Arrange
@@ -23,6 +24,8 @@ public class GamblerCardTest {
     //Direct Inputs
     @Test
     public void checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException(){
+        //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
         // Act & Assert
         Assertions.assertThrows(NotificationException.class,
 
@@ -30,6 +33,8 @@ public class GamblerCardTest {
                 "A Gambler Card cannot be checkout if it was not be assigned"
         );
     }
+
+
 
     /**
      * Check Out Card Successfully will result in Reset the Details of GamblerCard
@@ -41,13 +46,21 @@ public class GamblerCardTest {
      */
     @Test
     //Direct Inputs
-    public void checkOut_CheckOutCardSuccessfully_ResetItsDetails(){
+    public void checkOut_CheckOutCardSuccessfully_ResetItsDetails() throws NotificationException {
 
         //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
+        GamblerCard_SUT_Object.AssignCard(100);
+
 
         //Act
+        GamblerCard_SUT_Object.checkOut();
 
         //Assert
+        Assert.assertTrue("Initial amount was not rested",GamblerCard_SUT_Object.getInitialAmount()==0);
+        Assert.assertTrue("The credit was not rested",GamblerCard_SUT_Object.getCredit()==0);
+        Assert.assertTrue("The timestamp was not cleared",GamblerCard_SUT_Object.getTimeStamp()==null);
+        Assert.assertTrue("The list of bets was not cleared",GamblerCard_SUT_Object.getListOfBet()==null);
 
     }
 
