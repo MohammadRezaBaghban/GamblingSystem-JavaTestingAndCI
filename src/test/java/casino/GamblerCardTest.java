@@ -14,13 +14,12 @@ import java.time.LocalDateTime;
 public class GamblerCardTest {
 
     public GamblerCard GamblerCard_SUT_Object;
-    public Timestamp Valid_AssignmentMoment;
+    public final Timestamp Valid_AssignmentMoment = Timestamp.valueOf(LocalDateTime.now());
 
     @BeforeEach
     public void Setup(){
         //Arrange
         GamblerCard_SUT_Object = new GamblerCard();
-        Valid_AssignmentMoment = Timestamp.valueOf(LocalDateTime.now());
     }
 
     /**

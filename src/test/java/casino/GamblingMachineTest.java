@@ -1,9 +1,28 @@
 package casino;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+
+import java.util.UUID;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class GamblingMachineTest {
 
+    private GamblingMachine gamblingMachineSUT_object;
+    private BankTeller bankTeller_MockedObject;
+    private Game game_MockedObject;
+    private String Valid_GamblerCard_ID = UUID.randomUUID().toString();
+
+
+    @BeforeEach
+    public void Setup(){
+        game_MockedObject = mock(Game.class);
+        bankTeller_MockedObject = mock(BankTeller.class);
+        gamblingMachineSUT_object = new GamblingMachine(game_MockedObject,bankTeller_MockedObject);
+    }
 
     /**
      * throw BetNotificationException on placing a bet when the betRound has already been assigned
@@ -12,13 +31,15 @@ public class GamblingMachineTest {
     public void placeBet_theBetRoundHasBeenAlreadyAssigned_ThrowNotificationException(){
 
         //Arrange
-
+        
         //Act
 
         //Assert
 
 
     }
+
+
 
     /**
      * When gamblerCard Is Not Valid then Throw NotificationException
@@ -32,6 +53,7 @@ public class GamblingMachineTest {
     public void placeBet_gamblerCardIdIsNotValid_ThrowNotificationException()
 
     //Arrange
+    bankTeller_MockedObject.
 
     //Act
 
