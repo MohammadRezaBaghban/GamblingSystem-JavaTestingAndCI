@@ -2,6 +2,7 @@ package casino;
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 
 public class GamblerCard {
@@ -11,7 +12,7 @@ public class GamblerCard {
 	 */
 	private double initialAmount;
 	private Date timeStamp;
-	private List<String> listOfBet;
+	private HashSet<String> listOfBet;
 	private String cardID;
 	private boolean assignedStatus;
 	private double credit;
@@ -41,7 +42,7 @@ public class GamblerCard {
 	 * A getter method for accessing the list of bets that gambler has been made
 	 * @return List of bets that the Gambler has been made with card
 	 */
-	public List<String> getListOfBet() {
+	public HashSet<String> getListOfBet() {
 		return this.listOfBet;
 	}
 
@@ -79,7 +80,11 @@ public class GamblerCard {
 	 */
 	public void checkOut() throws NotificationException {
 		if(assignedStatus){
-
+			this.initialAmount = 0;
+			this.credit = 0;
+			timeStamp = null;
+			listOfBet = null;
+			assignedStatus=false;
 		}else{
 			throw new NotificationException("It is not possible to checkout an unassigned card");
 		}
@@ -125,6 +130,24 @@ public class GamblerCard {
 		throw new UnsupportedOperationException();
 	}
 
-	public void AssignCard(double initialAmount, Timestamp assignmentMoment) {
+	/**
+	 *
+	 * @param initialAmount the initial amount of GamblerCard that become credit
+	 * @param assignmentMoment the moment that the card is going to be created
+	 * @throws NotificationException on requesting for an assigned card or initial amount less 5
+	 */
+	public void AssignCard(double initialAmount, Timestamp assignmentMoment) throws NotificationException {
+		if(assignedStatus){
+			throw new NotificationException("An Assigned Card can not be reassign before checkout");
+		}
+		else if(initialAmount<5){
+			throw new NotificationException("The initial amount can not be less than 5 euros");
+		}else{
+			this.initialAmount = initialAmount;
+			this.credit = initialAmount;
+			timeStamp = assignmentMoment;
+			listOfBet = new HashSet<String>();
+			assignedStatus = true;
+		}
 	}
 }

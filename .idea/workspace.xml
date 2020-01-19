@@ -183,6 +183,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GamblerCardTest.AssignCard_OnAssigningAnAssignedCard_ThrowNotificationException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Casino.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="casino.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="casino" />
+      <option name="MAIN_CLASS_NAME" value="casino.GamblerCardTest" />
+      <option name="METHOD_NAME" value="AssignCard_OnAssigningAnAssignedCard_ThrowNotificationException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GamblerCardTest.AssignCard_OnProvidingNegativeAmount_ThrowNotificationException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Casino.test" />
       <extension name="coverage">
@@ -199,7 +215,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GamblerCardTest.checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GamblerCardTest.AssignCard_OnSuccessfullCardAssigning_ValuesOfCardBeSetCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Casino.test" />
       <extension name="coverage">
         <pattern>
@@ -209,7 +225,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="casino" />
       <option name="MAIN_CLASS_NAME" value="casino.GamblerCardTest" />
-      <option name="METHOD_NAME" value="checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException" />
+      <option name="METHOD_NAME" value="AssignCard_OnSuccessfullCardAssigning_ValuesOfCardBeSetCorrectly" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -247,17 +263,19 @@
       <item itemvalue="Gradle.TCI-Gambling [dependencies]" />
       <item itemvalue="Gradle.MohammadTDD [build]" />
       <item itemvalue="JUnit.WholeProject" />
-      <item itemvalue="JUnit.GamblerCardTest.checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException" />
       <item itemvalue="JUnit.GamblerCardTest.checkOut_CheckOutCardSuccessfully_ResetItsDetails" />
       <item itemvalue="JUnit.GamblerCardTest.AssignCard_OnProvidingNegativeAmount_ThrowNotificationException" />
       <item itemvalue="JUnit.GamblerCardTest" />
+      <item itemvalue="JUnit.GamblerCardTest.AssignCard_OnAssigningAnAssignedCard_ThrowNotificationException" />
+      <item itemvalue="JUnit.GamblerCardTest.AssignCard_OnSuccessfullCardAssigning_ValuesOfCardBeSetCorrectly" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GamblerCardTest" />
-        <item itemvalue="JUnit.GamblerCardTest.AssignCard_OnProvidingNegativeAmount_ThrowNotificationException" />
         <item itemvalue="JUnit.GamblerCardTest.checkOut_CheckOutCardSuccessfully_ResetItsDetails" />
-        <item itemvalue="JUnit.GamblerCardTest.checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException" />
+        <item itemvalue="JUnit.GamblerCardTest.AssignCard_OnSuccessfullCardAssigning_ValuesOfCardBeSetCorrectly" />
+        <item itemvalue="JUnit.GamblerCardTest.AssignCard_OnAssigningAnAssignedCard_ThrowNotificationException" />
+        <item itemvalue="JUnit.GamblerCardTest.AssignCard_OnProvidingNegativeAmount_ThrowNotificationException" />
       </list>
     </recent_temporary>
   </component>
@@ -292,7 +310,7 @@
       <workItem from="1578395740697" duration="13603000" />
       <workItem from="1578483072891" duration="178000" />
       <workItem from="1579203461995" duration="7200000" />
-      <workItem from="1579360905110" duration="19355000" />
+      <workItem from="1579360905110" duration="21286000" />
     </task>
     <task id="LOCAL-00001" summary="Red Phase for &quot;checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException&quot;">
       <created>1579456214443</created>
@@ -370,26 +388,42 @@
     </state>
     <state x="617" y="206" width="605" height="482" key="FileChooserDialogImpl/0.0.2000.1293@0.0.2000.1293" timestamp="1579381751136" />
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
-    <state width="978" height="332" key="GridCell.Tab.0.bottom" timestamp="1579459665573">
+    <state width="978" height="332" key="GridCell.Tab.0.bottom" timestamp="1579465182187">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="978" height="332" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579459665573" />
+    <state width="978" height="332" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579465182187" />
     <state width="1371" height="236" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="978" height="332" key="GridCell.Tab.0.center" timestamp="1579459665572">
+    <state width="978" height="332" key="GridCell.Tab.0.center" timestamp="1579465182187">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="978" height="332" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579459665572" />
+    <state width="978" height="332" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579465182187" />
     <state width="1371" height="236" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="978" height="332" key="GridCell.Tab.0.left" timestamp="1579459665572">
+    <state width="978" height="332" key="GridCell.Tab.0.left" timestamp="1579465182186">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="978" height="332" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579459665572" />
+    <state width="978" height="332" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579465182186" />
     <state width="1371" height="236" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="978" height="332" key="GridCell.Tab.0.right" timestamp="1579459665572">
+    <state width="978" height="332" key="GridCell.Tab.0.right" timestamp="1579465182187">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="978" height="332" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579459665572" />
+    <state width="978" height="332" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579465182187" />
     <state width="1371" height="236" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
+    <state width="978" height="449" key="GridCell.Tab.1.bottom" timestamp="1579461569391">
+      <screen x="0" y="0" width="2000" height="1293" />
+    </state>
+    <state width="978" height="449" key="GridCell.Tab.1.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579461569391" />
+    <state width="978" height="449" key="GridCell.Tab.1.center" timestamp="1579461569391">
+      <screen x="0" y="0" width="2000" height="1293" />
+    </state>
+    <state width="978" height="449" key="GridCell.Tab.1.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579461569391" />
+    <state width="978" height="449" key="GridCell.Tab.1.left" timestamp="1579461569391">
+      <screen x="0" y="0" width="2000" height="1293" />
+    </state>
+    <state width="978" height="449" key="GridCell.Tab.1.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579461569391" />
+    <state width="978" height="449" key="GridCell.Tab.1.right" timestamp="1579461569391">
+      <screen x="0" y="0" width="2000" height="1293" />
+    </state>
+    <state width="978" height="449" key="GridCell.Tab.1.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579461569391" />
     <state x="504" y="293" key="SettingsEditor" timestamp="1579362559659">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>

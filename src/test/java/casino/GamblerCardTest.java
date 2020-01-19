@@ -25,7 +25,7 @@ public class GamblerCardTest {
      */
     //Direct Input
     @Test
-    public void AssignCard_OnAssigningAnAssignedCard_ThrowNotificationException(){
+    public void AssignCard_OnAssigningAnAssignedCard_ThrowNotificationException() throws NotificationException {
 
         //Arrange
         GamblerCard_SUT_Object = new GamblerCard();
@@ -61,7 +61,7 @@ public class GamblerCardTest {
      * Assigning an unassigned card with a value more than or equal to 5 make the card assigned
      */
     @Test //DirectInput //DirectOutPut
-    public void AssignCard_OnSuccessfullCardAssigning_ValuesOfCardBeSetCorrectly(){
+    public void AssignCard_OnSuccessfullCardAssigning_ValuesOfCardBeSetCorrectly() throws NotificationException {
 
         //Arrange
         GamblerCard_SUT_Object = new GamblerCard();
@@ -75,7 +75,7 @@ public class GamblerCardTest {
         Assert.assertTrue("The Credit is not being set correctly",GamblerCard_SUT_Object.getCredit()==200);
         Assert.assertTrue("The bet list is not clear correctly",GamblerCard_SUT_Object.getListOfBet().size()==0);
         Assert.assertTrue("The timeStamp is not correctly set",GamblerCard_SUT_Object.getTimeStamp()==Valid_AssignmentMoment);
-
+        Assert.assertTrue("The Gambler assigned status is set to True",GamblerCard_SUT_Object.getAssignedStatus() == true);
     }
 
     /**
@@ -124,6 +124,8 @@ public class GamblerCardTest {
         Assert.assertTrue("The credit was not rested",GamblerCard_SUT_Object.getCredit()==0);
         Assert.assertTrue("The timestamp was not cleared",GamblerCard_SUT_Object.getTimeStamp()==null);
         Assert.assertTrue("The list of bets was not cleared",GamblerCard_SUT_Object.getListOfBet()==null);
+        Assert.assertTrue("The Gambler assigned status is not reseted to false",GamblerCard_SUT_Object.getAssignedStatus()==false);
+
 
     }
 

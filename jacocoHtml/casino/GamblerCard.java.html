@@ -2,6 +2,7 @@
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 
 public class GamblerCard {
@@ -11,22 +12,22 @@ public class GamblerCard {
 	 */
 	private double initialAmount;
 	private Date timeStamp;
-	private List&lt;String&gt; listOfBet;
+	private HashSet&lt;String&gt; listOfBet;
 	private String cardID;
 	private boolean assignedStatus;
 	private double credit;
 
-<span class="fc" id="L19">	public GamblerCard(){</span>
-<span class="fc" id="L20">		assignedStatus = false;</span>
-<span class="fc" id="L21">		cardID =  java.util.UUID.randomUUID().toString();</span>
-<span class="fc" id="L22">	}</span>
+<span class="fc" id="L20">	public GamblerCard(){</span>
+<span class="fc" id="L21">		assignedStatus = false;</span>
+<span class="fc" id="L22">		cardID =  java.util.UUID.randomUUID().toString();</span>
+<span class="fc" id="L23">	}</span>
 
 	/**
 	 * A getter method for taking InitialAmount that card has been created with
 	 * @return The initial amount that gambler charge on its assignment
 	 */
 	public double getInitialAmount() {
-<span class="fc" id="L29">		return this.initialAmount;</span>
+<span class="fc" id="L30">		return this.initialAmount;</span>
 	}
 
 	/**
@@ -34,15 +35,15 @@ public class GamblerCard {
 	 * @return The last moment that the card has been assigned to a gambler
 	 */
 	public Date getTimeStamp() {
-<span class="nc" id="L37">		return this.timeStamp;</span>
+<span class="fc" id="L38">		return this.timeStamp;</span>
 	}
 
 	/**
 	 * A getter method for accessing the list of bets that gambler has been made
 	 * @return List of bets that the Gambler has been made with card
 	 */
-	public List&lt;String&gt; getListOfBet() {
-<span class="nc" id="L45">		return this.listOfBet;</span>
+	public HashSet&lt;String&gt; getListOfBet() {
+<span class="fc" id="L46">		return this.listOfBet;</span>
 	}
 
 	/**
@@ -50,7 +51,7 @@ public class GamblerCard {
 	 * @return The unique ID of gambler card
 	 */
 	public String getCardID() {
-<span class="nc" id="L53">		return this.cardID;</span>
+<span class="nc" id="L54">		return this.cardID;</span>
 	}
 
 	/**
@@ -58,7 +59,7 @@ public class GamblerCard {
 	 * @return boolean status of card assignment to a gambler
 	 */
 	public boolean getAssignedStatus() {
-<span class="nc" id="L61">		return this.assignedStatus;</span>
+<span class="fc" id="L62">		return this.assignedStatus;</span>
 	}
 
 	/**
@@ -66,7 +67,7 @@ public class GamblerCard {
 	 * @return the current balance of gamblerCard
 	 */
 	public double getCredit() {
-<span class="nc" id="L69">		return this.credit;</span>
+<span class="fc" id="L70">		return this.credit;</span>
 	}
 
 	/**
@@ -78,12 +79,16 @@ public class GamblerCard {
 	 * &lt;/p&gt;
 	 */
 	public void checkOut() throws NotificationException {
-<span class="pc bpc" id="L81" title="1 of 2 branches missed.">		if(assignedStatus){</span>
-
+<span class="fc bfc" id="L82" title="All 2 branches covered.">		if(assignedStatus){</span>
+<span class="fc" id="L83">			this.initialAmount = 0;</span>
+<span class="fc" id="L84">			this.credit = 0;</span>
+<span class="fc" id="L85">			timeStamp = null;</span>
+<span class="fc" id="L86">			listOfBet = null;</span>
+<span class="fc" id="L87">			assignedStatus=false;</span>
 		}else{
-<span class="fc" id="L84">			throw new NotificationException(&quot;It is not possible to checkout an unassigned card&quot;);</span>
+<span class="fc" id="L89">			throw new NotificationException(&quot;It is not possible to checkout an unassigned card&quot;);</span>
 		}
-<span class="nc" id="L86">	}</span>
+<span class="fc" id="L91">	}</span>
 
 
 
@@ -98,7 +103,7 @@ public class GamblerCard {
 	 */
 	public boolean setCredit(double amount) {
 		// TODO - implement GamblerCard.setCredit
-<span class="nc" id="L101">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L106">		throw new UnsupportedOperationException();</span>
 	}
 
 	/**
@@ -112,7 +117,7 @@ public class GamblerCard {
 	 */
 	public void addBet(String betId) {
 		// TODO - implement GamblerCard.addBet
-<span class="nc" id="L115">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L120">		throw new UnsupportedOperationException();</span>
 	}
 
 
@@ -122,10 +127,28 @@ public class GamblerCard {
 	 */
 	public String ToString() {
 		// TODO - implement GamblerCard.ToString
-<span class="nc" id="L125">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L130">		throw new UnsupportedOperationException();</span>
 	}
 
-	public void AssignCard(double initialAmount, Timestamp assignmentMoment) {
-<span class="fc" id="L129">	}</span>
+	/**
+	 *
+	 * @param initialAmount the initial amount of GamblerCard that become credit
+	 * @param assignmentMoment the moment that the card is going to be created
+	 * @throws NotificationException on requesting for an assigned card or initial amount less 5
+	 */
+	public void AssignCard(double initialAmount, Timestamp assignmentMoment) throws NotificationException {
+<span class="fc bfc" id="L140" title="All 2 branches covered.">		if(assignedStatus){</span>
+<span class="fc" id="L141">			throw new NotificationException(&quot;An Assigned Card can not be reassign before checkout&quot;);</span>
+		}
+<span class="fc bfc" id="L143" title="All 2 branches covered.">		else if(initialAmount&lt;5){</span>
+<span class="fc" id="L144">			throw new NotificationException(&quot;The initial amount can not be less than 5 euros&quot;);</span>
+		}else{
+<span class="fc" id="L146">			this.initialAmount = initialAmount;</span>
+<span class="fc" id="L147">			this.credit = initialAmount;</span>
+<span class="fc" id="L148">			timeStamp = assignmentMoment;</span>
+<span class="fc" id="L149">			listOfBet = new HashSet&lt;String&gt;();</span>
+<span class="fc" id="L150">			assignedStatus = true;</span>
+		}
+<span class="fc" id="L152">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
