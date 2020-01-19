@@ -181,8 +181,14 @@ public class BankTellerTest {
     @Test
     public void deposit_InputAmountMustNotBeZero_ThrowsException() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = -20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
-        //assert
+        assertThrows(NotificationException.class, ()-> bankTeller.deposit(gamblerCardId, validAmount), "when negative amount is supplied. NotificationException is expected.");
     }
 
     /**
