@@ -73,11 +73,11 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @return
 	 */
 	private GamblerCard getGamblingCard(String gamblerCardID) {
-<span class="fc" id="L76">		GamblerCard card = null;</span>
-<span class="fc bfc" id="L77" title="All 2 branches covered.">		for(GamblerCard c : listOfGamblerCard)</span>
-<span class="pc bpc" id="L78" title="1 of 2 branches missed.">			if (c.getCardID().equals(gamblerCardID))</span>
-<span class="fc" id="L79">				card = c;</span>
-<span class="fc" id="L80">		return card;</span>
+<span class="nc" id="L76">		GamblerCard card = null;</span>
+<span class="nc bnc" id="L77" title="All 2 branches missed.">		for(GamblerCard c : listOfGamblerCard)</span>
+<span class="nc bnc" id="L78" title="All 2 branches missed.">			if (c.getCardID().equals(gamblerCardID))</span>
+<span class="nc" id="L79">				card = c;</span>
+<span class="nc" id="L80">		return card;</span>
 	}
 
 	/**
@@ -116,11 +116,11 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public void withdraw(String gamblerCardID, double amount) throws NotificationException {
-<span class="fc" id="L119">		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);</span>
-<span class="pc bpc" id="L120" title="1 of 2 branches missed.">		if(gamblerCard.getCredit()&gt;=amount)</span>
+<span class="nc" id="L119">		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);</span>
+<span class="nc bnc" id="L120" title="All 2 branches missed.">		if(gamblerCard.getCredit()&gt;=amount)</span>
 <span class="nc" id="L121">			gamblerCard.withdrawCredit(amount);</span>
 		else
-<span class="fc" id="L123">			throw new NotificationException(&quot;Not sufficient balance on card.&quot;);</span>
+<span class="nc" id="L123">			throw new NotificationException(&quot;Not sufficient balance on card.&quot;);</span>
 <span class="nc" id="L124">	}</span>
 
 	/**
@@ -130,7 +130,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) {
 
-<span class="nc" id="L133">	}</span>
+<span class="fc" id="L133">	}</span>
 
 	public Bet getBet(String betId){
 <span class="nc" id="L136">		return null; //to satisfy compiler</span>

@@ -56,4 +56,7 @@ public class Bet {
 		return this.cardInformation;
 	}
 
+	public String getId() {
+		return this.id;
+	}
 }
