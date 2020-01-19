@@ -46,7 +46,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	}
 
 	/**
-	 * Check if the amount is assigned
+	 * It sets the initial value of the card's credit and set it's status as assigned.
 	 * @param amount
 	 */
 	public boolean assignCard(double amount) {

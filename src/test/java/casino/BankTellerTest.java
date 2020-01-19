@@ -2,6 +2,7 @@ package casino;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.internal.matchers.Not;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -240,7 +241,7 @@ public class BankTellerTest {
      * Type: indirect output
      */
     @Test
-    public void addBet_BankTellerShouldBeAbleToAddBetIntoTheCard() {
+    public void addBet_BankTellerShouldBeAbleToAddBetIntoTheCard() throws NotificationException {
         //arrange
         String gamblerCardId = "a2u7wqe3r4";
         String validBetId = "jas54k";
@@ -261,8 +262,8 @@ public class BankTellerTest {
      *
      */
     @Test
-    void addBet_ShouldThrowExceptionIfCardIsNotValid() {
-//arrange
+    void addBet_ShouldThrowExceptionIfCardIsNotValid() throws NotificationException {
+        //arrange
         String gamblerCardId = "a2u7wqe3r4";
         String invalidGamblerCardId = "jas54k";
         GamblerCard gamblerCard = mock(GamblerCard.class);
@@ -284,8 +285,17 @@ public class BankTellerTest {
     @Test
     public void assignCard_BankTellerShouldNotBeAbleToAssignCardWhichIsAlreadyAssigned() {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.assignCard(gamblerCardId, validAmount); // assigned already.
+
         //assert
+        assertThrows(NotificationException.class, ()->bankTeller.assignCard(gamblerCardId, validAmount));// trying to assign the sameCard again.
     }
 
     /**
@@ -295,8 +305,18 @@ public class BankTellerTest {
     @Test
     public void assignCard_BankTellerShouldBeAbleToAssignCard() {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.assignCard(gamblerCardId, validAmount);
+
         //assert
+        verify(gamblerCard).setCredit(validAmount);
+        verify(gamblerCard).setAssignedStatus();
     }
 
 }

@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/Bet.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/Bet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/Bet.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/Bet.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/Bet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,7 +294,7 @@
       <workItem from="1578483072891" duration="178000" />
       <workItem from="1579419259006" duration="4210000" />
       <workItem from="1579426428103" duration="7776000" />
-      <workItem from="1579453483137" duration="1119000" />
+      <workItem from="1579453483137" duration="2111000" />
     </task>
     <task id="LOCAL-00001" summary="jacoco plugin added to the build.gradle">
       <created>1579360693771</created>
@@ -460,7 +450,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579454513544</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Green PHASE: code implemented and test passed. TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard.">
+      <created>1579454638127</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1579454638127</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Refactor PHASE: code changed in AddBetToGamblerCard method and test passed. TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard.">
+      <created>1579455018093</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1579455018093</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +494,9 @@
     <MESSAGE value="Green PHASE: code implemented and test passed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard." />
     <MESSAGE value="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;withdraw_GamblerShouldNotBeAbleToWithdrawHigherAmountThanItHas." />
     <MESSAGE value="Red PHASE: test defined and failed.  TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard." />
-    <option name="LAST_COMMIT_MESSAGE" value="Red PHASE: test defined and failed.  TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard." />
+    <MESSAGE value="Green PHASE: code implemented and test passed. TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard." />
+    <MESSAGE value="Refactor PHASE: code changed in AddBetToGamblerCard method and test passed. TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor PHASE: code changed in AddBetToGamblerCard method and test passed. TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard." />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1578478456346">
@@ -529,15 +535,16 @@
       <screen x="71" y="0" width="1529" height="900" />
     </state>
     <state x="292" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog/71.0.1529.900@71.0.1529.900" timestamp="1579366611964" />
-    <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1578480235180">
-      <screen x="62" y="0" width="1538" height="900" />
+    <state x="1426" y="-902" key="#com.intellij.ide.util.MemberChooser" timestamp="1579455477078">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
     <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1578403683259" />
     <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1578480235180" />
-    <state x="1275" y="-936" key="CommitChangelistDialog2" timestamp="1579454512467">
+    <state x="1426" y="-902" key="#com.intellij.ide.util.MemberChooser/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579455477078" />
+    <state x="1170" y="-936" key="CommitChangelistDialog2" timestamp="1579455598579">
       <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state x="1275" y="-936" key="CommitChangelistDialog2/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579454512467" />
+    <state x="1170" y="-936" key="CommitChangelistDialog2/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579455598579" />
     <state x="64" y="93" key="CommitChangelistDialog2/64.0.1536.900@64.0.1536.900" timestamp="1579444594174" />
     <state x="458" y="46" key="CommitChangelistDialog2/71.0.1529.900@71.0.1529.900" timestamp="1579360692881" />
     <state x="571" y="214" key="EnvironmentVariablesDialog" timestamp="1579366533163">
