@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Convert;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
@@ -212,17 +213,42 @@ public class GamblerCardTest {
 
     }
 
-    /**
-     * On calling to string method, the string includes all the Gambler card details
-     */
-    @Test
-    public void ToString_OnCalling_IncludesAllImportantDetailOfGamblercard(){
 
+    /**
+     * On calling to string method on an unassigned Gambler, the string should show this
+     */
+    @Test //Direct Output
+    public void ToString_OnCallingAnUnAssignedCard_IncludesAllImportantDetailOfGamblercard() throws NotificationException {
         //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
 
         //Act
+        String result = GamblerCard_SUT_Object.toString();
 
         //Assert
+        Assert.assertTrue("The format is not correct", GamblerCard_SUT_Object.toString()=="Card with cardId of "+GamblerCard_SUT_Object.getCardID()+" is unassigned");
+    }
+
+    /**
+     * On calling to string method on an assigned Gambler, the string includes all the Gambler card details
+     */
+    @Test //Direct Output
+    public void ToString_OnCallingAnAssignedCard_IncludesAllImportantDetailOfGamblercard() throws NotificationException {
+
+        //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
+        GamblerCard_SUT_Object.AssignCard(200,Valid_AssignmentMoment);
+
+        //Act
+        String result = GamblerCard_SUT_Object.toString();
+
+
+        //Assert
+        Assert.assertTrue("CardId is not included",result.contains(GamblerCard_SUT_Object.getCardID()));
+        Assert.assertTrue("Credit is not included",result.contains(Double.toString(GamblerCard_SUT_Object.getCredit())));
+        Assert.assertTrue("InitialCredit is not included",result.contains(Double.toString(GamblerCard_SUT_Object.getInitialAmount())));
+        Assert.assertTrue("TimeStamp is not included",result.contains(GamblerCard_SUT_Object.getTimeStamp().toString()));
+        Assert.assertTrue("Number of Bet is not included",result.contains(Integer.toString(GamblerCard_SUT_Object.getListOfBet().size())));
 
 
     }
