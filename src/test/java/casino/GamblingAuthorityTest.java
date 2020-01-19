@@ -1,12 +1,13 @@
 package casino;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static casino.isAWholeNumber.IsAWholeNumber;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -106,6 +107,6 @@ public class GamblingAuthorityTest {
         //act
         int result = authority.getWinNo(bettingRound);
         //assert
-        assertTrue(result >= 0);
+        assertThat(authority.getWinNo(bettingRound), IsAWholeNumber());
     }
 }

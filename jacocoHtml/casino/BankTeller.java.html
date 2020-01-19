@@ -14,11 +14,11 @@ public class BankTeller implements IBetLoggingAuthority {
 	/**
 	 * This class is responsible for managing gambling card information and logging all the activities.
 	 */
-<span class="fc" id="L17">	public BankTeller(IBetLoggingAuthority logger, GamblingAuthority gamblingAuthority) {</span>
-<span class="fc" id="L18">		this.logger = logger;</span>
-<span class="fc" id="L19">		this.gamblingAuthority = gamblingAuthority;</span>
-<span class="fc" id="L20">		this.listOfGamblerCard = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L21">	}</span>
+<span class="nc" id="L17">	public BankTeller(IBetLoggingAuthority logger, GamblingAuthority gamblingAuthority) {</span>
+<span class="nc" id="L18">		this.logger = logger;</span>
+<span class="nc" id="L19">		this.gamblingAuthority = gamblingAuthority;</span>
+<span class="nc" id="L20">		this.listOfGamblerCard = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L21">	}</span>
 
 	/**
 	 * The total amount of money credit is physically handed to the gambler
@@ -83,11 +83,11 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @return
 	 */
 	private GamblerCard getGamblingCard(String gamblerCardID) {
-<span class="fc" id="L86">		GamblerCard card = null;</span>
-<span class="fc bfc" id="L87" title="All 2 branches covered.">		for(GamblerCard c : listOfGamblerCard)</span>
-<span class="pc bpc" id="L88" title="1 of 2 branches missed.">			if (c.getCardID().equals(gamblerCardID))</span>
+<span class="nc" id="L86">		GamblerCard card = null;</span>
+<span class="nc bnc" id="L87" title="All 2 branches missed.">		for(GamblerCard c : listOfGamblerCard)</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">			if (c.getCardID().equals(gamblerCardID))</span>
 <span class="nc" id="L89">				card = c;</span>
-<span class="fc" id="L90">		return card;</span>
+<span class="nc" id="L90">		return card;</span>
 	}
 
 	/**
@@ -150,9 +150,9 @@ public class BankTeller implements IBetLoggingAuthority {
 	}
 
 	public boolean isGamblerCardValid(String gamblerCardID) {
-<span class="pc bpc" id="L153" title="1 of 2 branches missed.">		if(this.getGamblingCard(gamblerCardID)!=null)</span>
+<span class="nc bnc" id="L153" title="All 2 branches missed.">		if(this.getGamblingCard(gamblerCardID)!=null)</span>
 <span class="nc" id="L154">			return true;</span>
-<span class="fc" id="L155">		return false;</span>
+<span class="nc" id="L155">		return false;</span>
 	}
 
 	@Override
@@ -161,7 +161,7 @@ public class BankTeller implements IBetLoggingAuthority {
 <span class="nc" id="L161">	}</span>
 
 	public void addCard(GamblerCard gamblerCard) {
-<span class="fc" id="L164">		this.listOfGamblerCard.add(gamblerCard);</span>
-<span class="fc" id="L165">	}</span>
+<span class="nc" id="L164">		this.listOfGamblerCard.add(gamblerCard);</span>
+<span class="nc" id="L165">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
