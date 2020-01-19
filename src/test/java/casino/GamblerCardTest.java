@@ -29,9 +29,6 @@ public class GamblerCardTest {
     //Direct Input
     @Test
     public void AssignCard_OnAssigningAnAssignedCard_ThrowNotificationException() throws NotificationException {
-
-        //Arrange
-        GamblerCard_SUT_Object = new GamblerCard();
         GamblerCard_SUT_Object.AssignCard(100, Valid_AssignmentMoment);
 
         //Act and Assert
@@ -47,10 +44,6 @@ public class GamblerCardTest {
     //Direct Input
     @Test
     public void AssignCard_OnProvidingNegativeAmount_ThrowNotificationException(){
-
-        //Arrange
-        GamblerCard_SUT_Object = new GamblerCard();
-
         //Act and Assert
         Assertions.assertThrows(NotificationException.class,
                 ()->{GamblerCard_SUT_Object.AssignCard(0, Valid_AssignmentMoment);},
@@ -63,10 +56,6 @@ public class GamblerCardTest {
      */
     @Test //DirectInput //DirectOutPut
     public void AssignCard_OnSuccessfullCardAssigning_ValuesOfCardBeSetCorrectly() throws NotificationException {
-
-        //Arrange
-        GamblerCard_SUT_Object = new GamblerCard();
-
         //Act
         GamblerCard_SUT_Object.AssignCard(200,Valid_AssignmentMoment);
 
@@ -88,8 +77,6 @@ public class GamblerCardTest {
     //Direct Inputs
     @Test
     public void checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException(){
-        //Arrange
-        GamblerCard_SUT_Object = new GamblerCard();
         // Act & Assert
         Assertions.assertThrows(NotificationException.class,
 
@@ -110,11 +97,8 @@ public class GamblerCardTest {
     @Test
     //Direct Inputs
     public void checkOut_CheckOutCardSuccessfully_ResetItsDetails() throws NotificationException {
-
         //Arrange
-        GamblerCard_SUT_Object = new GamblerCard();
         GamblerCard_SUT_Object.AssignCard(100, Valid_AssignmentMoment);
-
 
         //Act
         GamblerCard_SUT_Object.checkOut();
@@ -140,10 +124,6 @@ public class GamblerCardTest {
     @Test
     //direct Input and direct output
     public void setCredit_OnValidAmount_CreditChangeAndReturnTrue() throws NotificationException {
-
-        //Arrange
-        GamblerCard_SUT_Object = new GamblerCard();
-
         //Act
         Boolean result = GamblerCard_SUT_Object.setCredit(10);
 
@@ -158,10 +138,6 @@ public class GamblerCardTest {
     @Test
     //Indirect Inputs
     public void setCredit_OvInvalidAmount_ThrowIllegalOperationException(){
-
-        //Arrange
-        GamblerCard_SUT_Object = new GamblerCard();
-
         //Act & Act
         Assertions.assertThrows(NotificationException.class,()->{
             GamblerCard_SUT_Object.setCredit(-1);
@@ -179,7 +155,6 @@ public class GamblerCardTest {
     public void addBet_OnAddingNonDuplicateBet_TheBetWouldBeAddedToBetList() throws NotificationException {
 
         //Arrange
-        GamblerCard_SUT_Object = new GamblerCard();
         GamblerCard_SUT_Object.AssignCard(200,Valid_AssignmentMoment);
 
         //Act
@@ -200,12 +175,10 @@ public class GamblerCardTest {
     public void addBet_OnAddingDuplicateBet_ThrowIllegalOperation() throws NotificationException {
 
         //Arrange
-        GamblerCard_SUT_Object = new GamblerCard();
         GamblerCard_SUT_Object.AssignCard(200,Valid_AssignmentMoment);
 
         //Act
         GamblerCard_SUT_Object.addBet("1");
-
 
         //Assert
         Assertions.assertThrows(NotificationException.class, ()->
@@ -221,9 +194,6 @@ public class GamblerCardTest {
      */
     @Test //Direct Output
     public void ToString_OnCallingAnUnAssignedCard_IncludesAllImportantDetailOfGamblercard() throws NotificationException {
-        //Arrange
-        GamblerCard_SUT_Object = new GamblerCard();
-
         //Act
         String result = GamblerCard_SUT_Object.toString();
 
@@ -238,7 +208,6 @@ public class GamblerCardTest {
     public void ToString_OnCallingAnAssignedCard_IncludesAllImportantDetailOfGamblercard() throws NotificationException {
 
         //Arrange
-        GamblerCard_SUT_Object = new GamblerCard();
         GamblerCard_SUT_Object.AssignCard(200,Valid_AssignmentMoment);
 
         //Act

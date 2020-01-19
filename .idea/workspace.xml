@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/casino/GamblerCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/casino/GamblerCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/GamblerCardTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/casino/GamblerCardTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblerCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblerCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblerCardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblerCardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -310,7 +300,7 @@
       <workItem from="1578395740697" duration="13603000" />
       <workItem from="1578483072891" duration="178000" />
       <workItem from="1579203461995" duration="7200000" />
-      <workItem from="1579360905110" duration="28718000" />
+      <workItem from="1579360905110" duration="29048000" />
     </task>
     <task id="LOCAL-00001" summary="Red Phase for &quot;checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException&quot;">
       <created>1579456214443</created>
@@ -392,25 +382,25 @@
     </state>
     <state x="617" y="206" width="605" height="482" key="FileChooserDialogImpl/0.0.2000.1293@0.0.2000.1293" timestamp="1579381751136" />
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
-    <state width="1249" height="303" key="GridCell.Tab.0.bottom" timestamp="1579474157511">
+    <state width="1249" height="71" key="GridCell.Tab.0.bottom" timestamp="1579474320634">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1249" height="303" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579474157511" />
+    <state width="1249" height="71" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579474320634" />
     <state width="1371" height="236" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="1249" height="303" key="GridCell.Tab.0.center" timestamp="1579474157511">
+    <state width="1249" height="71" key="GridCell.Tab.0.center" timestamp="1579474320633">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1249" height="303" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579474157511" />
+    <state width="1249" height="71" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579474320633" />
     <state width="1371" height="236" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="1249" height="303" key="GridCell.Tab.0.left" timestamp="1579474157511">
+    <state width="1249" height="71" key="GridCell.Tab.0.left" timestamp="1579474320633">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1249" height="303" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579474157511" />
+    <state width="1249" height="71" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579474320633" />
     <state width="1371" height="236" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="1249" height="303" key="GridCell.Tab.0.right" timestamp="1579474157511">
+    <state width="1249" height="71" key="GridCell.Tab.0.right" timestamp="1579474320633">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1249" height="303" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579474157511" />
+    <state width="1249" height="71" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579474320633" />
     <state width="1371" height="236" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
     <state width="1312" height="449" key="GridCell.Tab.1.bottom" timestamp="1579474052764">
       <screen x="0" y="0" width="2000" height="1293" />
@@ -453,22 +443,6 @@
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
     <state x="663" y="289" width="672" height="678" key="search.everywhere.popup/0.0.2000.1293@0.0.2000.1293" timestamp="1579458124163" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/casino/GamblerCardTest.java</url>
-          <line>248</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/casino/GamblerCardTest.java</url>
-          <line>239</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Casino$GamblerCardTest_ToString_OnCallingAnAssignedCard_IncludesAllImportantDetailOfGamblercard.ic" NAME="GamblerCardTest.ToString_OnCallingAnAssignedCard_IncludesAllImportantDetailOfGamblercard Coverage Results" MODIFIED="1579473950349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
