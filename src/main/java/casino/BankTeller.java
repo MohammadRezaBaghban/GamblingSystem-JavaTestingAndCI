@@ -84,7 +84,14 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public boolean checkCredit(String gamblerCardID, double amount) {
-		return true; // to satisfy the compiler
+		if (isGamblerCardValid(gamblerCardID))
+		{
+			GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
+			double rest = gamblerCard.getCredit() - amount;
+			if(rest>=0)
+				return true;
+		}
+		return false;
 	}
 
 	/**
