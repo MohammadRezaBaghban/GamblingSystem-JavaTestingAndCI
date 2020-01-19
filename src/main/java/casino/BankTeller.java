@@ -128,7 +128,9 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardID
 	 * @param bet
 	 */
-	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) {
+	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) throws NotificationException {
+		if(!isGamblerCardValid(gamblerCardID))
+			throw new NotificationException("Card is not valid.");
 		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
 		gamblerCard.addBet(bet.getId());
 	}

@@ -258,6 +258,26 @@ public class BankTellerTest {
     }
 
     /**
+     *
+     */
+    @Test
+    void addBet_ShouldThrowExceptionIfCardIsNotValid() {
+//arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        String invalidGamblerCardId = "jas54k";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        Bet bet = mock(Bet.class);
+        bankTeller.addCard(gamblerCard);
+
+        //act
+        bankTeller.AddBetToGamblerCard(gamblerCardId, bet);
+        //assert
+        assertThrows(NotificationException.class, ()->bankTeller.AddBetToGamblerCard(invalidGamblerCardId,bet), "Expected: If the gambler card is not valid. It should throw NotificationException." +
+                "Result: No or Another type of exception is thrown. ");
+    }
+
+    /**
      * At calling this method, If the card is already assigned It should throw exception.
      * Type: indirect input
      */
