@@ -3,6 +3,8 @@ package casino;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Convert;
 
@@ -14,7 +16,7 @@ public class GamblerCardTest {
     public GamblerCard GamblerCard_SUT_Object;
     public Timestamp Valid_AssignmentMoment;
 
-    @Before
+    @BeforeEach
     public void Setup(){
         //Arrange
         GamblerCard_SUT_Object = new GamblerCard();
@@ -226,7 +228,7 @@ public class GamblerCardTest {
         String result = GamblerCard_SUT_Object.toString();
 
         //Assert
-        Assert.assertTrue("The format is not correct", GamblerCard_SUT_Object.toString()=="Card with cardId of "+GamblerCard_SUT_Object.getCardID()+" is unassigned");
+        Assert.assertTrue("The format is not correct", GamblerCard_SUT_Object.toString().equals("Card with cardId of "+GamblerCard_SUT_Object.getCardID()+" is unassigned"));
     }
 
     /**

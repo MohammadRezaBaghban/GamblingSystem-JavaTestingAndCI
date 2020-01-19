@@ -134,9 +134,17 @@ public class GamblerCard {
 	 * Generate a statement including all the information upon the status of GamblerCard
 	 * @return status of of gambler card
 	 */
-	public String ToString() {
-		// TODO - implement GamblerCard.ToString
-		throw new UnsupportedOperationException();
+	@Override
+	public String toString() {
+		if(assignedStatus){
+			return ("CardId : " + this.cardID + " | " +
+					"Credit: " + Double.toString(credit) + " | " +
+					"Initial Credit: " + Double.toString(initialAmount) + " | " +
+					"TimeStamp: " + timeStamp + " | " +
+					"Number of Bets: " + listOfBet.size() + " | ") ;
+		}else{
+			return "Card with cardId of "+ this.getCardID()+" is unassigned";
+		}
 	}
 
 	/**
