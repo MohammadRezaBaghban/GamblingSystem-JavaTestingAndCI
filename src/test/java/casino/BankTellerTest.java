@@ -215,7 +215,6 @@ public class BankTellerTest {
     /**
      * At calling the withdraw() method with higher amount It should throw Exception.
      * It also should not deduct the amount If the amount is more than the amount it has.
-     * Type: indirect input
      * @throws NotificationException
      */
     @Test
@@ -231,7 +230,8 @@ public class BankTellerTest {
 
         //act
         //assert
-        assertThrows(NotificationException.class, ()->bankTeller.withdraw(gamblerCardId,higherAmount));
+        assertThrows(NotificationException.class, ()->bankTeller.withdraw(gamblerCardId,higherAmount), "Expected: If the amount is higher than the balance. It should throw NotificationException." +
+                "Result: No or Another type of exception is thrown. ");
     }
 
     /**
@@ -242,8 +242,19 @@ public class BankTellerTest {
     @Test
     public void addBet_BankTellerShouldBeAbleToAddBetIntoTheCard() {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        String validBetId = "jas54k";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        Bet bet = mock(Bet.class);
+        when(bet.getId()).thenReturn(validBetId);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.AddBetToGamblerCard(gamblerCardId, bet);
+
         //assert
+        verify(gamblerCard).addBet(validBetId);
     }
 
     /**

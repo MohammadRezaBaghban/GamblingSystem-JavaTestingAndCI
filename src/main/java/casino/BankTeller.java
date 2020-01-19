@@ -1,4 +1,6 @@
 package casino;
+import org.mockito.internal.matchers.Not;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -113,9 +115,12 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardID
 	 * @param amount
 	 */
-	public void withdraw(String gamblerCardID, double amount) {
+	public void withdraw(String gamblerCardID, double amount) throws NotificationException {
 		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
-		gamblerCard.withdrawCredit(amount);
+		if(gamblerCard.getCredit()>=amount)
+			gamblerCard.withdrawCredit(amount);
+		else
+			throw new NotificationException("Not sufficient balance on card.");
 	}
 
 	/**
