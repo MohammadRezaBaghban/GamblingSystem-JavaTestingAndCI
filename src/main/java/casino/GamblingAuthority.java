@@ -68,7 +68,7 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 
 	@Override
 	public void Log(String filePath, String info) {
-
+		// logging
 	}
 
 	public ArrayList<Bet> getBetList() {

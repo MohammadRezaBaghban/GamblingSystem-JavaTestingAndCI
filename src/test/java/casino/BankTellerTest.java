@@ -38,20 +38,21 @@ public class BankTellerTest {
     }
 
     /**
-     * If the card Id is not valid. It should return false.
+     * This test verifies if all the clearBet() method is called.
      */
     @Test
-    void isGamblerCardValid_ShouldReturnFalseIfCardIsInValid(){
+    void CashOut_ShouldClearAllStoredBetsWhenGamblerCashOut() throws NotificationException {
         //arrange
-        String validGamblerCardId = "a2u7wqe3r4";
-        String InvalidGamblerCardId = "ndu7wqe3r7";
+        String gamblerCardId = "a2u7wqe3r4";
         GamblerCard gamblerCard = mock(GamblerCard.class);
-        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
         bankTeller.addCard(gamblerCard);
+
         //act
-        boolean expected = bankTeller.isGamblerCardValid(InvalidGamblerCardId);
+        bankTeller.CashOut(gamblerCardId);
+
         //assert
-        assertFalse(expected, "Expected result is false but got true.");
+        verify(gamblerCard).checkOut();
     }
 
     /**
@@ -91,6 +92,24 @@ public class BankTellerTest {
         assertThrows(NotificationException.class, () -> {
            bankTeller.CashOut(InvalidGamblerCardId);
         },"gamblerCardId is not valid");
+    }
+
+
+    /**
+     * If the card Id is not valid. It should return false.
+     */
+    @Test
+    void isGamblerCardValid_ShouldReturnFalseIfCardIsInValid(){
+        //arrange
+        String validGamblerCardId = "a2u7wqe3r4";
+        String InvalidGamblerCardId = "ndu7wqe3r7";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        bankTeller.addCard(gamblerCard);
+        //act
+        boolean expected = bankTeller.isGamblerCardValid(InvalidGamblerCardId);
+        //assert
+        assertFalse(expected, "Expected result is false but got true.");
     }
 
     /**

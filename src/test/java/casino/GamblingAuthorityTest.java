@@ -121,20 +121,4 @@ public class GamblingAuthorityTest {
         //assert
         assertTrue(result >= 0);
     }
-
-    /**
-     *This method checks if the log method is called with the right parameter.
-     *
-     */
-    @Test
-    void log_ShouldLogTokenRequest() {
-
-    }
-
-    /**
-     * This method checks if the request is logged with the right parameter.
-     */
-    @Test
-    void log_ShouldLogGetWinNumberRequest() {
-    }
 }
