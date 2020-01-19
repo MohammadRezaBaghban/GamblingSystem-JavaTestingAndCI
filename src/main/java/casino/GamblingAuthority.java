@@ -1,6 +1,9 @@
 package casino;
 
+import org.mockito.internal.matchers.Not;
+
 import java.util.List;
+import java.util.UUID;
 
 public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthority {
 
@@ -31,8 +34,11 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 * This method also logs this request.
 	 * @param bettingRound
 	 */
-	public String getToken(BettingRound bettingRound) {
-		return null; // to satisfy the compiler
+	public String getToken(BettingRound bettingRound) throws NotificationException {
+		if(bettingRound==null)
+			throw new NotificationException("Betting Round Cannot be NUll");
+		String id =  UUID.randomUUID().toString();
+		return id;
 	}
 
 	/**
