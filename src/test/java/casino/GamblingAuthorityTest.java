@@ -48,19 +48,6 @@ public class GamblingAuthorityTest {
     }
 
     /**
-     *
-     */
-    @Test
-    void getToken_itShouldLogTheRequest() {
-        //arrange
-        GamblingAuthority authority = new GamblingAuthority();
-
-        //act
-        //assert
-
-    }
-
-    /**
      * This method should check if addBet() method adds bet object to the list.
      */
     @Test

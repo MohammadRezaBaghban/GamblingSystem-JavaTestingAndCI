@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.internal.matchers.Not;
 
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -107,9 +109,23 @@ public class BankTellerTest {
         when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
         bankTeller.addCard(gamblerCard);
         //act
-        boolean expected = bankTeller.isGamblerCardValid(InvalidGamblerCardId);
         //assert
-        assertFalse(expected, "Expected result is false but got true.");
+        assertThat(bankTeller.isGamblerCardValid(InvalidGamblerCardId),equalTo(false));
+    }
+
+    /**
+     * If the card Id is not valid. It should return false.
+     */
+    @Test
+    void isGamblerCardValid_ShouldReturnTrueIfCardIsInValid(){
+        //arrange
+        String validGamblerCardId = "a2u7wqe3r4";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        bankTeller.addCard(gamblerCard);
+        //act
+        //assert
+        assertThat(bankTeller.isGamblerCardValid(validGamblerCardId),equalTo(true));
     }
 
     /**
@@ -224,6 +240,7 @@ public class BankTellerTest {
         Double validAmount = 20.0;
         GamblerCard gamblerCard = mock(GamblerCard.class);
         when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        when(gamblerCard.getCredit()).thenReturn(validAmount);
         bankTeller.addCard(gamblerCard);
 
         //act
@@ -302,17 +319,16 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void assignCard_BankTellerShouldNotBeAbleToAssignCardWhichIsAlreadyAssigned() {
+    public void assignCard_BankTellerShouldNotBeAbleToAssignCardWhichIsAlreadyAssigned() throws NotificationException {
         //arrange
         String gamblerCardId = "a2u7wqe3r4";
         Double validAmount = 20.0;
         GamblerCard gamblerCard = mock(GamblerCard.class);
         when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        when(gamblerCard.getAssignedStatus()).thenReturn(true);// assigned already.
         bankTeller.addCard(gamblerCard);
 
         //act
-        bankTeller.assignCard(gamblerCardId, validAmount); // assigned already.
-
         //assert
         assertThrows(NotificationException.class, ()->bankTeller.assignCard(gamblerCardId, validAmount));// trying to assign the sameCard again.
     }
@@ -322,7 +338,7 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void assignCard_BankTellerShouldBeAbleToAssignCard() {
+    public void assignCard_BankTellerShouldBeAbleToAssignCard() throws NotificationException {
         //arrange
         String gamblerCardId = "a2u7wqe3r4";
         Double validAmount = 20.0;

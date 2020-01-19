@@ -118,5 +118,6 @@ public class GamblerCard {
 	}
 
 	public void setAssignedStatus() {
+		this.assignedStatus = true;
 	}
 }

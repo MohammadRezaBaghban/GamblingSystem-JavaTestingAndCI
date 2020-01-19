@@ -24,6 +24,7 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 
 	public GamblingAuthority() {
 		listOfBets = new ArrayList<>();
+		listOfBettingRound = new ArrayList<>();
 	}
 
 	/**
@@ -53,8 +54,7 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 * @param bettingRound
 	 */
 	public void addBettingRound(BettingRound bettingRound) {
-		// TODO - implement GamblingAuthority.addBettingRound
-		throw new UnsupportedOperationException();
+		listOfBettingRound.add(bettingRound);
 	}
 
 	/**

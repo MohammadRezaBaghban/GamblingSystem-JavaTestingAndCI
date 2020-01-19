@@ -49,10 +49,12 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardId
 	 * @param amount
 	 */
-	public boolean assignCard(String gamblerCardId, double amount) {
+	public boolean assignCard(String gamblerCardId, double amount) throws NotificationException {
 		if(isGamblerCardValid(gamblerCardId))
 		{
 			GamblerCard gamblerCard = getGamblingCard(gamblerCardId);
+			if(gamblerCard.getAssignedStatus())
+				throw new NotificationException("Card already assigned.");
 			gamblerCard.setCredit(amount);
 			gamblerCard.setAssignedStatus();
 			return true;
@@ -68,6 +70,7 @@ public class BankTeller implements IBetLoggingAuthority {
 		if(isGamblerCardValid(gamblerCardID)){
 			GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);
 			gamblerCard.setCredit(0.0);
+			gamblerCard.checkOut();
 		}
 		else
 			throw new NotificationException("gamblerCard is Invalid.");
