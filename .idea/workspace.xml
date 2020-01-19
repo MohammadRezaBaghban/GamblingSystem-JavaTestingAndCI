@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,13 +115,13 @@
       <recent name="C:\Users\User\Desktop\TCI\Casino\src\main\java\casino" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BankTellerTest.CashOut_ShouldReturnFalseIfCardIsInValid">
-    <configuration name="BankTellerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.BankTellerTest.CashOut_MethodShouldLogCardInformation">
+    <configuration name="BankTellerTest.CashOut_MethodShouldLogCardInformation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;casino.BankTellerTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;casino.BankTellerTest.CashOut_MethodShouldLogCardInformation&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -244,19 +252,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour" />
-      <item itemvalue="Gradle.BankTellerTest" />
       <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldSetAmountToZeroWhenGamblerCashOut" />
       <item itemvalue="JUnit.Whole project" />
       <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldThrowExceptionIfCardIsInValid" />
       <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldReturnFalseIfCardIsInValid" />
+      <item itemvalue="Gradle.BankTellerTest.CashOut_MethodShouldLogCardInformation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BankTellerTest.CashOut_MethodShouldLogCardInformation" />
         <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldReturnFalseIfCardIsInValid" />
         <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldThrowExceptionIfCardIsInValid" />
         <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldSetAmountToZeroWhenGamblerCashOut" />
         <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour" />
-        <item itemvalue="Gradle.BankTellerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +299,7 @@
       <workItem from="1578395740697" duration="13603000" />
       <workItem from="1578483072891" duration="178000" />
       <workItem from="1579419259006" duration="4210000" />
-      <workItem from="1579426428103" duration="534000" />
+      <workItem from="1579426428103" duration="3510000" />
     </task>
     <task id="LOCAL-00001" summary="jacoco plugin added to the build.gradle">
       <created>1579360693771</created>
@@ -328,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579426889579</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Green PHASE: code implemented and it Passed. TEST: BankTellerTest--&gt;CashOut_ShouldReturnFalseIfCardIsInValid.">
+      <created>1579427067753</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579427067754</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +355,8 @@
     <MESSAGE value="Green PHASE: coded only fot this test method and Passed the test. TEST: BankTellerTest--&gt;CashOut_ShouldSetAmountToZero." />
     <MESSAGE value="Refactor PHASE: changes on tested behaviour(clearCard). TEST: BankTellerTest--&gt;CashOut_ShouldSetAmountToZero." />
     <MESSAGE value="Red PHASE: test is introduced and run, it failed. TEST: BankTellerTest--&gt;CashOut_ShouldReturnFalseIfCardIsInValid." />
-    <option name="LAST_COMMIT_MESSAGE" value="Red PHASE: test is introduced and run, it failed. TEST: BankTellerTest--&gt;CashOut_ShouldReturnFalseIfCardIsInValid." />
+    <MESSAGE value="Green PHASE: code implemented and it Passed. TEST: BankTellerTest--&gt;CashOut_ShouldReturnFalseIfCardIsInValid." />
+    <option name="LAST_COMMIT_MESSAGE" value="Green PHASE: code implemented and it Passed. TEST: BankTellerTest--&gt;CashOut_ShouldReturnFalseIfCardIsInValid." />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1578478456346">
@@ -384,10 +400,11 @@
     </state>
     <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1578403683259" />
     <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1578480235180" />
-    <state x="1373" y="-936" key="CommitChangelistDialog2" timestamp="1579426973319">
-      <screen x="722" y="-1080" width="1858" height="1080" />
+    <state x="461" y="93" key="CommitChangelistDialog2" timestamp="1579439643717">
+      <screen x="64" y="0" width="1536" height="900" />
     </state>
-    <state x="1373" y="-936" key="CommitChangelistDialog2/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579426973319" />
+    <state x="1373" y="-936" key="CommitChangelistDialog2/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427066766" />
+    <state x="461" y="93" key="CommitChangelistDialog2/64.0.1536.900@64.0.1536.900" timestamp="1579439643717" />
     <state x="458" y="46" key="CommitChangelistDialog2/71.0.1529.900@71.0.1529.900" timestamp="1579360692881" />
     <state x="571" y="214" key="EnvironmentVariablesDialog" timestamp="1579366533163">
       <screen x="71" y="0" width="1529" height="900" />
@@ -398,25 +415,29 @@
     </state>
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
     <state x="618" y="206" key="FileChooserDialogImpl/71.0.1529.900@71.0.1529.900" timestamp="1579359222462" />
-    <state width="1815" height="334" key="GridCell.Tab.0.bottom" timestamp="1579427026695">
-      <screen x="722" y="-1080" width="1858" height="1080" />
+    <state width="1493" height="267" key="GridCell.Tab.0.bottom" timestamp="1579439600225">
+      <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.bottom/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
+    <state width="1493" height="267" key="GridCell.Tab.0.bottom/64.0.1536.900@64.0.1536.900" timestamp="1579439600225" />
     <state width="1486" height="297" key="GridCell.Tab.0.bottom/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
-    <state width="1815" height="334" key="GridCell.Tab.0.center" timestamp="1579427026695">
-      <screen x="722" y="-1080" width="1858" height="1080" />
+    <state width="1493" height="267" key="GridCell.Tab.0.center" timestamp="1579439600225">
+      <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.center/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
+    <state width="1493" height="267" key="GridCell.Tab.0.center/64.0.1536.900@64.0.1536.900" timestamp="1579439600225" />
     <state width="1486" height="297" key="GridCell.Tab.0.center/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
-    <state width="1815" height="334" key="GridCell.Tab.0.left" timestamp="1579427026695">
-      <screen x="722" y="-1080" width="1858" height="1080" />
+    <state width="1493" height="267" key="GridCell.Tab.0.left" timestamp="1579439600225">
+      <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.left/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
+    <state width="1493" height="267" key="GridCell.Tab.0.left/64.0.1536.900@64.0.1536.900" timestamp="1579439600225" />
     <state width="1486" height="297" key="GridCell.Tab.0.left/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
-    <state width="1815" height="334" key="GridCell.Tab.0.right" timestamp="1579427026695">
-      <screen x="722" y="-1080" width="1858" height="1080" />
+    <state width="1493" height="267" key="GridCell.Tab.0.right" timestamp="1579439600225">
+      <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.right/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
+    <state width="1493" height="267" key="GridCell.Tab.0.right/64.0.1536.900@64.0.1536.900" timestamp="1579439600225" />
     <state width="1486" height="297" key="GridCell.Tab.0.right/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
     <state x="338" y="94" key="SettingsEditor" timestamp="1579366590498">
       <screen x="71" y="0" width="1529" height="900" />

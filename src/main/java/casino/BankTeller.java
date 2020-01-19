@@ -23,8 +23,8 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * The total amount of money credit is physically handed to the gambler
 	 * This method also logs the GamblingCard information.
 	 */
-	public void CashOut(String gamblerCardID) {
-
+	public void CashOut(String gamblerCardID) throws NotificationException {
+		this.clearCard(gamblerCardID);
 	}
 
 	/**

@@ -1,19 +1,18 @@
 package casino;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class BankTellerTest {
     private static BankTeller bankTeller;
-    @BeforeAll
-    static void beforeAll() {
+    @BeforeEach
+    void beforeEach() {
         IBetLoggingAuthority iBetLoggingAuthority = mock(IBetLoggingAuthority.class);
         GamblingAuthority gamblingAuthority = mock(GamblingAuthority.class);
         bankTeller = new BankTeller(iBetLoggingAuthority,gamblingAuthority);
-
     }
 
     /**
@@ -29,7 +28,7 @@ public class BankTellerTest {
         bankTeller.addCard(gamblerCard);
 
         //act
-        bankTeller.clearCard(gamblerCardId);
+        bankTeller.CashOut(gamblerCardId);
 
         //assert
         verify(gamblerCard).setCredit(0.0);
@@ -49,7 +48,7 @@ public class BankTellerTest {
         //act
         boolean expected = bankTeller.isGamblerCardValid(InvalidGamblerCardId);
         //assert
-        Assertions.assertFalse(expected, "Expected result is false but got true.");
+        assertFalse(expected, "Expected result is false but got true.");
     }
 
     /**
@@ -59,8 +58,17 @@ public class BankTellerTest {
      * Type: indirect output
      */
     @Test
-    void CashOut_MethodShouldLogCardInformation() {
-
+    void CashOut_MethodShouldLogCardInformation() throws NotificationException {
+        //arrange
+        IBetLoggingAuthority iBetLoggingAuthority = mock(IBetLoggingAuthority.class);
+        GamblingAuthority gamblingAuthority = mock(GamblingAuthority.class);
+        bankTeller = new BankTeller(iBetLoggingAuthority,gamblingAuthority);
+        String validGamblerCardId = "a2u7wqe3r4";
+        String validPath = "/log.txt";
+        //act
+        bankTeller.CashOut(validGamblerCardId);
+        //assert
+        verify(iBetLoggingAuthority).Log(validPath, validGamblerCardId);
     }
 
 
