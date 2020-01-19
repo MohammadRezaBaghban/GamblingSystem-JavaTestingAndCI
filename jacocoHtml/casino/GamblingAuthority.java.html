@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GamblingAuthority.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">casino</a> &gt; <span class="el_source">GamblingAuthority.java</span></div><h1>GamblingAuthority.java</h1><pre class="source lang-java linenums">package casino;
+
+import java.util.List;
+
+<span class="nc" id="L5">public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthority {</span>
+
+	/**
+	 * list of all the bets created by game.
+	 */
+	private List&lt;Bet&gt; listOfBets;
+	/**
+	 * list of all the bettingRound.
+	 */
+	private List&lt;BettingRound&gt; listOfBettingRound;
+	/**
+	 * Instance of Logger interface for logging all the bets and betting round.
+	 */
+	private IBetLoggingAuthority logger;
+
+	/**
+	 * This method also logs this request.
+	 * @param bet
+	 */
+	public void addBet(Bet bet) {
+		// TODO - implement GamblingAuthority.addBet
+<span class="nc" id="L26">		throw new UnsupportedOperationException();</span>
+	}
+
+	/**
+	 * it returns the unique token for the betting round and it should check the token status.
+	 * This method also logs this request.
+	 * @param bettingRound
+	 */
+	public String getToken(BettingRound bettingRound) {
+<span class="nc" id="L35">		return null; // to satisfy the compiler</span>
+	}
+
+	/**
+	 * 
+	 * @param bettingRound
+	 */
+	public void addBettingRound(BettingRound bettingRound) {
+		// TODO - implement GamblingAuthority.addBettingRound
+<span class="nc" id="L44">		throw new UnsupportedOperationException();</span>
+	}
+
+	/**
+	 * it returns the whole integer as winning number. it should check the token status.
+	 * This method also logs this request.
+	 * @param bettingRound
+	 */
+	public int getWinNo(BettingRound bettingRound) {
+<span class="nc" id="L53">		return 0; // to satisfy the compiler</span>
+	}
+
+	@Override
+	public void Log(String filePath, String info) {
+
+<span class="nc" id="L59">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

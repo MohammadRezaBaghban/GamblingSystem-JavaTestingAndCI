@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GamblerCard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">casino</a> &gt; <span class="el_source">GamblerCard.java</span></div><h1>GamblerCard.java</h1><pre class="source lang-java linenums">package casino;
+
+import java.util.Date;
+import java.util.List;
+
+<span class="nc" id="L6">public class GamblerCard {</span>
+
+	/**
+	 * The Initial amount is determined on the assignment of the card to gambler by bank teller
+	 */
+	private double initialAmount;
+	private Date timeStamp;
+	private List&lt;String&gt; listOfBet;
+	private String cardID;
+	private boolean assignedStatus;
+	private double credit;
+
+	/**
+	 * A getter method for taking InitialAmount that card has been created with
+	 * @return The initial amount that gambler charge on its assignment
+	 */
+	public double getInitialAmount() {
+<span class="nc" id="L23">		return this.initialAmount;</span>
+	}
+
+	/**
+	 * A getter method for taking the timeStamp of the moment that card has been given to a Gambler
+	 * @return The last moment that the card has been assigned to a gambler
+	 */
+	public Date getTimeStamp() {
+<span class="nc" id="L31">		return this.timeStamp;</span>
+	}
+
+	/**
+	 * A getter method for accessing the list of bets that gambler has been made
+	 * @return List of bets that the Gambler has been made with card
+	 */
+	public List&lt;String&gt; getListOfBet() {
+<span class="nc" id="L39">		return this.listOfBet;</span>
+	}
+
+	/**
+	 * A getter method for accessing the unique id of gambler card
+	 * @return The unique ID of gambler card
+	 */
+	public String getCardID() {
+<span class="nc" id="L47">		return this.cardID;</span>
+	}
+
+	/**
+	 * A getter method for checking if the card has been assigned to a person or not
+	 * @return boolean status of card assignment to a gambler
+	 */
+	public boolean getAssignedStatus() {
+<span class="nc" id="L55">		return this.assignedStatus;</span>
+	}
+
+	/**
+	 * A getter method for retrieving the current balance of gambler card
+	 * @return the current balance of gamblerCard
+	 */
+	public double getCredit() {
+<span class="nc" id="L63">		return this.credit;</span>
+	}
+
+	/**
+	 * Check out the gambler card to make it ready for new assignment
+	 *
+	 * &lt;p&gt;
+	 *     Reset the timestamp, initial amount and credit to zero
+	 *     and clear list of bets.
+	 * &lt;/p&gt;
+	 */
+	public void checkOut() {
+		// TODO - implement GamblerCard.checkOut
+<span class="nc" id="L76">		throw new UnsupportedOperationException();</span>
+	}
+
+	/**
+	 * Change the current Balance of card
+	 *
+	 * &lt;p&gt;
+	 *     Throws an NotificationException on providing negative amount
+	 * &lt;/p&gt;
+	 *
+	 * @param amount should be positive value.
+	 */
+	public boolean setCredit(double amount) {
+		// TODO - implement GamblerCard.setCredit
+<span class="nc" id="L90">		throw new UnsupportedOperationException();</span>
+	}
+
+	/**
+	 * Add a new bet to BetList of gambler card
+	 *
+	 * &lt;p&gt;
+	 *     It will check if the gamblerCard has not the given bet Id in its betList
+	 *     On not having that, it will
+	 * &lt;/p&gt;
+	 * @param betId
+	 */
+	public void addBet(String betId) {
+		// TODO - implement GamblerCard.addBet
+<span class="nc" id="L104">		throw new UnsupportedOperationException();</span>
+	}
+
+
+	/**
+	 * Generate a statement including all the information upon the status of GamblerCard
+	 * @return status of of gambler card
+	 */
+	public String ToString() {
+		// TODO - implement GamblerCard.ToString
+<span class="nc" id="L114">		throw new UnsupportedOperationException();</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

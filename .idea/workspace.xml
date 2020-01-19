@@ -1,31 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Whole_project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="Red Phase :">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_vintage_junit_vintage_engine_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_core_1_10_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_objenesis_objenesis_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/Bet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/Bet.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/BettingRound.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/BettingRound.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingAuthority.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingAuthority.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/Game.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/Game.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/branchfc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/branchnc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/branchpc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/bundle.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/class.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/down.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/greenbar.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/group.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/method.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/package.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/prettify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/prettify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/redbar.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/report.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/report.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/session.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/sort.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/sort.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/source.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-resources/up.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Casino.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Casino.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Whole_project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/casino/BankTeller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/casino/BankTeller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/casino/Bet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/casino/Bet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/casino/GamblingAuthority.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/casino/GamblingAuthority.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/casino/GamblingMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/casino/GamblingMachine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/BankTellerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/casino/BankTellerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/BetTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/BettingRoundTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/casino/BettingRoundTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/classes/casino/GamblerCardTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/casino/GamblerCardTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/GamblingAuthorityTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/casino/GamblingAuthorityTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/classes/casino/GamblingMachineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/casino/GamblingMachineTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/casino/GameTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BettingRoundTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BettingRoundTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblerCardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblerCardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingMachineTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+    </option>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -36,14 +75,7 @@
     <system id="GRADLE">
       <state>
         <task path="$PROJECT_DIR$">
-          <activation>
-            <after_sync>
-              <task name="build" />
-            </after_sync>
-            <after_compile>
-              <task name="build" />
-            </after_compile>
-          </activation>
+          <activation />
         </task>
         <projects_view>
           <tree_state>
@@ -84,6 +116,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Mohammad Reza &lt;i378474@fhict.nl&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1VyUwiOfmg20fQd4pBFUQ56IfQ3" />
@@ -103,7 +140,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Personal Assignment/Week 1/week1_code" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -126,7 +163,7 @@
       <recent name="C:\Users\User\Desktop\TCI\Casino\src\main\java\casino" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MohammadTDD [build]">
+  <component name="RunManager" selected="JUnit.WholeProject">
     <configuration name="MohammadTDD [build]" type="GradleRunConfiguration" factoryName="Gradle" editBeforeRun="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -151,7 +188,6 @@
       </extension>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2">
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Whole project" run_configuration_type="JUnit" />
         <option name="Gradle.BeforeRunTask" enabled="true" tasks="" externalProjectPath="$PROJECT_DIR$" vmOptions="" scriptParameters="" />
       </method>
     </configuration>
@@ -174,10 +210,22 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="WholeProject" type="JUnit" factoryName="JUnit">
+      <module name="Casino.test" />
+      <option name="PACKAGE_NAME" value="casino" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <fork_mode value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Gradle.TCI-Gambling [dependencies]" />
       <item itemvalue="Gradle.MohammadTDD [build]" />
-      <item itemvalue="JUnit.Whole project" />
+      <item itemvalue="JUnit.WholeProject" />
     </list>
   </component>
   <component name="ServiceViewManager">
@@ -211,7 +259,7 @@
       <workItem from="1578395740697" duration="13603000" />
       <workItem from="1578483072891" duration="178000" />
       <workItem from="1579203461995" duration="7200000" />
-      <workItem from="1579360905110" duration="7196000" />
+      <workItem from="1579360905110" duration="14791000" />
     </task>
     <servers />
   </component>
@@ -235,53 +283,69 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="604" y="315" key="#All_in_Casino.test" timestamp="1579385616371">
+      <screen x="0" y="0" width="2000" height="1293" />
+    </state>
+    <state x="604" y="315" key="#All_in_Casino.test/0.0.2000.1293@0.0.2000.1293" timestamp="1579385616371" />
+    <state x="593" y="309" key="#Deployment" timestamp="1579456149379">
+      <screen x="0" y="0" width="2000" height="1293" />
+    </state>
+    <state x="593" y="309" key="#Deployment/0.0.2000.1293@0.0.2000.1293" timestamp="1579456149379" />
     <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1579361026116" />
     <state x="770" y="152" key="#File_and_Code_Templates/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
+    <state x="604" y="328" key="#GamblerCardTest.checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException" timestamp="1579385288131">
+      <screen x="0" y="0" width="2000" height="1293" />
+    </state>
+    <state x="604" y="328" key="#GamblerCardTest.checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException/0.0.2000.1293@0.0.2000.1293" timestamp="1579385288131" />
     <state x="593" y="309" key="#Project_Structure" timestamp="1579361678745">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
     <state x="593" y="309" key="#Project_Structure/0.0.2000.1293@0.0.2000.1293" timestamp="1579361678745" />
-    <state x="456" y="306" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579365594081">
+    <state x="456" y="306" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579385897509">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state x="456" y="306" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579365594081" />
+    <state x="456" y="306" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579385897509" />
     <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1579361026118" />
     <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1579361026118" />
     <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state x="731" y="429" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1579365298078">
+    <state x="731" y="429" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1579385866106">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state x="731" y="429" key="#com.intellij.ide.util.PackageChooserDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579365298078" />
+    <state x="731" y="429" key="#com.intellij.ide.util.PackageChooserDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579385866106" />
     <state x="731" y="438" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1579365321049">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
     <state x="731" y="438" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579365321049" />
     <state x="550" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579361026118" />
     <state x="550" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state x="617" y="206" key="FileChooserDialogImpl" timestamp="1579363175475">
+    <state x="466" y="246" key="CommitChangelistDialog2" timestamp="1579456210081">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state x="617" y="206" key="FileChooserDialogImpl/0.0.2000.1293@0.0.2000.1293" timestamp="1579363175475" />
+    <state x="466" y="246" key="CommitChangelistDialog2/0.0.2000.1293@0.0.2000.1293" timestamp="1579456210081" />
+    <state x="617" y="206" width="605" height="482" key="FileChooserDialogImpl" timestamp="1579381751136">
+      <screen x="0" y="0" width="2000" height="1293" />
+    </state>
+    <state x="617" y="206" width="605" height="482" key="FileChooserDialogImpl/0.0.2000.1293@0.0.2000.1293" timestamp="1579381751136" />
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
-    <state width="1957" height="332" key="GridCell.Tab.0.bottom" timestamp="1579366670124">
+    <state width="978" height="332" key="GridCell.Tab.0.bottom" timestamp="1579455842332">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="332" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579366670124" />
+    <state width="978" height="332" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579455842332" />
     <state width="1371" height="236" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="1957" height="332" key="GridCell.Tab.0.center" timestamp="1579366670124">
+    <state width="978" height="332" key="GridCell.Tab.0.center" timestamp="1579455842329">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="332" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579366670124" />
+    <state width="978" height="332" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579455842329" />
     <state width="1371" height="236" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="1957" height="332" key="GridCell.Tab.0.left" timestamp="1579366670123">
+    <state width="978" height="332" key="GridCell.Tab.0.left" timestamp="1579455842326">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="332" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579366670123" />
+    <state width="978" height="332" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579455842326" />
     <state width="1371" height="236" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="1957" height="332" key="GridCell.Tab.0.right" timestamp="1579366670124">
+    <state width="978" height="332" key="GridCell.Tab.0.right" timestamp="1579455842330">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="332" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579366670124" />
+    <state width="978" height="332" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579455842330" />
     <state width="1371" height="236" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
     <state x="504" y="293" key="SettingsEditor" timestamp="1579362559659">
       <screen x="0" y="0" width="2000" height="1293" />

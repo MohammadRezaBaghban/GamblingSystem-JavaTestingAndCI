@@ -11,6 +11,13 @@ public class GamblingMachineTest {
     @Test //Direct Input
     public void placeBet_theBetRoundHasBeenAlreadyAssigned_ThrowNotificationException(){
 
+        //Arrange
+
+        //Act
+
+        //Assert
+
+
     }
 
     /**
@@ -22,7 +29,14 @@ public class GamblingMachineTest {
      * </p>
      */
     @Test //Indirect Output
-    public void placeBet_gamblerCardIdIsNotValid_ThrowNotificationException(){
+    public void placeBet_gamblerCardIdIsNotValid_ThrowNotificationException()
+
+    //Arrange
+
+    //Act
+
+    //Assert
+    {
 
     }
 
@@ -32,6 +46,13 @@ public class GamblingMachineTest {
     @Test
     //Direct Outputs
     public void placeBet_AGamblerCardPutMoreThanOneBetOnSpecificBetRound_ThrowNotificationException(){
+
+        //Arrange
+
+        //Act
+
+        //Assert
+
 
     }
 
@@ -43,6 +64,13 @@ public class GamblingMachineTest {
     @Test //Indirect Output
     public void placeBet_gamblerCardDoesNotHaveEnoughBalance_ThrowsBalanceInsufficientNotificationException(){
 
+        //Arrange
+
+        //Act
+
+        //Assert
+
+
     }
 
 
@@ -51,6 +79,12 @@ public class GamblingMachineTest {
      */
     @Test //Indirect Output
     public void placeBet_OnHavingEnoughCredit_TheWithdrawMethodWouldBeCalled(){
+
+        //Arrange
+
+        //Act
+
+        //Assert
 
     }
 
@@ -61,6 +95,12 @@ public class GamblingMachineTest {
     @Test //Indirect Output
     public void placeBet_OnHavingValidCardAndEnoughCredit_CreateAndAddBetTotheRoundlistOfBet(){
 
+        //Arrange
+
+        //Act
+
+        //Assert
+
     }
 
 
@@ -70,6 +110,12 @@ public class GamblingMachineTest {
     @Test
     //Direct Input
     public void createBetRound_OnEmptylistOfBetOfCurrentRound_ThrowBetNotificationException(){
+
+        //Arrange
+
+        //Act
+
+        //Assert
 
     }
 
@@ -86,6 +132,12 @@ public class GamblingMachineTest {
     @Test
     public void createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException(){
 
+        //Arrange
+
+        //Act
+
+        //Assert
+
     }
 
 
@@ -96,6 +148,12 @@ public class GamblingMachineTest {
     //Indirect Output
     public void createBetRound_OnHavingListOfBet_CallCreateBettingRoundOfGameWithListOfBets(){
 
+        //Arrange
+
+        //Act
+
+        //Assert
+
     }
 
 
@@ -105,6 +163,12 @@ public class GamblingMachineTest {
     //Direct Output
     public void reward_OnCallingWhenBetRoundHasNotBeenFinished_ThrowNotificationException(){
 
+        //Arrange
+
+        //Act
+
+        //Assert
+
     }
 
 
@@ -112,7 +176,14 @@ public class GamblingMachineTest {
      * It will check the GamblingMachine roundStatus if it is true as representation of starting of new game round
      */
     //Direct Output
-    public void reward_OnCallForReward_theGameBecomeReadyForAnotherRound(){}
+    public void reward_OnCallForReward_theGameBecomeReadyForAnotherRound(){
+
+        //Arrange
+
+        //Act
+
+        //Assert
+    }
 
 
     /**
@@ -120,6 +191,12 @@ public class GamblingMachineTest {
      */
     //Indirect Output
     public void reward_OnCall_theBankTellerCallDepositMethodWithCorrectGamblerCardID(){
+
+        //Arrange
+
+        //Act
+
+        //Assert
 
     }
 

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BankTeller.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">casino</a> &gt; <span class="el_source">BankTeller.java</span></div><h1>BankTeller.java</h1><pre class="source lang-java linenums">package casino;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 
+ */
+public class BankTeller implements IBetLoggingAuthority {
+
+	private List&lt;GamblerCard&gt; listOfGamblerCard;
+	private IBetLoggingAuthority logger;
+	private GamblingAuthority gamblingAuthority;
+	/**
+	 * This class is responsible for managing gambling card information and logging all the activities.
+	 */
+<span class="nc" id="L16">	public BankTeller(IBetLoggingAuthority logger, GamblingAuthority gamblingAuthority) {</span>
+<span class="nc" id="L17">		this.logger = logger;</span>
+<span class="nc" id="L18">		this.gamblingAuthority = gamblingAuthority;</span>
+<span class="nc" id="L19">		this.listOfGamblerCard = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L20">	}</span>
+
+	/**
+	 * The total amount of money credit is physically handed to the gambler
+	 * This method also logs the GamblingCard information.
+	 */
+	public void CashOut(String gamblerCardID) {
+
+<span class="nc" id="L28">	}</span>
+
+	/**
+	 * Get the list of all gambler cards
+	 */
+	public List&lt;GamblerCard&gt; getListOfGamblerCard() {
+<span class="nc" id="L34">		return null; // to satisfy the compiler</span>
+	}
+
+	/**
+	 *
+	 * @param listOfGamblerCard
+	 */
+	public void setListOfGamblerCard(List&lt;GamblerCard&gt; listOfGamblerCard) {
+<span class="nc" id="L42">		this.listOfGamblerCard = listOfGamblerCard;</span>
+<span class="nc" id="L43">	}</span>
+
+	/**
+	 * Check if the amount is assigned
+	 * @param amount
+	 */
+	public boolean assignCard(double amount) {
+<span class="nc" id="L50">		return true; // to satisfy the compiler</span>
+	}
+
+	/**
+	 * This method clears the betID's stored in it  and the amount making card anonymous, and can be reused.
+	 * @param gamblerCardID
+	 */
+	public void clearCard(String gamblerCardID) {
+
+<span class="nc" id="L59">	}</span>
+
+	/**
+	 * check the current amount for specific person
+	 * @param gamblerCardID
+	 * @param amount
+	 */
+	public boolean checkCredit(String gamblerCardID, double amount) {
+<span class="nc" id="L67">		return true; // to satisfy the compiler</span>
+	}
+
+	/**
+	 * tops up the card with amount
+	 * @param gamblerCardID
+	 * @param amount
+	 */
+	public void deposit(String gamblerCardID, double amount) {
+
+<span class="nc" id="L77">	}</span>
+
+	/**
+	 * withdraw amount from the card by cashier.
+	 * @param gamblerCardID
+	 * @param amount
+	 */
+	public void withdraw(String gamblerCardID, double amount) {
+
+<span class="nc" id="L86">	}</span>
+
+	/**
+	 * Add bet to the Gambler card
+	 * @param gamblerCardID
+	 * @param bet
+	 */
+	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) {
+
+<span class="nc" id="L95">	}</span>
+
+	public Bet getBet(String betId){
+<span class="nc" id="L98">		return null; //to satisfy compiler</span>
+	}
+
+	public boolean isGamblerCardValid(String gamblerCardID) {
+<span class="nc" id="L102">		return true;// to satisfy the compiler</span>
+	}
+
+	@Override
+	public void Log(String filePath, String info) {
+
+<span class="nc" id="L108">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

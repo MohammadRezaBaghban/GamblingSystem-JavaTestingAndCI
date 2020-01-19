@@ -1,8 +1,18 @@
 package casino;
 
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class GamblerCardTest {
+
+    GamblerCard GamblerCard_SUT_Object;
+    @Before
+    public void Setup(){
+        //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
+    }
 
     /**
      * CheckOut An Unassigned Card Throws Illegal Operation Exception
@@ -12,8 +22,12 @@ public class GamblerCardTest {
      */
     //Direct Inputs
     @Test
-    public void checkOut_CheckOutAnUnassignedCard_ThrowsIllegalOperationException(){
-
+    public void checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException(){
+        // Act & Assert
+        Assertions.assertThrows(NotificationException.class,
+                ()->{GamblerCard_SUT_Object.checkOut();},
+                "A Gambler Card cannot be checkout if it was not be assigned"
+        );
     }
 
     /**
@@ -27,6 +41,12 @@ public class GamblerCardTest {
     @Test
     //Direct Inputs
     public void checkOut_CheckOutCardSuccessfully_ResetItsDetails(){
+
+        //Arrange
+
+        //Act
+
+        //Assert
 
     }
 
@@ -42,6 +62,13 @@ public class GamblerCardTest {
     //Indirect Inputs
     public void setCredit_OnValidAmount_CreditChangeAndReturnTrue(){
 
+        //Arrange
+
+        //Act
+
+        //Assert
+
+
     }
 
     /**
@@ -50,6 +77,13 @@ public class GamblerCardTest {
     @Test
     //Indirect Inputs
     public void setCredit_OvInvalidAmount_ThrowIllegalOperationException(){
+
+        //Arrange
+
+        //Act
+
+        //Assert
+
 
     }
 
@@ -62,6 +96,13 @@ public class GamblerCardTest {
     //Indirect Inputs
     public void addBet_OnAddingNonDuplicateBet_TheBetWouldBeAddedToBetList(){
 
+        //Arrange
+
+        //Act
+
+        //Assert
+
+
     }
 
     /**
@@ -71,6 +112,13 @@ public class GamblerCardTest {
     //Indirect Inputs
     public void addBet_OnAddingDuplicateBet_ThrowIllegalOperation(){
 
+        //Arrange
+
+        //Act
+
+        //Assert
+
+
     }
 
     /**
@@ -78,6 +126,13 @@ public class GamblerCardTest {
      */
     @Test
     public void ToString_OnCalling_IncludesAllImportantDetailOfGamblercard(){
+
+        //Arrange
+
+        //Act
+
+        //Assert
+
 
     }
 
