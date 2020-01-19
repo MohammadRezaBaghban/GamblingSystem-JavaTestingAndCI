@@ -64,6 +64,16 @@ public class GamblingAuthorityTest {
     }
 
     /**
+     *
+     */
+    @Test
+    void addBet_BetCannotBeNull_throwNotificationException() {
+        //arrange
+        //act
+        //assert
+    }
+
+    /**
      * Checks if the method throws exception when null value of BettingRound is submitted.
      * @throws NotificationException
      */

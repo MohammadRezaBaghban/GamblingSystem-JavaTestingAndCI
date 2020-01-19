@@ -2,6 +2,8 @@ package casino;
 
 import org.mockito.internal.matchers.Not;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
@@ -20,13 +22,16 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 */
 	private IBetLoggingAuthority logger;
 
+	public GamblingAuthority() {
+		listOfBets = new ArrayList<>();
+	}
+
 	/**
 	 * This method also logs this request.
 	 * @param bet
 	 */
 	public void addBet(Bet bet) {
-		// TODO - implement GamblingAuthority.addBet
-		throw new UnsupportedOperationException();
+		this.listOfBets.add(bet);
 	}
 
 	/**
@@ -62,5 +67,10 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	@Override
 	public void Log(String filePath, String info) {
 
+	}
+
+	public ArrayList<Bet> getBetList() {
+		ArrayList<Bet> tempList = (ArrayList<Bet>) this.listOfBets;
+		return tempList;
 	}
 }
