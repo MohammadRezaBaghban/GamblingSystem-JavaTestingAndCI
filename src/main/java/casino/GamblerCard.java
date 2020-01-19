@@ -116,4 +116,7 @@ public class GamblerCard {
 
 	public void withdrawCredit(Double validAmount) {
 	}
+
+	public void setAssignedStatus() {
+	}
 }

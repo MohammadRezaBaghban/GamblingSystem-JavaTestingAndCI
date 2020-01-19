@@ -1,5 +1,4 @@
 package casino;
-import org.mockito.internal.matchers.Not;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,10 +46,18 @@ public class BankTeller implements IBetLoggingAuthority {
 
 	/**
 	 * It sets the initial value of the card's credit and set it's status as assigned.
+	 * @param gamblerCardId
 	 * @param amount
 	 */
-	public boolean assignCard(double amount) {
-		return true; // to satisfy the compiler
+	public boolean assignCard(String gamblerCardId, double amount) {
+		if(isGamblerCardValid(gamblerCardId))
+		{
+			GamblerCard gamblerCard = getGamblingCard(gamblerCardId);
+			gamblerCard.setCredit(amount);
+			gamblerCard.setAssignedStatus();
+			return true;
+		}
+		return false;
 	}
 
 	/**
