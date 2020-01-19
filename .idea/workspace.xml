@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.java.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/index.html" afterDir="false" />
@@ -299,7 +301,7 @@
       <workItem from="1578395740697" duration="13603000" />
       <workItem from="1578483072891" duration="178000" />
       <workItem from="1579419259006" duration="4210000" />
-      <workItem from="1579426428103" duration="3510000" />
+      <workItem from="1579426428103" duration="3822000" />
     </task>
     <task id="LOCAL-00001" summary="jacoco plugin added to the build.gradle">
       <created>1579360693771</created>
@@ -343,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579427067754</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;CashOut_MethodShouldLogCardInformation.">
+      <created>1579439704020</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579439704020</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +365,8 @@
     <MESSAGE value="Refactor PHASE: changes on tested behaviour(clearCard). TEST: BankTellerTest--&gt;CashOut_ShouldSetAmountToZero." />
     <MESSAGE value="Red PHASE: test is introduced and run, it failed. TEST: BankTellerTest--&gt;CashOut_ShouldReturnFalseIfCardIsInValid." />
     <MESSAGE value="Green PHASE: code implemented and it Passed. TEST: BankTellerTest--&gt;CashOut_ShouldReturnFalseIfCardIsInValid." />
-    <option name="LAST_COMMIT_MESSAGE" value="Green PHASE: code implemented and it Passed. TEST: BankTellerTest--&gt;CashOut_ShouldReturnFalseIfCardIsInValid." />
+    <MESSAGE value="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;CashOut_MethodShouldLogCardInformation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;CashOut_MethodShouldLogCardInformation." />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1578478456346">
@@ -400,11 +410,11 @@
     </state>
     <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1578403683259" />
     <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1578480235180" />
-    <state x="461" y="93" key="CommitChangelistDialog2" timestamp="1579439643717">
+    <state x="461" y="93" key="CommitChangelistDialog2" timestamp="1579439703047">
       <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state x="1373" y="-936" key="CommitChangelistDialog2/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427066766" />
-    <state x="461" y="93" key="CommitChangelistDialog2/64.0.1536.900@64.0.1536.900" timestamp="1579439643717" />
+    <state x="461" y="93" key="CommitChangelistDialog2/64.0.1536.900@64.0.1536.900" timestamp="1579439703047" />
     <state x="458" y="46" key="CommitChangelistDialog2/71.0.1529.900@71.0.1529.900" timestamp="1579360692881" />
     <state x="571" y="214" key="EnvironmentVariablesDialog" timestamp="1579366533163">
       <screen x="71" y="0" width="1529" height="900" />
@@ -415,29 +425,29 @@
     </state>
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
     <state x="618" y="206" key="FileChooserDialogImpl/71.0.1529.900@71.0.1529.900" timestamp="1579359222462" />
-    <state width="1493" height="267" key="GridCell.Tab.0.bottom" timestamp="1579439600225">
+    <state width="1493" height="267" key="GridCell.Tab.0.bottom" timestamp="1579439938768">
       <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.bottom/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
-    <state width="1493" height="267" key="GridCell.Tab.0.bottom/64.0.1536.900@64.0.1536.900" timestamp="1579439600225" />
+    <state width="1493" height="267" key="GridCell.Tab.0.bottom/64.0.1536.900@64.0.1536.900" timestamp="1579439938768" />
     <state width="1486" height="297" key="GridCell.Tab.0.bottom/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
-    <state width="1493" height="267" key="GridCell.Tab.0.center" timestamp="1579439600225">
+    <state width="1493" height="267" key="GridCell.Tab.0.center" timestamp="1579439938768">
       <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.center/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
-    <state width="1493" height="267" key="GridCell.Tab.0.center/64.0.1536.900@64.0.1536.900" timestamp="1579439600225" />
+    <state width="1493" height="267" key="GridCell.Tab.0.center/64.0.1536.900@64.0.1536.900" timestamp="1579439938768" />
     <state width="1486" height="297" key="GridCell.Tab.0.center/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
-    <state width="1493" height="267" key="GridCell.Tab.0.left" timestamp="1579439600225">
+    <state width="1493" height="267" key="GridCell.Tab.0.left" timestamp="1579439938768">
       <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.left/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
-    <state width="1493" height="267" key="GridCell.Tab.0.left/64.0.1536.900@64.0.1536.900" timestamp="1579439600225" />
+    <state width="1493" height="267" key="GridCell.Tab.0.left/64.0.1536.900@64.0.1536.900" timestamp="1579439938768" />
     <state width="1486" height="297" key="GridCell.Tab.0.left/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
-    <state width="1493" height="267" key="GridCell.Tab.0.right" timestamp="1579439600225">
+    <state width="1493" height="267" key="GridCell.Tab.0.right" timestamp="1579439938768">
       <screen x="64" y="0" width="1536" height="900" />
     </state>
     <state width="1815" height="334" key="GridCell.Tab.0.right/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579427026695" />
-    <state width="1493" height="267" key="GridCell.Tab.0.right/64.0.1536.900@64.0.1536.900" timestamp="1579439600225" />
+    <state width="1493" height="267" key="GridCell.Tab.0.right/64.0.1536.900@64.0.1536.900" timestamp="1579439938768" />
     <state width="1486" height="297" key="GridCell.Tab.0.right/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
     <state x="338" y="94" key="SettingsEditor" timestamp="1579366590498">
       <screen x="71" y="0" width="1529" height="900" />

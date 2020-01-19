@@ -24,6 +24,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * This method also logs the GamblingCard information.
 	 */
 	public void CashOut(String gamblerCardID) throws NotificationException {
+		this.logger.Log("/log.txt", gamblerCardID);
 		this.clearCard(gamblerCardID);
 	}
 

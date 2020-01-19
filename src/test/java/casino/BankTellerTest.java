@@ -7,11 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class BankTellerTest {
-    private static BankTeller bankTeller;
+        BankTeller bankTeller;
+        IBetLoggingAuthority iBetLoggingAuthority;
+        GamblingAuthority gamblingAuthority;
     @BeforeEach
     void beforeEach() {
-        IBetLoggingAuthority iBetLoggingAuthority = mock(IBetLoggingAuthority.class);
-        GamblingAuthority gamblingAuthority = mock(GamblingAuthority.class);
+        iBetLoggingAuthority = mock(IBetLoggingAuthority.class);
+        gamblingAuthority = mock(GamblingAuthority.class);
         bankTeller = new BankTeller(iBetLoggingAuthority,gamblingAuthority);
     }
 
@@ -60,11 +62,11 @@ public class BankTellerTest {
     @Test
     void CashOut_MethodShouldLogCardInformation() throws NotificationException {
         //arrange
-        IBetLoggingAuthority iBetLoggingAuthority = mock(IBetLoggingAuthority.class);
-        GamblingAuthority gamblingAuthority = mock(GamblingAuthority.class);
-        bankTeller = new BankTeller(iBetLoggingAuthority,gamblingAuthority);
         String validGamblerCardId = "a2u7wqe3r4";
         String validPath = "/log.txt";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        bankTeller.addCard(gamblerCard);
         //act
         bankTeller.CashOut(validGamblerCardId);
         //assert
