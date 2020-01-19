@@ -55,7 +55,22 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardID
 	 */
 	public void clearCard(String gamblerCardID) {
+		GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);
+		gamblerCard.setCredit(0.0);
+	}
 
+	/**
+	 * returns the GamblingCard object if the gamblerCardID exists in the gamblingCardList.
+	 * otherwise returns null
+	 * @param gamblerCardID
+	 * @return
+	 */
+	private GamblerCard getGamblingCard(String gamblerCardID) {
+		GamblerCard card = null;
+		for(GamblerCard c : listOfGamblerCard)
+			if (c.getCardID().equals(gamblerCardID))
+				card = c;
+		return card;
 	}
 
 	/**
@@ -105,5 +120,9 @@ public class BankTeller implements IBetLoggingAuthority {
 	@Override
 	public void Log(String filePath, String info) {
 
+	}
+
+	public void addCard(GamblerCard gamblerCard) {
+		this.listOfGamblerCard.add(gamblerCard);
 	}
 }

@@ -55,8 +55,23 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardID
 	 */
 	public void clearCard(String gamblerCardID) {
+<span class="fc" id="L58">		GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);</span>
+<span class="fc" id="L59">		gamblerCard.setCredit(0.0);</span>
+<span class="fc" id="L60">	}</span>
 
-<span class="fc" id="L59">	}</span>
+	/**
+	 * returns the GamblingCard object if the gamblerCardID exists in the gamblingCardList.
+	 * otherwise returns null
+	 * @param gamblerCardID
+	 * @return
+	 */
+	private GamblerCard getGamblingCard(String gamblerCardID) {
+<span class="fc" id="L69">		GamblerCard card = null;</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">		for(GamblerCard c : listOfGamblerCard)</span>
+<span class="pc bpc" id="L71" title="1 of 2 branches missed.">			if (c.getCardID().equals(gamblerCardID))</span>
+<span class="fc" id="L72">				card = c;</span>
+<span class="fc" id="L73">		return card;</span>
+	}
 
 	/**
 	 * check the current amount for specific person
@@ -64,7 +79,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public boolean checkCredit(String gamblerCardID, double amount) {
-<span class="nc" id="L67">		return true; // to satisfy the compiler</span>
+<span class="nc" id="L82">		return true; // to satisfy the compiler</span>
 	}
 
 	/**
@@ -74,7 +89,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void deposit(String gamblerCardID, double amount) {
 
-<span class="nc" id="L77">	}</span>
+<span class="nc" id="L92">	}</span>
 
 	/**
 	 * withdraw amount from the card by cashier.
@@ -83,7 +98,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void withdraw(String gamblerCardID, double amount) {
 
-<span class="nc" id="L86">	}</span>
+<span class="nc" id="L101">	}</span>
 
 	/**
 	 * Add bet to the Gambler card
@@ -92,19 +107,23 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) {
 
-<span class="nc" id="L95">	}</span>
+<span class="nc" id="L110">	}</span>
 
 	public Bet getBet(String betId){
-<span class="nc" id="L98">		return null; //to satisfy compiler</span>
+<span class="nc" id="L113">		return null; //to satisfy compiler</span>
 	}
 
 	public boolean isGamblerCardValid(String gamblerCardID) {
-<span class="nc" id="L102">		return true;// to satisfy the compiler</span>
+<span class="nc" id="L117">		return true;// to satisfy the compiler</span>
 	}
 
 	@Override
 	public void Log(String filePath, String info) {
 
-<span class="nc" id="L108">	}</span>
+<span class="nc" id="L123">	}</span>
+
+	public void addCard(GamblerCard gamblerCard) {
+<span class="fc" id="L126">		this.listOfGamblerCard.add(gamblerCard);</span>
+<span class="fc" id="L127">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

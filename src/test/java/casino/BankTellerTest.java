@@ -15,10 +15,14 @@ public class BankTellerTest {
         IBetLoggingAuthority iBetLoggingAuthority = mock(IBetLoggingAuthority.class);
         GamblingAuthority gamblingAuthority = mock(GamblingAuthority.class);
         BankTeller bankTeller = new BankTeller(iBetLoggingAuthority,gamblingAuthority);
-        GamblerCard gamblerCard = mock(GamblerCard.class);
         String gamblerCardId = "a2u7wqe3r4";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
         bankTeller.clearCard(gamblerCardId);
+
         //assert
         verify(gamblerCard).setCredit(0.0);
     }
