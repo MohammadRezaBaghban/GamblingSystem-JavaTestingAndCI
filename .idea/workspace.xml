@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.java.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/index.html" afterDir="false" />
@@ -123,7 +121,7 @@
       <recent name="C:\Users\User\Desktop\TCI\Casino\src\main\java\casino" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GamblerCardTest.checkOut_CheckOutCardSuccessfully_ResetItsDetails">
+  <component name="RunManager" selected="JUnit.GamblerCardTest">
     <configuration name="MohammadTDD [build]" type="GradleRunConfiguration" factoryName="Gradle" editBeforeRun="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -169,6 +167,37 @@
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
+    </configuration>
+    <configuration name="GamblerCardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Casino.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="casino.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="casino" />
+      <option name="MAIN_CLASS_NAME" value="casino.GamblerCardTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GamblerCardTest.AssignCard_OnProvidingNegativeAmount_ThrowNotificationException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Casino.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="casino.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="casino" />
+      <option name="MAIN_CLASS_NAME" value="casino.GamblerCardTest" />
+      <option name="METHOD_NAME" value="AssignCard_OnProvidingNegativeAmount_ThrowNotificationException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="GamblerCardTest.checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Casino.test" />
@@ -220,9 +249,13 @@
       <item itemvalue="JUnit.WholeProject" />
       <item itemvalue="JUnit.GamblerCardTest.checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException" />
       <item itemvalue="JUnit.GamblerCardTest.checkOut_CheckOutCardSuccessfully_ResetItsDetails" />
+      <item itemvalue="JUnit.GamblerCardTest.AssignCard_OnProvidingNegativeAmount_ThrowNotificationException" />
+      <item itemvalue="JUnit.GamblerCardTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GamblerCardTest" />
+        <item itemvalue="JUnit.GamblerCardTest.AssignCard_OnProvidingNegativeAmount_ThrowNotificationException" />
         <item itemvalue="JUnit.GamblerCardTest.checkOut_CheckOutCardSuccessfully_ResetItsDetails" />
         <item itemvalue="JUnit.GamblerCardTest.checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException" />
       </list>
@@ -259,7 +292,7 @@
       <workItem from="1578395740697" duration="13603000" />
       <workItem from="1578483072891" duration="178000" />
       <workItem from="1579203461995" duration="7200000" />
-      <workItem from="1579360905110" duration="17086000" />
+      <workItem from="1579360905110" duration="19355000" />
     </task>
     <task id="LOCAL-00001" summary="Red Phase for &quot;checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException&quot;">
       <created>1579456214443</created>
@@ -337,25 +370,25 @@
     </state>
     <state x="617" y="206" width="605" height="482" key="FileChooserDialogImpl/0.0.2000.1293@0.0.2000.1293" timestamp="1579381751136" />
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
-    <state width="978" height="332" key="GridCell.Tab.0.bottom" timestamp="1579458459845">
+    <state width="978" height="332" key="GridCell.Tab.0.bottom" timestamp="1579459665573">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="978" height="332" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579458459845" />
+    <state width="978" height="332" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579459665573" />
     <state width="1371" height="236" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="978" height="332" key="GridCell.Tab.0.center" timestamp="1579458459845">
+    <state width="978" height="332" key="GridCell.Tab.0.center" timestamp="1579459665572">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="978" height="332" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579458459845" />
+    <state width="978" height="332" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579459665572" />
     <state width="1371" height="236" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="978" height="332" key="GridCell.Tab.0.left" timestamp="1579458459844">
+    <state width="978" height="332" key="GridCell.Tab.0.left" timestamp="1579459665572">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="978" height="332" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579458459844" />
+    <state width="978" height="332" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579459665572" />
     <state width="1371" height="236" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="978" height="332" key="GridCell.Tab.0.right" timestamp="1579458459845">
+    <state width="978" height="332" key="GridCell.Tab.0.right" timestamp="1579459665572">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="978" height="332" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579458459845" />
+    <state width="978" height="332" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579459665572" />
     <state width="1371" height="236" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
     <state x="504" y="293" key="SettingsEditor" timestamp="1579362559659">
       <screen x="0" y="0" width="2000" height="1293" />
@@ -370,6 +403,14 @@
     <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
     <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1579361026118" />
     <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
+    <state x="710" y="282" key="refactoring.ChangeSignatureDialog" timestamp="1579460814346">
+      <screen x="0" y="0" width="2000" height="1293" />
+    </state>
+    <state x="710" y="282" key="refactoring.ChangeSignatureDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579460814346" />
+    <state x="657" y="304" key="run.anything.popup" timestamp="1579460890119">
+      <screen x="0" y="0" width="2000" height="1293" />
+    </state>
+    <state x="657" y="304" key="run.anything.popup/0.0.2000.1293@0.0.2000.1293" timestamp="1579460890119" />
     <state x="663" y="289" width="672" height="678" key="search.everywhere.popup" timestamp="1579458124163">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>

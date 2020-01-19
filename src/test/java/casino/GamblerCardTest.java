@@ -5,14 +5,77 @@ import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
 public class GamblerCardTest {
 
     public GamblerCard GamblerCard_SUT_Object;
+    public Timestamp Valid_AssignmentMoment;
 
     @Before
     public void Setup(){
         //Arrange
         GamblerCard_SUT_Object = new GamblerCard();
+        Valid_AssignmentMoment = Timestamp.valueOf(LocalDateTime.now());
+    }
+
+    /**
+     * An exciting AssignCard cannot be reassign
+     */
+    //Direct Input
+    @Test
+    public void AssignCard_OnAssigningAnAssignedCard_ThrowNotificationException(){
+
+        //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
+        GamblerCard_SUT_Object.AssignCard(100, Valid_AssignmentMoment);
+
+        //Act and Assert
+        Assertions.assertThrows(NotificationException.class,
+                ()->{GamblerCard_SUT_Object.AssignCard(0, Valid_AssignmentMoment);},
+                "An already assigned Gambler Card cannot be reassigned before checkout"
+        );
+    }
+
+
+
+    /**
+     * AssignCard to a Gambler with an initialAmount less than 5 euro throw NotificationException
+     */
+    //Direct Input
+    @Test
+    public void AssignCard_OnProvidingNegativeAmount_ThrowNotificationException(){
+
+        //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
+
+        //Act and Assert
+        Assertions.assertThrows(NotificationException.class,
+                ()->{GamblerCard_SUT_Object.AssignCard(0, Valid_AssignmentMoment);},
+                "A Gambler Card cannot be assigned with an initial amount less than 5 euros"
+        );
+    }
+
+    /**
+     * Assigning an unassigned card with a value more than or equal to 5 make the card assigned
+     */
+    @Test //DirectInput //DirectOutPut
+    public void AssignCard_OnSuccessfullCardAssigning_ValuesOfCardBeSetCorrectly(){
+
+        //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
+
+        //Act
+        GamblerCard_SUT_Object.AssignCard(200,Valid_AssignmentMoment);
+
+
+        //Assert
+        Assert.assertTrue("The InitialAmount is not being set correctly",GamblerCard_SUT_Object.getInitialAmount()==200);
+        Assert.assertTrue("The Credit is not being set correctly",GamblerCard_SUT_Object.getCredit()==200);
+        Assert.assertTrue("The bet list is not clear correctly",GamblerCard_SUT_Object.getListOfBet().size()==0);
+        Assert.assertTrue("The timeStamp is not correctly set",GamblerCard_SUT_Object.getTimeStamp()==Valid_AssignmentMoment);
+
     }
 
     /**
@@ -50,7 +113,7 @@ public class GamblerCardTest {
 
         //Arrange
         GamblerCard_SUT_Object = new GamblerCard();
-        GamblerCard_SUT_Object.AssignCard(100);
+        GamblerCard_SUT_Object.AssignCard(100, Valid_AssignmentMoment);
 
 
         //Act

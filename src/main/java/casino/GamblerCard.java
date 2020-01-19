@@ -1,5 +1,6 @@
 package casino;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -124,6 +125,6 @@ public class GamblerCard {
 		throw new UnsupportedOperationException();
 	}
 
-	public void AssignCard(int i) {
+	public void AssignCard(double initialAmount, Timestamp assignmentMoment) {
 	}
 }
