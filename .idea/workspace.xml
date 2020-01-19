@@ -4,6 +4,14 @@
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/BankTeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/BankTellerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +116,7 @@
       <recent name="C:\Users\User\Desktop\TCI\Casino\src\main\java\casino" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Repo [build]">
+  <component name="RunManager" selected="Gradle.BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour">
     <configuration name="BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -127,6 +135,25 @@
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Repo [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assemble" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <configuration name="Repo [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -225,13 +252,15 @@
       <item itemvalue="Gradle.Repo [build]" />
       <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour" />
       <item itemvalue="Gradle.Repo [jacocoTestReport]" />
+      <item itemvalue="Gradle.Repo [assemble]" />
       <item itemvalue="JUnit.Whole project" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour" />
+        <item itemvalue="Gradle.Repo [assemble]" />
         <item itemvalue="Gradle.Repo [test]" />
         <item itemvalue="Gradle.Repo [jacocoTestReport]" />
-        <item itemvalue="Gradle.BankTellerTest.CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour" />
         <item itemvalue="Gradle.Repo [build]" />
       </list>
     </recent_temporary>
@@ -266,6 +295,7 @@
       <workItem from="1578337995955" duration="669000" />
       <workItem from="1578395740697" duration="13603000" />
       <workItem from="1578483072891" duration="178000" />
+      <workItem from="1579419259006" duration="2255000" />
     </task>
     <task id="LOCAL-00001" summary="jacoco plugin added to the build.gradle">
       <created>1579360693771</created>
@@ -289,6 +319,10 @@
       <screen x="62" y="0" width="1538" height="900" />
     </state>
     <state x="770" y="152" key="#File_and_Code_Templates/62.0.1538.900@62.0.1538.900" timestamp="1578478456346" />
+    <state x="426" y="110" key="#Inspections" timestamp="1579419339865">
+      <screen x="64" y="0" width="1536" height="900" />
+    </state>
+    <state x="426" y="110" key="#Inspections/64.0.1536.900@64.0.1536.900" timestamp="1579419339865" />
     <state x="429" y="110" key="#Project_Structure" timestamp="1579361794758">
       <screen x="71" y="0" width="1529" height="900" />
     </state>
@@ -335,22 +369,26 @@
     </state>
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
     <state x="618" y="206" key="FileChooserDialogImpl/71.0.1529.900@71.0.1529.900" timestamp="1579359222462" />
-    <state width="1486" height="297" key="GridCell.Tab.0.bottom" timestamp="1579369214881">
-      <screen x="71" y="0" width="1529" height="900" />
+    <state width="1815" height="297" key="GridCell.Tab.0.bottom" timestamp="1579424436663">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state width="1486" height="297" key="GridCell.Tab.0.bottom/71.0.1529.900@71.0.1529.900" timestamp="1579369214881" />
-    <state width="1486" height="297" key="GridCell.Tab.0.center" timestamp="1579369214881">
-      <screen x="71" y="0" width="1529" height="900" />
+    <state width="1815" height="297" key="GridCell.Tab.0.bottom/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579424436663" />
+    <state width="1486" height="297" key="GridCell.Tab.0.bottom/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
+    <state width="1815" height="297" key="GridCell.Tab.0.center" timestamp="1579424436663">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state width="1486" height="297" key="GridCell.Tab.0.center/71.0.1529.900@71.0.1529.900" timestamp="1579369214881" />
-    <state width="1486" height="297" key="GridCell.Tab.0.left" timestamp="1579369214881">
-      <screen x="71" y="0" width="1529" height="900" />
+    <state width="1815" height="297" key="GridCell.Tab.0.center/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579424436663" />
+    <state width="1486" height="297" key="GridCell.Tab.0.center/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
+    <state width="1815" height="297" key="GridCell.Tab.0.left" timestamp="1579424436663">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state width="1486" height="297" key="GridCell.Tab.0.left/71.0.1529.900@71.0.1529.900" timestamp="1579369214881" />
-    <state width="1486" height="297" key="GridCell.Tab.0.right" timestamp="1579369214881">
-      <screen x="71" y="0" width="1529" height="900" />
+    <state width="1815" height="297" key="GridCell.Tab.0.left/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579424436663" />
+    <state width="1486" height="297" key="GridCell.Tab.0.left/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
+    <state width="1815" height="297" key="GridCell.Tab.0.right" timestamp="1579424436663">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state width="1486" height="297" key="GridCell.Tab.0.right/71.0.1529.900@71.0.1529.900" timestamp="1579369214881" />
+    <state width="1815" height="297" key="GridCell.Tab.0.right/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579424436663" />
+    <state width="1486" height="297" key="GridCell.Tab.0.right/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
     <state x="338" y="94" key="SettingsEditor" timestamp="1579366590498">
       <screen x="71" y="0" width="1529" height="900" />
     </state>

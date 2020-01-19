@@ -19,10 +19,6 @@ public class BankTeller implements IBetLoggingAuthority {
 		this.listOfGamblerCard = new ArrayList<>();
 	}
 
-	public BankTeller() {
-
-	}
-
 	/**
 	 * The total amount of money credit is physically handed to the gambler
 	 * This method also logs the GamblingCard information.

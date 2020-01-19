@@ -2,6 +2,8 @@ package casino;
 
 import org.junit.jupiter.api.Test;
 
+import static org.mockito.Mockito.*;
+
 public class BankTellerTest {
     /**
      * This test checks if CashOut method invokes the ClearCard() method with right parameter.
@@ -10,10 +12,15 @@ public class BankTellerTest {
     @Test
     void CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour() {
         //arrange
+        IBetLoggingAuthority iBetLoggingAuthority = mock(IBetLoggingAuthority.class);
+        GamblingAuthority gamblingAuthority = mock(GamblingAuthority.class);
+        BankTeller bankTeller = new BankTeller(iBetLoggingAuthority,gamblingAuthority);
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        String gamblerCardId = "a2u7wqe3r4";
         //act
+        bankTeller.clearCard(gamblerCardId);
         //assert
-        BankTeller bankTeller = new BankTeller();
-        bankTeller.clearCard("ASD");
+        verify(gamblerCard).setCredit(0.0);
     }
 
     /**

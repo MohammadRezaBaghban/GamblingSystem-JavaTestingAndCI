@@ -13,15 +13,11 @@ public class BankTeller implements IBetLoggingAuthority {
 	/**
 	 * This class is responsible for managing gambling card information and logging all the activities.
 	 */
-<span class="nc" id="L16">	public BankTeller(IBetLoggingAuthority logger, GamblingAuthority gamblingAuthority) {</span>
-<span class="nc" id="L17">		this.logger = logger;</span>
-<span class="nc" id="L18">		this.gamblingAuthority = gamblingAuthority;</span>
-<span class="nc" id="L19">		this.listOfGamblerCard = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L20">	}</span>
-
-<span class="fc" id="L22">	public BankTeller() {</span>
-
-<span class="fc" id="L24">	}</span>
+<span class="fc" id="L16">	public BankTeller(IBetLoggingAuthority logger, GamblingAuthority gamblingAuthority) {</span>
+<span class="fc" id="L17">		this.logger = logger;</span>
+<span class="fc" id="L18">		this.gamblingAuthority = gamblingAuthority;</span>
+<span class="fc" id="L19">		this.listOfGamblerCard = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L20">	}</span>
 
 	/**
 	 * The total amount of money credit is physically handed to the gambler
@@ -29,13 +25,13 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void CashOut(String gamblerCardID) {
 
-<span class="nc" id="L32">	}</span>
+<span class="nc" id="L28">	}</span>
 
 	/**
 	 * Get the list of all gambler cards
 	 */
 	public List&lt;GamblerCard&gt; getListOfGamblerCard() {
-<span class="nc" id="L38">		return null; // to satisfy the compiler</span>
+<span class="nc" id="L34">		return null; // to satisfy the compiler</span>
 	}
 
 	/**
@@ -43,15 +39,15 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param listOfGamblerCard
 	 */
 	public void setListOfGamblerCard(List&lt;GamblerCard&gt; listOfGamblerCard) {
-<span class="nc" id="L46">		this.listOfGamblerCard = listOfGamblerCard;</span>
-<span class="nc" id="L47">	}</span>
+<span class="nc" id="L42">		this.listOfGamblerCard = listOfGamblerCard;</span>
+<span class="nc" id="L43">	}</span>
 
 	/**
 	 * Check if the amount is assigned
 	 * @param amount
 	 */
 	public boolean assignCard(double amount) {
-<span class="nc" id="L54">		return true; // to satisfy the compiler</span>
+<span class="nc" id="L50">		return true; // to satisfy the compiler</span>
 	}
 
 	/**
@@ -60,7 +56,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void clearCard(String gamblerCardID) {
 
-<span class="fc" id="L63">	}</span>
+<span class="fc" id="L59">	}</span>
 
 	/**
 	 * check the current amount for specific person
@@ -68,7 +64,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public boolean checkCredit(String gamblerCardID, double amount) {
-<span class="nc" id="L71">		return true; // to satisfy the compiler</span>
+<span class="nc" id="L67">		return true; // to satisfy the compiler</span>
 	}
 
 	/**
@@ -78,7 +74,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void deposit(String gamblerCardID, double amount) {
 
-<span class="nc" id="L81">	}</span>
+<span class="nc" id="L77">	}</span>
 
 	/**
 	 * withdraw amount from the card by cashier.
@@ -87,7 +83,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void withdraw(String gamblerCardID, double amount) {
 
-<span class="nc" id="L90">	}</span>
+<span class="nc" id="L86">	}</span>
 
 	/**
 	 * Add bet to the Gambler card
@@ -96,19 +92,19 @@ public class BankTeller implements IBetLoggingAuthority {
 	 */
 	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) {
 
-<span class="nc" id="L99">	}</span>
+<span class="nc" id="L95">	}</span>
 
 	public Bet getBet(String betId){
-<span class="nc" id="L102">		return null; //to satisfy compiler</span>
+<span class="nc" id="L98">		return null; //to satisfy compiler</span>
 	}
 
 	public boolean isGamblerCardValid(String gamblerCardID) {
-<span class="nc" id="L106">		return true;// to satisfy the compiler</span>
+<span class="nc" id="L102">		return true;// to satisfy the compiler</span>
 	}
 
 	@Override
 	public void Log(String filePath, String info) {
 
-<span class="nc" id="L112">	}</span>
+<span class="nc" id="L108">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
