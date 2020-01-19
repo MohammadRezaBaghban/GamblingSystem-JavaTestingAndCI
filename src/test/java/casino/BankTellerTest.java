@@ -40,7 +40,7 @@ public class BankTellerTest {
      * If the card Id is not valid. It should return false.
      */
     @Test
-    void CashOut_ShouldReturnFalseIfCardIsInValid(){
+    void isGamblerCardValid_ShouldReturnFalseIfCardIsInValid(){
         //arrange
         String validGamblerCardId = "a2u7wqe3r4";
         String InvalidGamblerCardId = "ndu7wqe3r7";
@@ -73,6 +73,26 @@ public class BankTellerTest {
         verify(iBetLoggingAuthority).Log(validPath, validGamblerCardId);
     }
 
+    /**
+     *
+     */
+    @Test
+    void CashOut_ShouldThrowExceptionIfCardIsNotValid() throws NotificationException {
+        //arrange
+        String validGamblerCardId = "a2u7wqe3r4";
+        String InvalidGamblerCardId = "ndu7wqe3r7";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
+        //act
+        ;
+
+        //assert
+        assertThrows(NotificationException.class, () -> {
+           bankTeller.CashOut(InvalidGamblerCardId);
+        },"gamblerCardId is not valid");
+    }
 
     /**
      *This method should return true if it has enough amount with the valid Card number.
