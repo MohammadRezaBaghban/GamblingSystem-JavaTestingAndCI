@@ -118,7 +118,9 @@ public class BankTeller implements IBetLoggingAuthority {
 	}
 
 	public boolean isGamblerCardValid(String gamblerCardID) {
-		return true;// to satisfy the compiler
+		if(this.getGamblingCard(gamblerCardID)!=null)
+			return true;
+		return false;
 	}
 
 	@Override
