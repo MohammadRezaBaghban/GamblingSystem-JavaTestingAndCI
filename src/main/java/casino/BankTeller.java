@@ -100,8 +100,10 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public void deposit(String gamblerCardID, double amount) {
-		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
-		gamblerCard.setCredit(amount);
+		if(isGamblerCardValid(gamblerCardID)) {
+			GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
+			gamblerCard.setCredit(amount);
+		}
 	}
 
 	/**
