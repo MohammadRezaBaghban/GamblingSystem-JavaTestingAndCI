@@ -114,4 +114,6 @@ public class GamblerCard {
 		throw new UnsupportedOperationException();
 	}
 
+	public void withdrawCredit(Double validAmount) {
+	}
 }

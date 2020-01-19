@@ -114,7 +114,8 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public void withdraw(String gamblerCardID, double amount) {
-
+		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
+		gamblerCard.withdrawCredit(amount);
 	}
 
 	/**
