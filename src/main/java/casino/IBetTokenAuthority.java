@@ -6,6 +6,6 @@ public interface IBetTokenAuthority {
 	 * 
 	 * @param bettingRound
 	 */
-	String getToken(BettingRound bettingRound);
+	String getToken(BettingRound bettingRound) throws NotificationException;
 
 }

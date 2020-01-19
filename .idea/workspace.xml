@@ -2,25 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/casino/isAWholeNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/BankTeller.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblingAuthority.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingAuthority.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblingAuthority.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingAuthority.java.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblerCardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblerCardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingMachineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingAuthorityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="module" />
-    </option>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -54,7 +52,14 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Casino" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Casino" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -72,11 +77,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Mohammad Reza &lt;i378474@fhict.nl&gt;" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1VyUwiOfmg20fQd4pBFUQ56IfQ3" />
@@ -96,7 +96,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Personal Assignment/Week 1/week1_code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TCI-master/TCI-master/Web_Crawler" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -105,7 +105,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
@@ -119,8 +119,68 @@
       <recent name="C:\Users\User\Desktop\TCI\Casino\src\main\java\casino" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GamblingMachineTest">
-    <configuration name="MohammadTDD [build]" type="GradleRunConfiguration" factoryName="Gradle" editBeforeRun="true">
+  <component name="RunManager" selected="Gradle.GamblingAuthorityTest.getWinNo_ShouldReturnWinNumber">
+    <configuration name="BankTellerTest.assignCard_BankTellerShouldNotBeAbleToAssignCardWhichIsAlreadyAssigned" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;casino.BankTellerTest.assignCard_BankTellerShouldNotBeAbleToAssignCardWhichIsAlreadyAssigned&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="BankTellerTest.isGamblerCardValid_ShouldReturnFalseIfCardIsInValid" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;casino.BankTellerTest.isGamblerCardValid_ShouldReturnFalseIfCardIsInValid&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GamblingAuthorityTest.getWinNo_ShouldReturnWinNumber" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;casino.GamblingAuthorityTest.getWinNo_ShouldReturnWinNumber&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Repo [jacocoTestCoverageVerification]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -131,148 +191,82 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="jacocoTestCoverageVerification" />
           </list>
         </option>
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <extension name="coverage" track_test_folders="true" runner="jacoco">
-        <pattern>
-          <option name="PATTERN" value="casino.BankTellerTest" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2">
-        <option name="Gradle.BeforeRunTask" enabled="true" tasks="" externalProjectPath="$PROJECT_DIR$" vmOptions="" scriptParameters="" />
-      </method>
+      <method v="2" />
     </configuration>
-    <configuration name="TCI-Gambling [dependencies]" type="GradleRunConfiguration" factoryName="Gradle">
+    <configuration name="Repo [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="dependencies" />
+            <option value="jacocoTestReport" />
           </list>
         </option>
-        <option name="vmOptions" />
+        <option name="vmOptions" value="" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GamblerCardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Casino.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="casino.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="casino" />
-      <option name="MAIN_CLASS_NAME" value="casino.GamblerCardTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="GamblerCardTest.ToString_OnCallingAnAssignedCard_IncludesAllImportantDetailOfGamblercard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Casino.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="casino.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="casino" />
-      <option name="MAIN_CLASS_NAME" value="casino.GamblerCardTest" />
-      <option name="METHOD_NAME" value="ToString_OnCallingAnAssignedCard_IncludesAllImportantDetailOfGamblercard" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GamblerCardTest.ToString_OnCallingAnUnAssignedCard_IncludesAllImportantDetailOfGamblercard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Casino.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="casino.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="casino" />
-      <option name="MAIN_CLASS_NAME" value="casino.GamblerCardTest" />
-      <option name="METHOD_NAME" value="ToString_OnCallingAnUnAssignedCard_IncludesAllImportantDetailOfGamblercard" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GamblerCardTest.checkOut_CheckOutCardSuccessfully_ResetItsDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Casino.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="casino.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="casino" />
-      <option name="MAIN_CLASS_NAME" value="casino.GamblerCardTest" />
-      <option name="METHOD_NAME" value="checkOut_CheckOutCardSuccessfully_ResetItsDetails" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GamblingMachineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Casino.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="casino.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="casino" />
-      <option name="MAIN_CLASS_NAME" value="casino.GamblingMachineTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WholeProject" type="JUnit" factoryName="JUnit">
-      <module name="Casino.test" />
-      <option name="PACKAGE_NAME" value="casino" />
+    <configuration name="Whole project" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <extension name="coverage" runner="jacoco" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <option name="PARAMETERS" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
       <fork_mode value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.TCI-Gambling [dependencies]" />
-      <item itemvalue="Gradle.MohammadTDD [build]" />
-      <item itemvalue="JUnit.WholeProject" />
-      <item itemvalue="JUnit.GamblerCardTest.checkOut_CheckOutCardSuccessfully_ResetItsDetails" />
-      <item itemvalue="JUnit.GamblerCardTest" />
-      <item itemvalue="JUnit.GamblerCardTest.ToString_OnCallingAnUnAssignedCard_IncludesAllImportantDetailOfGamblercard" />
-      <item itemvalue="JUnit.GamblerCardTest.ToString_OnCallingAnAssignedCard_IncludesAllImportantDetailOfGamblercard" />
-      <item itemvalue="JUnit.GamblingMachineTest" />
+      <item itemvalue="Gradle.BankTellerTest.assignCard_BankTellerShouldNotBeAbleToAssignCardWhichIsAlreadyAssigned" />
+      <item itemvalue="Gradle.Repo [jacocoTestReport]" />
+      <item itemvalue="Gradle.Repo [jacocoTestCoverageVerification]" />
+      <item itemvalue="Gradle.BankTellerTest.isGamblerCardValid_ShouldReturnFalseIfCardIsInValid" />
+      <item itemvalue="Gradle.GamblingAuthorityTest.getWinNo_ShouldReturnWinNumber" />
+      <item itemvalue="JUnit.Whole project" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GamblingMachineTest" />
-        <item itemvalue="JUnit.GamblerCardTest" />
-        <item itemvalue="JUnit.GamblerCardTest.ToString_OnCallingAnAssignedCard_IncludesAllImportantDetailOfGamblercard" />
-        <item itemvalue="JUnit.GamblerCardTest.ToString_OnCallingAnUnAssignedCard_IncludesAllImportantDetailOfGamblercard" />
-        <item itemvalue="JUnit.GamblerCardTest.checkOut_CheckOutCardSuccessfully_ResetItsDetails" />
+        <item itemvalue="Gradle.GamblingAuthorityTest.getWinNo_ShouldReturnWinNumber" />
+        <item itemvalue="Gradle.BankTellerTest.isGamblerCardValid_ShouldReturnFalseIfCardIsInValid" />
+        <item itemvalue="Gradle.Repo [jacocoTestCoverageVerification]" />
+        <item itemvalue="Gradle.Repo [jacocoTestReport]" />
+        <item itemvalue="Gradle.BankTellerTest.assignCard_BankTellerShouldNotBeAbleToAssignCardWhichIsAlreadyAssigned" />
       </list>
     </recent_temporary>
   </component>
@@ -306,157 +300,404 @@
       <workItem from="1578337995955" duration="669000" />
       <workItem from="1578395740697" duration="13603000" />
       <workItem from="1578483072891" duration="178000" />
-      <workItem from="1579203461995" duration="7200000" />
-      <workItem from="1579360905110" duration="32081000" />
+      <workItem from="1579419259006" duration="4210000" />
+      <workItem from="1579426428103" duration="7776000" />
+      <workItem from="1579453483137" duration="13419000" />
     </task>
-    <task id="LOCAL-00001" summary="Red Phase for &quot;checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException&quot;">
-      <created>1579456214443</created>
+    <task id="LOCAL-00001" summary="jacoco plugin added to the build.gradle">
+      <created>1579360693771</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1579456214443</updated>
+      <updated>1579360693771</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Red PHASE: test added and it failed.">
+      <created>1579424611185</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579424611185</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Green PHASE: coded only fot this test method and Passed the test. TEST: BankTellerTest--&gt;CashOut_ShouldSetAmountToZero.">
+      <created>1579425518679</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579425518679</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Refactor PHASE: changes on tested behaviour(clearCard). TEST: BankTellerTest--&gt;CashOut_ShouldSetAmountToZero.">
+      <created>1579426133060</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579426133060</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Red PHASE: test is introduced and run, it failed. TEST: BankTellerTest--&gt;CashOut_ShouldReturnFalseIfCardIsInValid.">
+      <created>1579426889577</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579426889579</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Green PHASE: code implemented and it Passed. TEST: BankTellerTest--&gt;CashOut_ShouldReturnFalseIfCardIsInValid.">
+      <created>1579427067753</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579427067754</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;CashOut_MethodShouldLogCardInformation.">
+      <created>1579439704020</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579439704020</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Green PHASE: code implemented and it Passed.TEST: BankTellerTest--&gt;CashOut_MethodShouldLogCardInformation.">
+      <created>1579439974545</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579439974545</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Red PHASE: test is introduced and it failed.TEST: BankTellerTest--&gt;CashOut_ShouldThrowExceptionIfCardIsNotValid.">
+      <created>1579441969180</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1579441969180</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Green PHASE: code implemented and it Passed. TEST: BankTellerTest--&gt;CashOut_ShouldThrowExceptionIfCardIsNotValid.">
+      <created>1579442176539</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579442176539</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Red PHASE: test defined for checkCredit behaviour and failed. TEST: BankTellerTest--&gt;CheckCredit_ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber.">
+      <created>1579442499828</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1579442499828</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Red PHASE: checkCredit() method implemented and test is PASSED. TEST: BankTellerTest--&gt;CheckCredit_ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber.">
+      <created>1579442736696</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1579442736696</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Green PHASE: checkCredit() method implemented and test is PASSED. TEST: BankTellerTest--&gt;CheckCredit_ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber.">
+      <created>1579442883638</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1579442883638</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Red PHASE: test is introduced, gambler should be able to deposit, and test is failed. TEST: BankTellerTest--&gt;deposit_GamblerShouldBeAbleToDepositAmountToTheCard.">
+      <created>1579443546423</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1579443546423</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Green PHASE: depsoit() method is implemented and test is Passed. TEST: BankTellerTest--&gt;deposit_GamblerShouldBeAbleToDepositAmountToTheCard.">
+      <created>1579443643782</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1579443643782</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Refactor PHASE: depsoit() method is refactored for card validity. it should first check if card is valid and run test and is Passed. TEST: BankTellerTest--&gt;deposit_GamblerShouldBeAbleToDepositAmountToTheCard.">
+      <created>1579443736581</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1579443736581</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Red PHASE: test is defined and run and failed. TEST: BankTellerTest--&gt;deposit_InputAmountMustNotBeZero_ThrowsException.">
+      <created>1579444045121</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1579444045121</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Green PHASE: changes done in deposit method and test passed . TEST: BankTellerTest--&gt;deposit_InputAmountMustNotBeZero_ThrowsException.">
+      <created>1579444264216</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1579444264216</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Red PHASE: test introduced and test failed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard.">
+      <created>1579444467307</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1579444467307</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Green PHASE: code implemented and test passed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard.">
+      <created>1579444594928</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1579444594928</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;withdraw_GamblerShouldNotBeAbleToWithdrawHigherAmountThanItHas.">
+      <created>1579453822857</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1579453822857</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Red PHASE: test defined and failed.  TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard.">
+      <created>1579454513544</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1579454513544</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Green PHASE: code implemented and test passed. TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard.">
+      <created>1579454638127</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1579454638127</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Refactor PHASE: code changed in AddBetToGamblerCard method and test passed. TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard.">
+      <created>1579455018093</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1579455018093</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;assignCard_BankTellerShouldBeAbleToAssignCard.">
+      <created>1579455634720</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1579455634720</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Green PHASE: code implemented and it Passed. TEST: BankTellerTest--&gt;assignCard_BankTellerShouldBeAbleToAssignCard.">
+      <created>1579455782369</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1579455782369</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Red PHASE: test defined and failed. TEST: GamblingAuthorityTest--&gt;getToken_ShouldReturnUniqueTokenString.">
+      <created>1579456724039</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1579456724039</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Red PHASE: test defined and failed. TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList.">
+      <created>1579465282394</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1579465282394</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Green PHASE: code implemented and test passed . TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList.">
+      <created>1579465653377</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1579465653377</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Refactor PHASE: changes done in addBet() method of GamblingAuthority class and test passed . TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList.">
+      <created>1579466107627</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1579466107627</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Red PHASE: test defined and failed. TEST: GamblingAuthorityTest--&gt;getWinNo_ShouldReturnWinNumber.">
+      <created>1579467243690</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1579467243690</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;CashOut_ShouldClearAllStoredBetsWhenGamblerCashOut.">
+      <created>1579467809550</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1579467809550</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Green PHASE: code implemented and passed. TEST: BankTellerTest--&gt;isGamblerCardValid_ShouldReturnTrueIfCardIsInValid.">
+      <created>1579470402548</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1579470402548</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Red Phase for &quot;checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Red Phase for &quot;checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException&quot;" />
+    <MESSAGE value="Green PHASE: code implemented and it Passed. TEST: BankTellerTest--&gt;CashOut_ShouldThrowExceptionIfCardIsNotValid." />
+    <MESSAGE value="Red PHASE: test defined for checkCredit behaviour and failed. TEST: BankTellerTest--&gt;CheckCredit_ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber." />
+    <MESSAGE value="Red PHASE: checkCredit() method implemented and test is PASSED. TEST: BankTellerTest--&gt;CheckCredit_ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber." />
+    <MESSAGE value="Green PHASE: checkCredit() method implemented and test is PASSED. TEST: BankTellerTest--&gt;CheckCredit_ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber." />
+    <MESSAGE value="Red PHASE: test is introduced, gambler should be able to deposit, and test is failed. TEST: BankTellerTest--&gt;deposit_GamblerShouldBeAbleToDepositAmountToTheCard." />
+    <MESSAGE value="Green PHASE: depsoit() method is implemented and test is Passed. TEST: BankTellerTest--&gt;deposit_GamblerShouldBeAbleToDepositAmountToTheCard." />
+    <MESSAGE value="Refactor PHASE: depsoit() method is refactored for card validity. it should first check if card is valid and run test and is Passed. TEST: BankTellerTest--&gt;deposit_GamblerShouldBeAbleToDepositAmountToTheCard." />
+    <MESSAGE value="Red PHASE: test is defined and run and failed. TEST: BankTellerTest--&gt;deposit_InputAmountMustNotBeZero_ThrowsException." />
+    <MESSAGE value="Green PHASE: changes done in deposit method and test passed . TEST: BankTellerTest--&gt;deposit_InputAmountMustNotBeZero_ThrowsException." />
+    <MESSAGE value="Red PHASE: test introduced and test failed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard." />
+    <MESSAGE value="Green PHASE: test introduced and test failed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard." />
+    <MESSAGE value="Green PHASE: code implemented and test passed . TEST: BankTellerTest--&gt;withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard." />
+    <MESSAGE value="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;withdraw_GamblerShouldNotBeAbleToWithdrawHigherAmountThanItHas." />
+    <MESSAGE value="Red PHASE: test defined and failed.  TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard." />
+    <MESSAGE value="Green PHASE: code implemented and test passed. TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard." />
+    <MESSAGE value="Refactor PHASE: code changed in AddBetToGamblerCard method and test passed. TEST: BankTellerTest--&gt;addBet_BankTellerShouldBeAbleToAddBetIntoTheCard." />
+    <MESSAGE value="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;assignCard_BankTellerShouldBeAbleToAssignCard." />
+    <MESSAGE value="Green PHASE: code implemented and it Passed. TEST: BankTellerTest--&gt;assignCard_BankTellerShouldBeAbleToAssignCard." />
+    <MESSAGE value="Red PHASE: test defined and failed. TEST: GamblingAuthorityTest--&gt;getToken_ShouldReturnUniqueTokenString." />
+    <MESSAGE value="Red PHASE: test defined and failed. TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList." />
+    <MESSAGE value="Green PHASE: code implemented and test passed . TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList." />
+    <MESSAGE value="Refactor PHASE: changes done in addBet() method of GamblingAuthority class and test passed . TEST: GamblingAuthorityTest--&gt;addBet_ShouldAddBetToTheList." />
+    <MESSAGE value="Red PHASE: test defined and failed. TEST: GamblingAuthorityTest--&gt;getWinNo_ShouldReturnWinNumber." />
+    <MESSAGE value="Red PHASE: test defined and failed. TEST: BankTellerTest--&gt;CashOut_ShouldClearAllStoredBetsWhenGamblerCashOut." />
+    <MESSAGE value="Green PHASE: code implemented and passed. TEST: BankTellerTest--&gt;isGamblerCardValid_ShouldReturnTrueIfCardIsInValid." />
+    <option name="LAST_COMMIT_MESSAGE" value="Green PHASE: code implemented and passed. TEST: BankTellerTest--&gt;isGamblerCardValid_ShouldReturnTrueIfCardIsInValid." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="604" y="315" key="#All_in_Casino.test" timestamp="1579385616371">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1578478456346">
+      <screen x="62" y="0" width="1538" height="900" />
     </state>
-    <state x="604" y="315" key="#All_in_Casino.test/0.0.2000.1293@0.0.2000.1293" timestamp="1579385616371" />
-    <state x="593" y="309" key="#Deployment" timestamp="1579456149379">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="770" y="152" key="#File_and_Code_Templates/62.0.1538.900@62.0.1538.900" timestamp="1578478456346" />
+    <state x="426" y="110" key="#Inspections" timestamp="1579419339865">
+      <screen x="64" y="0" width="1536" height="900" />
     </state>
-    <state x="593" y="309" key="#Deployment/0.0.2000.1293@0.0.2000.1293" timestamp="1579456149379" />
-    <state x="770" y="152" key="#File_and_Code_Templates" timestamp="1579361026116" />
-    <state x="770" y="152" key="#File_and_Code_Templates/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state x="604" y="328" key="#GamblerCardTest.checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException" timestamp="1579385288131">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="426" y="110" key="#Inspections/64.0.1536.900@64.0.1536.900" timestamp="1579419339865" />
+    <state x="429" y="110" key="#Project_Structure" timestamp="1579361794758">
+      <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state x="604" y="328" key="#GamblerCardTest.checkOut_CheckOutAnUnassignedCard_ThrowsNotificationException/0.0.2000.1293@0.0.2000.1293" timestamp="1579385288131" />
-    <state x="593" y="309" key="#Project_Structure" timestamp="1579361678745">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="429" y="110" key="#Project_Structure/71.0.1529.900@71.0.1529.900" timestamp="1579361794758" />
+    <state x="555" y="78" key="#Repo_[build]" timestamp="1579362650128">
+      <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state x="593" y="309" key="#Project_Structure/0.0.2000.1293@0.0.2000.1293" timestamp="1579361678745" />
-    <state x="456" y="306" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579385897509">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="555" y="78" key="#Repo_[build]/71.0.1529.900@71.0.1529.900" timestamp="1579362650128" />
+    <state x="555" y="78" key="#Repo_[build]_(1)" timestamp="1579362708105">
+      <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state x="456" y="306" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579385897509" />
-    <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1579361026118" />
-    <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1579361026118" />
-    <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state x="731" y="429" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1579385866106">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="555" y="78" key="#Repo_[build]_(1)/71.0.1529.900@71.0.1529.900" timestamp="1579362708105" />
+    <state x="555" y="78" key="#Repo_[build]_(2)" timestamp="1579362731967">
+      <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state x="731" y="429" key="#com.intellij.ide.util.PackageChooserDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579385866106" />
-    <state x="731" y="438" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1579365321049">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="555" y="78" key="#Repo_[build]_(2)/71.0.1529.900@71.0.1529.900" timestamp="1579362731967" />
+    <state x="555" y="78" key="#Repo_[test]" timestamp="1579365570460">
+      <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state x="731" y="438" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579365321049" />
-    <state x="550" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579361026118" />
-    <state x="550" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state x="466" y="246" key="CommitChangelistDialog2" timestamp="1579456210081">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="555" y="78" key="#Repo_[test]/71.0.1529.900@71.0.1529.900" timestamp="1579365570460" />
+    <state x="555" y="78" key="#Repo_[test]_(1)" timestamp="1579365790165">
+      <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state x="466" y="246" key="CommitChangelistDialog2/0.0.2000.1293@0.0.2000.1293" timestamp="1579456210081" />
-    <state width="400" height="466" key="DebuggerActiveHint" timestamp="1579472973966">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="555" y="78" key="#Repo_[test]_(1)/71.0.1529.900@71.0.1529.900" timestamp="1579365790165" />
+    <state x="292" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579366611964">
+      <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state width="400" height="466" key="DebuggerActiveHint/0.0.2000.1293@0.0.2000.1293" timestamp="1579472973966" />
-    <state x="617" y="206" width="605" height="482" key="FileChooserDialogImpl" timestamp="1579381751136">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="292" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog/71.0.1529.900@71.0.1529.900" timestamp="1579366611964" />
+    <state x="1426" y="-902" key="#com.intellij.ide.util.MemberChooser" timestamp="1579471218841">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state x="617" y="206" width="605" height="482" key="FileChooserDialogImpl/0.0.2000.1293@0.0.2000.1293" timestamp="1579381751136" />
-    <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
-    <state width="1249" height="352" key="GridCell.Tab.0.bottom" timestamp="1579475484326">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="606" y="181" key="#com.intellij.ide.util.MemberChooser/0.40.1600.860@0.40.1600.860" timestamp="1578403683259" />
+    <state x="645" y="148" key="#com.intellij.ide.util.MemberChooser/62.0.1538.900@62.0.1538.900" timestamp="1578480235180" />
+    <state x="1426" y="-902" key="#com.intellij.ide.util.MemberChooser/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579455477078" />
+    <state x="1426" y="-902" key="#com.intellij.ide.util.MemberChooser/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579471218841" />
+    <state x="1142" y="-936" key="CommitChangelistDialog2" timestamp="1579470401399">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state width="1249" height="352" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579475484326" />
-    <state width="1371" height="236" key="GridCell.Tab.0.bottom/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="1249" height="352" key="GridCell.Tab.0.center" timestamp="1579475484326">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="1170" y="-936" key="CommitChangelistDialog2/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456723231" />
+    <state x="64" y="93" key="CommitChangelistDialog2/64.0.1536.900@64.0.1536.900" timestamp="1579444594174" />
+    <state x="458" y="46" key="CommitChangelistDialog2/71.0.1529.900@71.0.1529.900" timestamp="1579360692881" />
+    <state x="1142" y="-936" key="CommitChangelistDialog2/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579470401399" />
+    <state x="571" y="214" key="EnvironmentVariablesDialog" timestamp="1579366533163">
+      <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state width="1249" height="352" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579475484326" />
-    <state width="1371" height="236" key="GridCell.Tab.0.center/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="1249" height="352" key="GridCell.Tab.0.left" timestamp="1579475484326">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="571" y="214" key="EnvironmentVariablesDialog/71.0.1529.900@71.0.1529.900" timestamp="1579366533163" />
+    <state x="618" y="206" key="FileChooserDialogImpl" timestamp="1579359222462">
+      <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state width="1249" height="352" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579475484326" />
-    <state width="1371" height="236" key="GridCell.Tab.0.left/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="1249" height="352" key="GridCell.Tab.0.right" timestamp="1579475484326">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
+    <state x="618" y="206" key="FileChooserDialogImpl/71.0.1529.900@71.0.1529.900" timestamp="1579359222462" />
+    <state width="1815" height="314" key="GridCell.Tab.0.bottom" timestamp="1579472151474">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state width="1249" height="352" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579475484326" />
-    <state width="1371" height="236" key="GridCell.Tab.0.right/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state width="1312" height="449" key="GridCell.Tab.1.bottom" timestamp="1579474052764">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state width="1815" height="364" key="GridCell.Tab.0.bottom/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
+    <state width="1493" height="267" key="GridCell.Tab.0.bottom/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
+    <state width="1486" height="297" key="GridCell.Tab.0.bottom/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
+    <state width="1815" height="314" key="GridCell.Tab.0.bottom/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579472151474" />
+    <state width="1815" height="314" key="GridCell.Tab.0.center" timestamp="1579472151474">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state width="1312" height="449" key="GridCell.Tab.1.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579474052764" />
-    <state width="1312" height="449" key="GridCell.Tab.1.center" timestamp="1579474052764">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state width="1815" height="364" key="GridCell.Tab.0.center/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
+    <state width="1493" height="267" key="GridCell.Tab.0.center/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
+    <state width="1486" height="297" key="GridCell.Tab.0.center/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
+    <state width="1815" height="314" key="GridCell.Tab.0.center/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579472151474" />
+    <state width="1815" height="314" key="GridCell.Tab.0.left" timestamp="1579472151474">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state width="1312" height="449" key="GridCell.Tab.1.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579474052764" />
-    <state width="1312" height="449" key="GridCell.Tab.1.left" timestamp="1579474052764">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state width="1815" height="364" key="GridCell.Tab.0.left/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
+    <state width="1493" height="267" key="GridCell.Tab.0.left/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
+    <state width="1486" height="297" key="GridCell.Tab.0.left/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
+    <state width="1815" height="314" key="GridCell.Tab.0.left/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579472151474" />
+    <state width="1815" height="314" key="GridCell.Tab.0.right" timestamp="1579472151474">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state width="1312" height="449" key="GridCell.Tab.1.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579474052764" />
-    <state width="1312" height="449" key="GridCell.Tab.1.right" timestamp="1579474052764">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state width="1815" height="364" key="GridCell.Tab.0.right/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
+    <state width="1493" height="267" key="GridCell.Tab.0.right/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
+    <state width="1486" height="297" key="GridCell.Tab.0.right/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
+    <state width="1815" height="314" key="GridCell.Tab.0.right/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579472151474" />
+    <state width="1815" height="364" key="GridCell.Tab.1.bottom" timestamp="1579468620850">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state width="1312" height="449" key="GridCell.Tab.1.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579474052764" />
-    <state x="504" y="293" key="SettingsEditor" timestamp="1579362559659">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state width="1815" height="364" key="GridCell.Tab.1.bottom/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
+    <state width="1815" height="364" key="GridCell.Tab.1.bottom/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579468620850" />
+    <state width="1815" height="364" key="GridCell.Tab.1.center" timestamp="1579468620850">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state x="504" y="293" key="SettingsEditor/0.0.2000.1293@0.0.2000.1293" timestamp="1579362559659" />
-    <state x="593" y="384" key="Vcs.Push.Dialog.v2" timestamp="1579456233416">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state width="1815" height="364" key="GridCell.Tab.1.center/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
+    <state width="1815" height="364" key="GridCell.Tab.1.center/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579468620850" />
+    <state width="1815" height="364" key="GridCell.Tab.1.left" timestamp="1579468620850">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state x="593" y="384" key="Vcs.Push.Dialog.v2/0.0.2000.1293@0.0.2000.1293" timestamp="1579456233416" />
-    <state x="525" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1579361026118" />
-    <state x="525" y="276" key="com.intellij.ide.util.TipDialog/62.0.1538.900@62.0.1538.900" timestamp="1579361026118" />
-    <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
-    <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1579361026118" />
-    <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog/70.0.1530.900@70.0.1530.900" timestamp="1579361026118" />
-    <state x="710" y="282" key="refactoring.ChangeSignatureDialog" timestamp="1579460814346">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state width="1815" height="364" key="GridCell.Tab.1.left/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
+    <state width="1815" height="364" key="GridCell.Tab.1.left/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579468620850" />
+    <state width="1815" height="364" key="GridCell.Tab.1.right" timestamp="1579468620850">
+      <screen x="722" y="-1080" width="1858" height="1080" />
     </state>
-    <state x="710" y="282" key="refactoring.ChangeSignatureDialog/0.0.2000.1293@0.0.2000.1293" timestamp="1579460814346" />
-    <state x="657" y="304" key="run.anything.popup" timestamp="1579460890119">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state width="1815" height="364" key="GridCell.Tab.1.right/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
+    <state width="1815" height="364" key="GridCell.Tab.1.right/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579468620850" />
+    <state x="338" y="94" key="SettingsEditor" timestamp="1579366590498">
+      <screen x="71" y="0" width="1529" height="900" />
     </state>
-    <state x="657" y="304" key="run.anything.popup/0.0.2000.1293@0.0.2000.1293" timestamp="1579460890119" />
-    <state x="663" y="289" width="672" height="678" key="search.everywhere.popup" timestamp="1579458124163">
-      <screen x="0" y="0" width="2000" height="1293" />
+    <state x="338" y="94" key="SettingsEditor/71.0.1529.900@71.0.1529.900" timestamp="1579366590498" />
+    <state x="531" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1578395739967">
+      <screen x="70" y="0" width="1530" height="900" />
     </state>
-    <state x="663" y="289" width="672" height="678" key="search.everywhere.popup/0.0.2000.1293@0.0.2000.1293" timestamp="1579458124163" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Casino$GamblerCardTest_ToString_OnCallingAnAssignedCard_IncludesAllImportantDetailOfGamblercard.ic" NAME="GamblerCardTest.ToString_OnCallingAnAssignedCard_IncludesAllImportantDetailOfGamblercard Coverage Results" MODIFIED="1579473950349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>casino.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Casino$Whole_project.exec" NAME="Whole project Coverage Results" MODIFIED="1579363062891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>casino.*</FILTER>
-    </SUITE>
+    <state x="525" y="276" key="com.intellij.ide.util.TipDialog/62.0.1538.900@62.0.1538.900" timestamp="1578483074481" />
+    <state x="531" y="276" key="com.intellij.ide.util.TipDialog/70.0.1530.900@70.0.1530.900" timestamp="1578395739967" />
+    <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1578225709565">
+      <screen x="70" y="0" width="1530" height="900" />
+    </state>
+    <state x="601" y="154" key="com.intellij.testIntegration.createTest.CreateTestDialog/70.0.1530.900@70.0.1530.900" timestamp="1578225709565" />
+    <state x="1357" y="-911" key="refactoring.ChangeSignatureDialog" timestamp="1579465512331">
+      <screen x="722" y="-1080" width="1858" height="1080" />
+    </state>
+    <state x="1357" y="-911" key="refactoring.ChangeSignatureDialog/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579455645066" />
+    <state x="1357" y="-911" key="refactoring.ChangeSignatureDialog/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579465512331" />
+    <state x="1373" y="-627" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579466789129">
+      <screen x="722" y="-1080" width="1858" height="1080" />
+    </state>
+    <state x="1373" y="-627" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579466789129" />
   </component>
 </project>

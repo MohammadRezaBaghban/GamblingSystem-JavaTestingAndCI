@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GamblingAuthority.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">casino</a> &gt; <span class="el_source">GamblingAuthority.java</span></div><h1>GamblingAuthority.java</h1><pre class="source lang-java linenums">package casino;
 
-import java.util.List;
+import org.mockito.internal.matchers.Not;
 
-<span class="nc" id="L5">public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthority {</span>
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.UUID;
+
+public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthority {
 
 	/**
 	 * list of all the bets created by game.
@@ -17,22 +22,31 @@ import java.util.List;
 	 */
 	private IBetLoggingAuthority logger;
 
+<span class="fc" id="L25">	public GamblingAuthority() {</span>
+<span class="fc" id="L26">		listOfBets = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L27">		listOfBettingRound = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L28">	}</span>
+
 	/**
 	 * This method also logs this request.
 	 * @param bet
 	 */
 	public void addBet(Bet bet) {
-		// TODO - implement GamblingAuthority.addBet
-<span class="nc" id="L26">		throw new UnsupportedOperationException();</span>
-	}
+<span class="nc bnc" id="L35" title="All 2 branches missed.">		if(bet==null)</span>
+<span class="nc" id="L36">			throw new NullPointerException(&quot;Bet Can not be NUll&quot;);</span>
+<span class="nc" id="L37">		this.listOfBets.add(bet);</span>
+<span class="nc" id="L38">	}</span>
 
 	/**
 	 * it returns the unique token for the betting round and it should check the token status.
 	 * This method also logs this request.
 	 * @param bettingRound
 	 */
-	public String getToken(BettingRound bettingRound) {
-<span class="nc" id="L35">		return null; // to satisfy the compiler</span>
+	public String getToken(BettingRound bettingRound) throws NotificationException {
+<span class="nc bnc" id="L46" title="All 2 branches missed.">		if(bettingRound==null)</span>
+<span class="nc" id="L47">			throw new NotificationException(&quot;Betting Round Can not be NUll&quot;);</span>
+<span class="nc" id="L48">		String id =  UUID.randomUUID().toString();</span>
+<span class="nc" id="L49">		return id;</span>
 	}
 
 	/**
@@ -40,9 +54,8 @@ import java.util.List;
 	 * @param bettingRound
 	 */
 	public void addBettingRound(BettingRound bettingRound) {
-		// TODO - implement GamblingAuthority.addBettingRound
-<span class="nc" id="L44">		throw new UnsupportedOperationException();</span>
-	}
+<span class="nc" id="L57">		listOfBettingRound.add(bettingRound);</span>
+<span class="nc" id="L58">	}</span>
 
 	/**
 	 * it returns the whole integer as winning number. it should check the token status.
@@ -50,12 +63,17 @@ import java.util.List;
 	 * @param bettingRound
 	 */
 	public int getWinNo(BettingRound bettingRound) {
-<span class="nc" id="L53">		return 0; // to satisfy the compiler</span>
+<span class="fc" id="L66">		return 0; // to satisfy the compiler</span>
 	}
 
 	@Override
 	public void Log(String filePath, String info) {
+		// logging
+<span class="nc" id="L72">	}</span>
 
-<span class="nc" id="L59">	}</span>
+	public ArrayList&lt;Bet&gt; getBetList() {
+<span class="nc" id="L75">		ArrayList&lt;Bet&gt; tempList = (ArrayList&lt;Bet&gt;) this.listOfBets;</span>
+<span class="nc" id="L76">		return tempList;</span>
+	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

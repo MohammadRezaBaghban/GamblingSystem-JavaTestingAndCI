@@ -1,4 +1,5 @@
 package casino;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,8 +24,9 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * The total amount of money credit is physically handed to the gambler
 	 * This method also logs the GamblingCard information.
 	 */
-	public void CashOut(String gamblerCardID) {
-
+	public void CashOut(String gamblerCardID) throws NotificationException {
+		this.logger.Log("/log.txt", gamblerCardID);
+		this.clearCard(gamblerCardID);
 	}
 
 	/**
@@ -43,19 +45,49 @@ public class BankTeller implements IBetLoggingAuthority {
 	}
 
 	/**
-	 * Check if the amount is assigned
+	 * It sets the initial value of the card's credit and set it's status as assigned.
+	 * @param gamblerCardId
 	 * @param amount
 	 */
-	public boolean assignCard(double amount) {
-		return true; // to satisfy the compiler
+	public boolean assignCard(String gamblerCardId, double amount) throws NotificationException {
+		if(isGamblerCardValid(gamblerCardId))
+		{
+			GamblerCard gamblerCard = getGamblingCard(gamblerCardId);
+			if(gamblerCard.getAssignedStatus())
+				throw new NotificationException("Card already assigned.");
+			gamblerCard.setCredit(amount);
+			gamblerCard.setAssignedStatus();
+			return true;
+		}
+		return false;
 	}
 
 	/**
 	 * This method clears the betID's stored in it  and the amount making card anonymous, and can be reused.
 	 * @param gamblerCardID
 	 */
-	public void clearCard(String gamblerCardID) {
+	public void clearCard(String gamblerCardID) throws NotificationException {
+		if(isGamblerCardValid(gamblerCardID)){
+			GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);
+			gamblerCard.setCredit(0.0);
+			gamblerCard.checkOut();
+		}
+		else
+			throw new NotificationException("gamblerCard is Invalid.");
+	}
 
+	/**
+	 * returns the GamblingCard object if the gamblerCardID exists in the gamblingCardList.
+	 * otherwise returns null
+	 * @param gamblerCardID
+	 * @return
+	 */
+	private GamblerCard getGamblingCard(String gamblerCardID) {
+		GamblerCard card = null;
+		for(GamblerCard c : listOfGamblerCard)
+			if (c.getCardID().equals(gamblerCardID))
+				card = c;
+		return card;
 	}
 
 	/**
@@ -64,7 +96,14 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public boolean checkCredit(String gamblerCardID, double amount) {
-		return true; // to satisfy the compiler
+		if (isGamblerCardValid(gamblerCardID))
+		{
+			GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
+			double rest = gamblerCard.getCredit() - amount;
+			if(rest>=0)
+				return true;
+		}
+		return false;
 	}
 
 	/**
@@ -72,8 +111,13 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardID
 	 * @param amount
 	 */
-	public void deposit(String gamblerCardID, double amount) {
-
+	public void deposit(String gamblerCardID, double amount) throws NotificationException {
+		if(amount < 0.0)
+			throw new NotificationException("Amount cannot be negative.");
+		if(isGamblerCardValid(gamblerCardID)) {
+			GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
+			gamblerCard.setCredit(amount);
+		}
 	}
 
 	/**
@@ -81,8 +125,12 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardID
 	 * @param amount
 	 */
-	public void withdraw(String gamblerCardID, double amount) {
-
+	public void withdraw(String gamblerCardID, double amount) throws NotificationException {
+		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
+		if(gamblerCard.getCredit()>=amount)
+			gamblerCard.withdrawCredit(amount);
+		else
+			throw new NotificationException("Not sufficient balance on card.");
 	}
 
 	/**
@@ -90,8 +138,11 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardID
 	 * @param bet
 	 */
-	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) {
-
+	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) throws NotificationException {
+		if(!isGamblerCardValid(gamblerCardID))
+			throw new NotificationException("Card is not valid.");
+		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
+		gamblerCard.addBet(bet.getId());
 	}
 
 	public Bet getBet(String betId){
@@ -99,11 +150,17 @@ public class BankTeller implements IBetLoggingAuthority {
 	}
 
 	public boolean isGamblerCardValid(String gamblerCardID) {
-		return true;// to satisfy the compiler
+		if(this.getGamblingCard(gamblerCardID)!=null)
+			return true;
+		return false;
 	}
 
 	@Override
 	public void Log(String filePath, String info) {
 
+	}
+
+	public void addCard(GamblerCard gamblerCard) {
+		this.listOfGamblerCard.add(gamblerCard);
 	}
 }

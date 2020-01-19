@@ -1,28 +1,60 @@
 package casino;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.internal.matchers.Not;
+
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 public class BankTellerTest {
-    /**
-     * This test checks if CashOut method invokes the ClearCard() method with right parameter.
-     * Type: direct input
-     */
-    @Test
-    void CashOut_ShouldSetAmountToZeroPerformNormalCashOutBehaviour() {
-        //arrange
-        //act
-        //assert
+        BankTeller bankTeller;
+        IBetLoggingAuthority iBetLoggingAuthority;
+        GamblingAuthority gamblingAuthority;
+    @BeforeEach
+    void beforeEach() {
+        iBetLoggingAuthority = mock(IBetLoggingAuthority.class);
+        gamblingAuthority = mock(GamblingAuthority.class);
+        bankTeller = new BankTeller(iBetLoggingAuthority,gamblingAuthority);
     }
 
     /**
-     * If the card Id is not valid. It should throw an exception.
-     * @throws NotificationException
+     * This test checks if CashOut method invokes the ClearCard() method with right parameter.
+     * GamblerCard object is mocked and added to the SUT.(Type: indirect input)
      */
     @Test
-    void CashOut_ShouldThrowExceptionIfCardIsInValid() throws NotificationException {
+    void CashOut_ShouldSetAmountToZeroWhenGamblerCashOut() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.CashOut(gamblerCardId);
+
         //assert
+        verify(gamblerCard).setCredit(0.0);
+    }
+
+    /**
+     * This test verifies if all the clearBet() method is called.
+     */
+    @Test
+    void CashOut_ShouldClearAllStoredBetsWhenGamblerCashOut() throws NotificationException {
+        //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
+        //act
+        bankTeller.CashOut(gamblerCardId);
+
+        //assert
+        verify(gamblerCard).checkOut();
     }
 
     /**
@@ -32,10 +64,69 @@ public class BankTellerTest {
      * Type: indirect output
      */
     @Test
-    void CashOut_MethodShouldLogCardInformation() {
-
+    void CashOut_MethodShouldLogCardInformation() throws NotificationException {
+        //arrange
+        String validGamblerCardId = "a2u7wqe3r4";
+        String validPath = "/log.txt";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        bankTeller.addCard(gamblerCard);
+        //act
+        bankTeller.CashOut(validGamblerCardId);
+        //assert
+        verify(iBetLoggingAuthority).Log(validPath, validGamblerCardId);
     }
 
+    /**
+     *if the card is not valid, NotificationException is expected.
+     */
+    @Test
+    void CashOut_ShouldThrowExceptionIfCardIsNotValid() throws NotificationException {
+        //arrange
+        String validGamblerCardId = "a2u7wqe3r4";
+        String InvalidGamblerCardId = "ndu7wqe3r7";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
+        //act
+        //assert
+        assertThrows(NotificationException.class, () -> {
+           bankTeller.CashOut(InvalidGamblerCardId);
+        },"gamblerCardId is not valid");
+    }
+
+
+    /**
+     * If the card Id is not valid. It should return false.
+     */
+    @Test
+    void isGamblerCardValid_ShouldReturnFalseIfCardIsInValid(){
+        //arrange
+        String validGamblerCardId = "a2u7wqe3r4";
+        String InvalidGamblerCardId = "ndu7wqe3r7";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        bankTeller.addCard(gamblerCard);
+        //act
+        //assert
+        assertThat(bankTeller.isGamblerCardValid(InvalidGamblerCardId),equalTo(false));
+    }
+
+    /**
+     * If the card Id is not valid. It should return false.
+     */
+    @Test
+    void isGamblerCardValid_ShouldReturnTrueIfCardIsInValid(){
+        //arrange
+        String validGamblerCardId = "a2u7wqe3r4";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        bankTeller.addCard(gamblerCard);
+        //act
+        //assert
+        assertThat(bankTeller.isGamblerCardValid(validGamblerCardId),equalTo(true));
+    }
 
     /**
      *This method should return true if it has enough amount with the valid Card number.
@@ -45,8 +136,16 @@ public class BankTellerTest {
     @Test
     public void CheckCredit_ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber() {
         //arrange
+        String validGamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        when(gamblerCard.getCredit()).thenReturn(validAmount);
+        bankTeller.addCard(gamblerCard);
         //act
+        boolean result = bankTeller.checkCredit(validGamblerCardId, validAmount);
         //assert
+        assertTrue(result, "return value true expected but false is returned.");
     }
 
     /**
@@ -57,32 +156,37 @@ public class BankTellerTest {
     @Test
     public void CheckCredit_ShouldReturnFalseIfCardDoesNotHaveEnoughAmountWithValidCardNumber() {
         //arrange
+        String validGamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        Double higherAmount = 25.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        when(gamblerCard.getCredit()).thenReturn(validAmount);
+        bankTeller.addCard(gamblerCard);
         //act
+        boolean result = bankTeller.checkCredit(validGamblerCardId, higherAmount); //amount greater than the validAmount is supplied.
         //assert
+        assertFalse(result, "return value false expected but true is returned.");
     }
 
-    /**
-     * This method checks if the given card number is invalid it should throw an exception.
-     * It uses the mock object of GamblerCard which returns valid card number.
-     * Type: indirect input
-     * @throws NotificationException
-     */
-    @Test
-    public void isValid_ShouldThrowExceptionIfCardNumberIsInvalid() throws NotificationException {
-        //arrange
-        //act
-        //assert
-    }
 
     /**
      * While clearCard() method is invoked at the Bank Teller. It should clear the amount of the card and set it to zero.
      * Type: indirect input
      */
     @Test
-    public void clearCard_CardAmountShouldBeZeroAfterCheckingOut() {
+    public void clearCard_CardAmountShouldBeZeroAfterCheckingOut() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.clearCard(gamblerCardId);
+
         //assert
+        verify(gamblerCard).setCredit(0.0);
     }
 
     /**
@@ -91,10 +195,19 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void deposit_GamblerShouldBeAbleToDepositAmountToTheCard() {
+    public void deposit_GamblerShouldBeAbleToDepositAmountToTheCard() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.deposit(gamblerCardId, validAmount);
+
         //assert
+        verify(gamblerCard).setCredit(validAmount);
     }
 
     /**
@@ -105,8 +218,14 @@ public class BankTellerTest {
     @Test
     public void deposit_InputAmountMustNotBeZero_ThrowsException() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = -20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
-        //assert
+        assertThrows(NotificationException.class, ()-> bankTeller.deposit(gamblerCardId, validAmount), "when negative amount is supplied. NotificationException is expected.");
     }
 
     /**
@@ -115,22 +234,41 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void deposit_GamblerShouldBeAbleToWithdrawAmountFromTheCard() {
+    public void withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        when(gamblerCard.getCredit()).thenReturn(validAmount);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.withdraw(gamblerCardId, validAmount);
+
         //assert
+        verify(gamblerCard).withdrawCredit(validAmount);
     }
     /**
      * At calling the withdraw() method with higher amount It should throw Exception.
      * It also should not deduct the amount If the amount is more than the amount it has.
-     * Type: indirect input
-     * @throws Exception
+     * @throws NotificationException
      */
     @Test
-    public void withdraw_GamblerShouldNotBeAbleToWithdrawHigherAmountThanItHas() throws Exception {
+    public void withdraw_GamblerShouldNotBeAbleToWithdrawHigherAmountThanItHas() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        Double higherAmount = 25.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        when(gamblerCard.getCredit()).thenReturn(validAmount);
+        bankTeller.addCard(gamblerCard);
+
         //act
         //assert
+        assertThrows(NotificationException.class, ()->bankTeller.withdraw(gamblerCardId,higherAmount), "Expected: If the amount is higher than the balance. It should throw NotificationException." +
+                "Result: No or Another type of exception is thrown. ");
     }
 
     /**
@@ -139,10 +277,41 @@ public class BankTellerTest {
      * Type: indirect output
      */
     @Test
-    public void addBet_BankTellerShouldBeAbleToAddBetIntoTheCard() {
+    public void addBet_BankTellerShouldBeAbleToAddBetIntoTheCard() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        String validBetId = "jas54k";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        Bet bet = mock(Bet.class);
+        when(bet.getId()).thenReturn(validBetId);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.AddBetToGamblerCard(gamblerCardId, bet);
+
         //assert
+        verify(gamblerCard).addBet(validBetId);
+    }
+
+    /**
+     *
+     */
+    @Test
+    void addBet_ShouldThrowExceptionIfCardIsNotValid() throws NotificationException {
+        //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        String invalidGamblerCardId = "jas54k";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        Bet bet = mock(Bet.class);
+        bankTeller.addCard(gamblerCard);
+
+        //act
+        bankTeller.AddBetToGamblerCard(gamblerCardId, bet);
+        //assert
+        assertThrows(NotificationException.class, ()->bankTeller.AddBetToGamblerCard(invalidGamblerCardId,bet), "Expected: If the gambler card is not valid. It should throw NotificationException." +
+                "Result: No or Another type of exception is thrown. ");
     }
 
     /**
@@ -150,10 +319,18 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void assignCard_BankTellerShouldNotBeAbleToAssignCardWhichIsAlreadyAssigned() {
+    public void assignCard_BankTellerShouldNotBeAbleToAssignCardWhichIsAlreadyAssigned() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        when(gamblerCard.getAssignedStatus()).thenReturn(true);// assigned already.
+        bankTeller.addCard(gamblerCard);
+
         //act
         //assert
+        assertThrows(NotificationException.class, ()->bankTeller.assignCard(gamblerCardId, validAmount));// trying to assign the sameCard again.
     }
 
     /**
@@ -161,10 +338,20 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void assignCard_BankTellerShouldBeAbleToAssignCard() {
+    public void assignCard_BankTellerShouldBeAbleToAssignCard() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.assignCard(gamblerCardId, validAmount);
+
         //assert
+        verify(gamblerCard).setCredit(validAmount);
+        verify(gamblerCard).setAssignedStatus();
     }
 
 }

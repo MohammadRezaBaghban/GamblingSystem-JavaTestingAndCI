@@ -1,6 +1,11 @@
 package casino;
 
+import org.mockito.internal.matchers.Not;
+
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthority {
 
@@ -17,13 +22,19 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 */
 	private IBetLoggingAuthority logger;
 
+	public GamblingAuthority() {
+		listOfBets = new ArrayList<>();
+		listOfBettingRound = new ArrayList<>();
+	}
+
 	/**
 	 * This method also logs this request.
 	 * @param bet
 	 */
 	public void addBet(Bet bet) {
-		// TODO - implement GamblingAuthority.addBet
-		throw new UnsupportedOperationException();
+		if(bet==null)
+			throw new NullPointerException("Bet Can not be NUll");
+		this.listOfBets.add(bet);
 	}
 
 	/**
@@ -31,8 +42,11 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 * This method also logs this request.
 	 * @param bettingRound
 	 */
-	public String getToken(BettingRound bettingRound) {
-		return null; // to satisfy the compiler
+	public String getToken(BettingRound bettingRound) throws NotificationException {
+		if(bettingRound==null)
+			throw new NotificationException("Betting Round Can not be NUll");
+		String id =  UUID.randomUUID().toString();
+		return id;
 	}
 
 	/**
@@ -40,8 +54,7 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 * @param bettingRound
 	 */
 	public void addBettingRound(BettingRound bettingRound) {
-		// TODO - implement GamblingAuthority.addBettingRound
-		throw new UnsupportedOperationException();
+		listOfBettingRound.add(bettingRound);
 	}
 
 	/**
@@ -55,6 +68,11 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 
 	@Override
 	public void Log(String filePath, String info) {
+		// logging
+	}
 
+	public ArrayList<Bet> getBetList() {
+		ArrayList<Bet> tempList = (ArrayList<Bet>) this.listOfBets;
+		return tempList;
 	}
 }
