@@ -197,10 +197,19 @@ public class BankTellerTest {
      * Type: indirect input
      */
     @Test
-    public void deposit_GamblerShouldBeAbleToWithdrawAmountFromTheCard() {
+    public void withdraw_GamblerShouldBeAbleToWithdrawAmountFromTheCard() throws NotificationException {
         //arrange
+        String gamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
+        bankTeller.addCard(gamblerCard);
+
         //act
+        bankTeller.withdraw(gamblerCardId, validAmount);
+
         //assert
+        verify(gamblerCard).withdrawCredit(validAmount);
     }
     /**
      * At calling the withdraw() method with higher amount It should throw Exception.
