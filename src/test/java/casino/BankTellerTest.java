@@ -100,8 +100,16 @@ public class BankTellerTest {
     @Test
     public void CheckCredit_ShouldReturnTrueIfCardHasEnoughAmountWithValidCardNumber() {
         //arrange
+        String validGamblerCardId = "a2u7wqe3r4";
+        Double validAmount = 20.0;
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        when(gamblerCard.getCredit()).thenReturn(validAmount);
+        bankTeller.addCard(gamblerCard);
         //act
+        boolean result = bankTeller.checkCredit(validGamblerCardId, validAmount);
         //assert
+        assertTrue(result, "return value true expected but false is returned.");
     }
 
     /**
