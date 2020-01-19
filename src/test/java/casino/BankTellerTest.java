@@ -1,10 +1,21 @@
 package casino;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.mockito.Mockito.*;
 
 public class BankTellerTest {
+    private static BankTeller bankTeller;
+    @BeforeAll
+    static void beforeAll() {
+        IBetLoggingAuthority iBetLoggingAuthority = mock(IBetLoggingAuthority.class);
+        GamblingAuthority gamblingAuthority = mock(GamblingAuthority.class);
+        bankTeller = new BankTeller(iBetLoggingAuthority,gamblingAuthority);
+
+    }
+
     /**
      * This test checks if CashOut method invokes the ClearCard() method with right parameter.
      * GamblerCard object is mocked and added to the SUT.(Type: indirect input)
@@ -12,10 +23,6 @@ public class BankTellerTest {
     @Test
     void CashOut_ShouldSetAmountToZeroWhenGamblerCashOut() throws NotificationException {
         //arrange
-        IBetLoggingAuthority iBetLoggingAuthority = mock(IBetLoggingAuthority.class);
-        GamblingAuthority gamblingAuthority = mock(GamblingAuthority.class);
-        BankTeller bankTeller = new BankTeller(iBetLoggingAuthority,gamblingAuthority);
-
         String gamblerCardId = "a2u7wqe3r4";
         GamblerCard gamblerCard = mock(GamblerCard.class);
         when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
@@ -29,14 +36,20 @@ public class BankTellerTest {
     }
 
     /**
-     * If the card Id is not valid. It should throw an exception.
-     * @throws NotificationException
+     * If the card Id is not valid. It should return false.
      */
     @Test
-    void CashOut_ShouldThrowExceptionIfCardIsInValid() throws NotificationException {
+    void CashOut_ShouldReturnFalseIfCardIsInValid(){
         //arrange
+        String validGamblerCardId = "a2u7wqe3r4";
+        String InvalidGamblerCardId = "ndu7wqe3r7";
+        GamblerCard gamblerCard = mock(GamblerCard.class);
+        when(gamblerCard.getCardID()).thenReturn(validGamblerCardId);
+        bankTeller.addCard(gamblerCard);
         //act
+        boolean expected = bankTeller.isGamblerCardValid(InvalidGamblerCardId);
         //assert
+        Assertions.assertFalse(expected, "Expected result is false but got true.");
     }
 
     /**

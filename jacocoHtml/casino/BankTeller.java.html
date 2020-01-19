@@ -55,13 +55,13 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardID
 	 */
 	public void clearCard(String gamblerCardID) throws NotificationException {
-<span class="pc bpc" id="L58" title="1 of 2 branches missed.">		if(isGamblerCardValid(gamblerCardID)){</span>
-<span class="fc" id="L59">			GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);</span>
-<span class="fc" id="L60">			gamblerCard.setCredit(0.0);</span>
-<span class="fc" id="L61">		}</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">		if(isGamblerCardValid(gamblerCardID)){</span>
+<span class="nc" id="L59">			GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);</span>
+<span class="nc" id="L60">			gamblerCard.setCredit(0.0);</span>
+<span class="nc" id="L61">		}</span>
 		else
 <span class="nc" id="L63">			throw new NotificationException(&quot;gamblerCard is not Valid.&quot;);</span>
-<span class="fc" id="L64">	}</span>
+<span class="nc" id="L64">	}</span>
 
 	/**
 	 * returns the GamblingCard object if the gamblerCardID exists in the gamblingCardList.
@@ -70,11 +70,11 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @return
 	 */
 	private GamblerCard getGamblingCard(String gamblerCardID) {
-<span class="fc" id="L73">		GamblerCard card = null;</span>
-<span class="fc bfc" id="L74" title="All 2 branches covered.">		for(GamblerCard c : listOfGamblerCard)</span>
-<span class="pc bpc" id="L75" title="1 of 2 branches missed.">			if (c.getCardID().equals(gamblerCardID))</span>
-<span class="fc" id="L76">				card = c;</span>
-<span class="fc" id="L77">		return card;</span>
+<span class="nc" id="L73">		GamblerCard card = null;</span>
+<span class="nc bnc" id="L74" title="All 2 branches missed.">		for(GamblerCard c : listOfGamblerCard)</span>
+<span class="nc bnc" id="L75" title="All 2 branches missed.">			if (c.getCardID().equals(gamblerCardID))</span>
+<span class="nc" id="L76">				card = c;</span>
+<span class="nc" id="L77">		return card;</span>
 	}
 
 	/**
