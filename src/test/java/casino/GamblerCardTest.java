@@ -38,8 +38,6 @@ public class GamblerCardTest {
         );
     }
 
-
-
     /**
      * AssignCard to a Gambler with an initialAmount less than 5 euro throw NotificationException
      */
@@ -98,7 +96,6 @@ public class GamblerCardTest {
     }
 
 
-
     /**
      * Check Out Card Successfully will result in Reset the Details of GamblerCard
      *
@@ -138,16 +135,18 @@ public class GamblerCardTest {
      * </p>
      */
     @Test
-    //Indirect Inputs
+    //direct Input and direct output
     public void setCredit_OnValidAmount_CreditChangeAndReturnTrue(){
 
         //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
 
         //Act
+        Boolean result = GamblerCard_SUT_Object.setCredit(10);
 
         //Assert
-
-
+        Assert.assertTrue("The credit is not set correctly", GamblerCard_SUT_Object.getCredit() ==10);
+        Assert.assertTrue("It return false incorrectly",result=true);
     }
 
     /**
@@ -158,11 +157,12 @@ public class GamblerCardTest {
     public void setCredit_OvInvalidAmount_ThrowIllegalOperationException(){
 
         //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
 
-        //Act
-
-        //Assert
-
+        //Act & Act
+        Assertions.assertThrows(NotificationException.class,()->{
+            GamblerCard_SUT_Object.setCredit(-1);
+        });
 
     }
 
@@ -173,14 +173,19 @@ public class GamblerCardTest {
      */
     @Test
     //Indirect Inputs
-    public void addBet_OnAddingNonDuplicateBet_TheBetWouldBeAddedToBetList(){
+    public void addBet_OnAddingNonDuplicateBet_TheBetWouldBeAddedToBetList() throws NotificationException {
 
         //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
+        GamblerCard_SUT_Object.AssignCard(200,Valid_AssignmentMoment);
 
         //Act
-
+        GamblerCard_SUT_Object.addBet("1");
+        GamblerCard_SUT_Object.addBet("2");
+        GamblerCard_SUT_Object.addBet("3");
+        GamblerCard_SUT_Object.addBet("4");
         //Assert
-
+        Assert.assertTrue("bet was not added successfully", GamblerCard_SUT_Object.getListOfBet().size()==4);
 
     }
 
@@ -189,14 +194,21 @@ public class GamblerCardTest {
      */
     @Test
     //Indirect Inputs
-    public void addBet_OnAddingDuplicateBet_ThrowIllegalOperation(){
+    public void addBet_OnAddingDuplicateBet_ThrowIllegalOperation() throws NotificationException {
 
         //Arrange
+        GamblerCard_SUT_Object = new GamblerCard();
+        GamblerCard_SUT_Object.AssignCard(200,Valid_AssignmentMoment);
 
         //Act
+        GamblerCard_SUT_Object.addBet("1");
+
 
         //Assert
-
+        Assertions.assertThrows(NotificationException.class, ()->
+        {
+            GamblerCard_SUT_Object.addBet("1");
+        },"The card is adding duplicate bets to correct illegally");
 
     }
 
