@@ -28,14 +28,15 @@ public class GamblingMachineTest {
      * throw BetNotificationException on placing a bet when the betRound has already been assigned
      */
     @Test //Direct Input
-    public void placeBet_whentheBetRoundHasAlreadyFinished_ThrowNotificationException(){
-
-        //Arrange
+    public void placeBet_whentheBetRoundHasAlreadyFinished_ThrowNotificationException() throws NotificationException {
 
         //Act
+        gamblingMachineSUT_object.createBetRound();
 
         //Assert
-
+        Assertions.assertThrows(NotificationException.class,()->{
+            gamblingMachineSUT_object.placeBet("test",20,40);
+        },"Bets cannot be placed after bettingRound being finished");
 
     }
 
@@ -131,7 +132,6 @@ public class GamblingMachineTest {
      */
     @Test //Direct Inputs
     public void createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible(){
-
         //Act
         gamblingMachineSUT_object.createBetRound();
 

@@ -70,11 +70,13 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @exception throw NotificationException when the user does not have enough credit for bet amount
 	 * @exception throw NotificationException when a GamblerCard want to put more than one bet on a BetRound
 	 */
-	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) throws NotificationException {
-		if(bankTeller.getGamblingCard(gamblerCardID)==null){
+	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) throws Exception {
+		if(this.IsRoundFinished()){
+			return false;
+		}else if(bankTeller.getGamblingCard(gamblerCardID)==null){
 			throw new NotificationException("The Card is Invalid for placing a bet");
 		}else{
-			return true;
+			throw new NotificationException("");
 		}
 	}
 

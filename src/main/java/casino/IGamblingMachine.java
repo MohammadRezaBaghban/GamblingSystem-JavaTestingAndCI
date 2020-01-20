@@ -8,7 +8,7 @@ public interface IGamblingMachine {
 	 * @param amount
 	 * @param selectedNumber
 	 */
-	boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) throws NotificationException;
+	boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) throws Exception;
 
 	BettingRound createBetRound();
 
