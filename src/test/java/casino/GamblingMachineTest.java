@@ -1,5 +1,6 @@
 package casino;
 
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -58,23 +59,8 @@ public class GamblingMachineTest {
                 "Invalid GamblerCard place a bet");
     }
 
-    /**
-     * When gamblerCard is exsist but was not assigned, then the bet can not be made
-     */
-    @Test
-    public void placeBet_OnGivingValidUnAssignedGamblerCard_ThrowNotificationException(){
-        //Arrange
-        GamblerCard card = mock(GamblerCard.class);
-        when(card.getAssignedStatus()).thenReturn(false);
-        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(card);
-        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(false);
 
-        //Act and Assert
-        Exception exceptionThrown = Assertions.assertThrows(NotificationException.class,()->{
-            gamblingMachineSUT_object.placeBet("first",20,20);
-        });
-        Assertions.assertTrue(exceptionThrown.getMessage().equals("The Card is not assigned yet! Invalid Card for Betting"));
-    }
+
 
     /**
      * When the bet amount is more than the credit on gambler's card, throw NotificationException
@@ -176,12 +162,12 @@ public class GamblingMachineTest {
     @Test
     //Direct Input
     public void createBetRound_OnEmptylistOfBetOfCurrentRound_ThrowBetNotificationException(){
+        //Act & Assert
+        Exception exceptionThrown = Assertions.assertThrows(NotificationException.class,()->{
+            gamblingMachineSUT_object.createBetRound();
+        });
+        Assertions.assertTrue(exceptionThrown.getMessage().equals("It is not possible createBet when there is no bet in betRound"));
 
-        //Arrange
-
-        //Act
-
-        //Assert
 
     }
 

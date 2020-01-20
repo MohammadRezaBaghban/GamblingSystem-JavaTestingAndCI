@@ -48,9 +48,6 @@ public class GamblingMachine implements IGamblingMachine {
 	 *         Check if the betRound is null as representation of the game has not been started
 	 *     </li>
 	 *     <li>
-	 *     		Check if the GamblerCard is valid and assigned.
-	 *     </li>
-	 *     <li>
 	 *      	Check if the Gambler has enough credit for the bet amount
 	 *     </li>
 	 *     <li>
@@ -66,7 +63,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @param selectedNumber the selected number among options that the gambler put the bet on it.
 	 * @exception throw NotificationException <p> if the betRound has already assigned as a representation of valid time
 	 * to place a bet has already finished</p>
-	 * @exception throw NotificationException when the gambler card is not valid or assigned
+	 * @exception throw NotificationException when the gambler card is not valid
 	 * @exception throw NotificationException when the user does not have enough credit for bet amount
 	 * @exception throw NotificationException when a GamblerCard want to put more than one bet on a BetRound
 	 */
@@ -81,11 +78,7 @@ public class GamblingMachine implements IGamblingMachine {
 
 			throw new NotificationException("The Card is Invalid for placing a bet");
 
-		} else if(!card.getAssignedStatus()) {
-
-			throw new NotificationException("The Card is not assigned yet! Invalid Card for Betting");
-
-		}else {
+		} else {
 
 			if(listOfBetsOfCurrentRound.containsValue(gamblerCardID)){
 
