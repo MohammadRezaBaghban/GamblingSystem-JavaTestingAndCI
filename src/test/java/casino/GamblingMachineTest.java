@@ -25,11 +25,10 @@ public class GamblingMachineTest {
     }
 
     /**
-     * throw BetNotificationException on placing a bet when the betRound has already been assigned
+     *  on placing a bet when the betRound has already been assigned, throw BetNotificationException
      */
     @Test //Direct Input
     public void placeBet_whentheBetRoundHasAlreadyFinished_ThrowNotificationException() throws NotificationException {
-
         //Act
         gamblingMachineSUT_object.createBetRound();
 
@@ -38,7 +37,6 @@ public class GamblingMachineTest {
             gamblingMachineSUT_object.placeBet("test",20,40);});
         Assertions.assertTrue(exceptionThrown.getMessage().equals("Bets cannot be placed after bettingRound being finished"));
     }
-
 
 
     /**
@@ -62,19 +60,23 @@ public class GamblingMachineTest {
 
 
     /**
-     * A NotificationException should be throw, when a GamblerCard wants to put more than one Bet On the specific BetRound
+     *  when a GamblerCard wants to put more than one Bet On the specific BetRound, A NotificationException should be throw
      */
     @Test
     //Direct Outputs
-    public void placeBet_AGamblerCardPutMoreThanOneBetOnSpecificBetRound_ThrowNotificationException(){
+    public void placeBet_AGamblerCardPutMoreThanOneBetOnSpecificBetRound_ThrowNotificationException() throws Exception {
 
         //Arrange
-        //when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(null);
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
 
         //Act
+        gamblingMachineSUT_object.placeBet("first",20,20);
 
         //Assert
-
+        Exception exceptionThrown = Assertions.assertThrows(NotificationException.class,()->{
+            gamblingMachineSUT_object.placeBet("first",20,20);
+        });
+        Assertions.assertTrue(exceptionThrown.getMessage().equals("It is not possible to put more than one bet per gamblerCard on each Game Round"));
 
     }
 

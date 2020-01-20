@@ -32,9 +32,9 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public boolean IsRoundFinished() {
 <span class="pc bpc" id="L34" title="1 of 2 branches missed.">		if(betRound==null){</span>
-<span class="nc" id="L35">			return false;</span>
+<span class="fc" id="L35">			return false;</span>
 		}else{
-<span class="fc" id="L37">			return true;</span>
+<span class="nc" id="L37">			return true;</span>
 		}
 	}
 
@@ -72,11 +72,11 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) throws Exception {
 <span class="pc bpc" id="L74" title="1 of 2 branches missed.">		if(this.IsRoundFinished()){</span>
-<span class="fc" id="L75">			throw new NotificationException(&quot;Bets cannot be placed after bettingRound being finished&quot;);</span>
-<span class="nc bnc" id="L76" title="All 2 branches missed.">		}else if(bankTeller.getGamblingCard(gamblerCardID)==null){</span>
+<span class="nc" id="L75">			throw new NotificationException(&quot;Bets cannot be placed after bettingRound being finished&quot;);</span>
+<span class="pc bpc" id="L76" title="1 of 2 branches missed.">		}else if(bankTeller.getGamblingCard(gamblerCardID)==null){</span>
 <span class="nc" id="L77">			throw new NotificationException(&quot;The Card is Invalid for placing a bet&quot;);</span>
 		}else{
-<span class="nc" id="L79">			throw new NotificationException(&quot;&quot;);</span>
+<span class="fc" id="L79">			throw new NotificationException(&quot;&quot;);</span>
 		}
 	}
 
@@ -87,8 +87,8 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @exception throws NotificationException if the betRound Object of the Gambling machine has already been assigned
 	 */
 	public BettingRound createBetRound() {
-<span class="fc" id="L90">		betRound = new BettingRound(new ArrayList&lt;&gt;(listOfBetsOfCurrentRound.keySet()));</span>
-<span class="fc" id="L91">		return  betRound;</span>
+<span class="nc" id="L90">		betRound = new BettingRound(new ArrayList&lt;&gt;(listOfBetsOfCurrentRound.keySet()));</span>
+<span class="nc" id="L91">		return  betRound;</span>
 	}
 
 
