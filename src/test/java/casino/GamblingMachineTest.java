@@ -34,10 +34,9 @@ public class GamblingMachineTest {
         gamblingMachineSUT_object.createBetRound();
 
         //Assert
-        Assertions.assertThrows(NotificationException.class,()->{
-            gamblingMachineSUT_object.placeBet("test",20,40);
-        },"Bets cannot be placed after bettingRound being finished");
-
+        Exception exceptionThrown = Assertions.assertThrows(NotificationException.class,()->{
+            gamblingMachineSUT_object.placeBet("test",20,40);});
+        Assertions.assertTrue(exceptionThrown.getMessage().equals("Bets cannot be placed after bettingRound being finished"));
     }
 
 

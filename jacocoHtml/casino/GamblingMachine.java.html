@@ -72,7 +72,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) throws Exception {
 <span class="pc bpc" id="L74" title="1 of 2 branches missed.">		if(this.IsRoundFinished()){</span>
-<span class="fc" id="L75">			return false;</span>
+<span class="fc" id="L75">			throw new NotificationException(&quot;Bets cannot be placed after bettingRound being finished&quot;);</span>
 <span class="nc bnc" id="L76" title="All 2 branches missed.">		}else if(bankTeller.getGamblingCard(gamblerCardID)==null){</span>
 <span class="nc" id="L77">			throw new NotificationException(&quot;The Card is Invalid for placing a bet&quot;);</span>
 		}else{
