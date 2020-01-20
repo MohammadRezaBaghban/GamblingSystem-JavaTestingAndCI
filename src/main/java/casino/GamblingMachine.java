@@ -91,6 +91,7 @@ public class GamblingMachine implements IGamblingMachine {
 				throw new NotificationException("Balance is insufficient for this amount of bet");
 
 			}else{
+				bankTeller.withdraw(gamblerCardID,amount);
 				Bet bet = new Bet(amount,selectedNumber,bankTeller.getGamblingCard(gamblerCardID).toString());
 				listOfBetsOfCurrentRound.putIfAbsent(bet,gamblerCardID);
 				return true;

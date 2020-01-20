@@ -91,9 +91,10 @@ public class GamblingMachine implements IGamblingMachine {
 <span class="nc" id="L91">				throw new NotificationException(&quot;Balance is insufficient for this amount of bet&quot;);</span>
 
 			}else{
-<span class="fc" id="L94">				Bet bet = new Bet(amount,selectedNumber,bankTeller.getGamblingCard(gamblerCardID).toString());</span>
-<span class="fc" id="L95">				listOfBetsOfCurrentRound.putIfAbsent(bet,gamblerCardID);</span>
-<span class="fc" id="L96">				return true;</span>
+<span class="fc" id="L94">				bankTeller.withdraw(gamblerCardID,amount);</span>
+<span class="fc" id="L95">				Bet bet = new Bet(amount,selectedNumber,bankTeller.getGamblingCard(gamblerCardID).toString());</span>
+<span class="fc" id="L96">				listOfBetsOfCurrentRound.putIfAbsent(bet,gamblerCardID);</span>
+<span class="fc" id="L97">				return true;</span>
 			}
 		}
 	}
@@ -105,8 +106,8 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @exception throws NotificationException if the betRound Object of the Gambling machine has already been assigned
 	 */
 	public BettingRound createBetRound() {
-<span class="nc" id="L108">		betRound = new BettingRound(new ArrayList&lt;&gt;(listOfBetsOfCurrentRound.keySet()));</span>
-<span class="nc" id="L109">		return  betRound;</span>
+<span class="nc" id="L109">		betRound = new BettingRound(new ArrayList&lt;&gt;(listOfBetsOfCurrentRound.keySet()));</span>
+<span class="nc" id="L110">		return  betRound;</span>
 	}
 
 
@@ -125,7 +126,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public void reward() {
 		// TODO - implement GamblingMachine.reward
-<span class="nc" id="L128">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L129">		throw new UnsupportedOperationException();</span>
 	}
 
 
