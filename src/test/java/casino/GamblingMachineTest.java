@@ -58,6 +58,27 @@ public class GamblingMachineTest {
                 "Invalid GamblerCard place a bet");
     }
 
+    /**
+     * When the bet amount is more than the credit on gambler's card, throw NotificationException
+     *
+     */
+    @Test //Indirect Output
+    public void placeBet_gamblerCardDoesNotHaveEnoughBalance_ThrowsBalanceInsufficientNotificationException(){
+
+        //Arrange
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
+        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(false);
+
+        //Act and Assert
+        Exception exceptionThrown = Assertions.assertThrows(NotificationException.class,()->{
+            gamblingMachineSUT_object.placeBet("first",20,20);
+        });
+        Assertions.assertTrue(exceptionThrown.getMessage().equals("Balance is insufficient for this amount of bet"));
+
+
+
+    }
+
 
     /**
      *  when a GamblerCard wants to put more than one Bet On the specific BetRound, A NotificationException should be throw
@@ -81,21 +102,7 @@ public class GamblingMachineTest {
     }
 
 
-    /**
-     * When the bet amount is more than the credit on gambler's card, throw NotificationException
-     *
-     */
-    @Test //Indirect Output
-    public void placeBet_gamblerCardDoesNotHaveEnoughBalance_ThrowsBalanceInsufficientNotificationException(){
 
-        //Arrange
-
-        //Act
-
-        //Assert
-
-
-    }
 
 
     /**
