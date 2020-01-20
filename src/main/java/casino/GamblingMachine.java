@@ -108,8 +108,13 @@ public class GamblingMachine implements IGamblingMachine {
 		if(getNumberOfBetsInBettingRound()<1){
 			throw new NotificationException("It is not possible createBet when there is no bet in betRound");
 		}else{
-			betRound = new BettingRound(new ArrayList<>(listOfBetsOfCurrentRound.keySet()));
-			return  betRound;
+			if(betRound!=null){
+				throw new NotificationException("It is not possible to start another betRound before this betround being processed");
+			}else{
+				betRound = new BettingRound(new ArrayList<>(listOfBetsOfCurrentRound.keySet()));
+				return  betRound;
+			}
+
 		}
 
 	}
