@@ -236,13 +236,30 @@ public class GamblingMachineTest {
      */
     //Direct Output
     @Test
-    public void reward_OnCallForReward_theGameBecomeReadyForAnotherRound(){
+    public void () throws Exception {
 
         //Arrange
+        GamblerCard card = mock(GamblerCard.class);
+        when(card.getCardID()).thenReturn("first");
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(card);
+        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
+        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
+
+        Boolean result = gamblingMachineSUT_object.placeBet("first",20,20);
+
+
+        BettingRound bettingRound = mock(BettingRound.class);
+        when(bettingRound.getWinNr()).thenReturn(20);
+        when(game_MockedObject.createBetRound(gamblingMachineSUT_object.listOfBetsOfCurrentRound)).thenReturn(bettingRound);
+        gamblingMachineSUT_object.createBetRound();
+
 
         //Act
+        gamblingMachineSUT_object.reward();
 
         //Assert
+        Assertions.assertTrue(gamblingMachineSUT_object.getNumberOfBetsInBettingRound()==0);
+        Assertions.assertTrue(gamblingMachineSUT_object.IsRoundFinished()==false);
     }
 
 

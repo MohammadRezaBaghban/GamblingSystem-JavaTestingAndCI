@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/Bet.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/Bet.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/Bet.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/Bet.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblerCard.java.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/Game.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/Game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/Game.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/Game.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.java.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/Bet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingMachineTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +118,7 @@
       <recent name="C:\Users\User\Desktop\TCI\Casino\src\main\java\casino" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GamblingMachineTest.reward_OnCall_theBankTellerCallDepositMethodWithCorrectGamblerCardID">
+  <component name="RunManager" selected="Gradle.GamblingMachineTest.reward_OnCallForReward_theGameBecomeReadyForAnotherRound">
     <configuration name="GamblingMachineTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -168,12 +159,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GamblingMachineTest.placeBet_whentheBetRoundHasAlreadyFinished_ThrowNotificationException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GamblingMachineTest.reward_OnCallForReward_theGameBecomeReadyForAnotherRound" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;casino.GamblingMachineTest.placeBet_whentheBetRoundHasAlreadyFinished_ThrowNotificationException&quot;" />
+        <option name="scriptParameters" value="--tests &quot;casino.GamblingMachineTest.reward_OnCallForReward_theGameBecomeReadyForAnotherRound&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -264,19 +255,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Whole project" />
-      <item itemvalue="Gradle.GamblingMachineTest.placeBet_whentheBetRoundHasAlreadyFinished_ThrowNotificationException" />
       <item itemvalue="Gradle.GamblingMachineTest.reward_OnCallingWhenBetRoundHasNotBeenFinished_ThrowNotificationException" />
       <item itemvalue="Gradle.GamblingMachineTest" />
       <item itemvalue="Gradle.GamblingMachineTest.createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException" />
       <item itemvalue="Gradle.GamblingMachineTest.reward_OnCall_theBankTellerCallDepositMethodWithCorrectGamblerCardID" />
+      <item itemvalue="Gradle.GamblingMachineTest.reward_OnCallForReward_theGameBecomeReadyForAnotherRound" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GamblingMachineTest.reward_OnCallForReward_theGameBecomeReadyForAnotherRound" />
         <item itemvalue="Gradle.GamblingMachineTest.reward_OnCall_theBankTellerCallDepositMethodWithCorrectGamblerCardID" />
         <item itemvalue="Gradle.GamblingMachineTest.reward_OnCallingWhenBetRoundHasNotBeenFinished_ThrowNotificationException" />
         <item itemvalue="Gradle.GamblingMachineTest.createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException" />
         <item itemvalue="Gradle.GamblingMachineTest" />
-        <item itemvalue="Gradle.GamblingMachineTest.placeBet_whentheBetRoundHasAlreadyFinished_ThrowNotificationException" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +304,7 @@
       <workItem from="1579419259006" duration="4210000" />
       <workItem from="1579426428103" duration="7776000" />
       <workItem from="1579453483137" duration="13419000" />
-      <workItem from="1579477878955" duration="20819000" />
+      <workItem from="1579477878955" duration="21107000" />
     </task>
     <task id="LOCAL-00001" summary="jacoco plugin added to the build.gradle">
       <created>1579360693771</created>
@@ -646,34 +637,34 @@
     <state x="716" y="296" key="FileChooserDialogImpl/0.0.2000.1293@0.0.2000.1293" timestamp="1579478841484" />
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
     <state x="618" y="206" key="FileChooserDialogImpl/71.0.1529.900@71.0.1529.900" timestamp="1579359222462" />
-    <state width="1957" height="449" key="GridCell.Tab.0.bottom" timestamp="1579499145604">
+    <state width="1957" height="352" key="GridCell.Tab.0.bottom" timestamp="1579499457825">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="449" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579499145604" />
+    <state width="1957" height="352" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579499457825" />
     <state width="1815" height="364" key="GridCell.Tab.0.bottom/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
     <state width="1493" height="267" key="GridCell.Tab.0.bottom/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.bottom/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
     <state width="1815" height="314" key="GridCell.Tab.0.bottom/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579472151474" />
-    <state width="1957" height="449" key="GridCell.Tab.0.center" timestamp="1579499145604">
+    <state width="1957" height="352" key="GridCell.Tab.0.center" timestamp="1579499457824">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="449" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579499145604" />
+    <state width="1957" height="352" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579499457824" />
     <state width="1815" height="364" key="GridCell.Tab.0.center/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
     <state width="1493" height="267" key="GridCell.Tab.0.center/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.center/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
     <state width="1815" height="314" key="GridCell.Tab.0.center/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579472151474" />
-    <state width="1957" height="449" key="GridCell.Tab.0.left" timestamp="1579499145604">
+    <state width="1957" height="352" key="GridCell.Tab.0.left" timestamp="1579499457824">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="449" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579499145604" />
+    <state width="1957" height="352" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579499457824" />
     <state width="1815" height="364" key="GridCell.Tab.0.left/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
     <state width="1493" height="267" key="GridCell.Tab.0.left/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.left/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
     <state width="1815" height="314" key="GridCell.Tab.0.left/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579472151474" />
-    <state width="1957" height="449" key="GridCell.Tab.0.right" timestamp="1579499145604">
+    <state width="1957" height="352" key="GridCell.Tab.0.right" timestamp="1579499457825">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="449" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579499145604" />
+    <state width="1957" height="352" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579499457825" />
     <state width="1815" height="364" key="GridCell.Tab.0.right/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
     <state width="1493" height="267" key="GridCell.Tab.0.right/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.right/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
@@ -744,7 +735,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/casino/GamblingMachine.java</url>
-          <line>144</line>
+          <line>141</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>

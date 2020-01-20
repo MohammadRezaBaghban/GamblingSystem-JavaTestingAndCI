@@ -1,9 +1,6 @@
 package casino;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+import java.util.*;
 
 public class GamblingMachine implements IGamblingMachine {
 	private BettingRound betRound;
@@ -144,12 +141,15 @@ public class GamblingMachine implements IGamblingMachine {
 			listOfBetsOfCurrentRound.forEach((bet, s)->{
 				if (bet.getSelectedNumber()==betRound.getWinNr()){
 					try {
+						bet.setOutValue(bet.getInValue()*2);
 						bankTeller.deposit(s,bet.getInValue()*2);
 					} catch (NotificationException e) {
 						e.printStackTrace();
 					}
 				}
 			});
+
+
 		}else{
 			throw new NotificationException("It is not possible start reward process until having the the GameRound finish");
 		}

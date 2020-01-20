@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GamblingMachine.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">casino</a> &gt; <span class="el_source">GamblingMachine.java</span></div><h1>GamblingMachine.java</h1><pre class="source lang-java linenums">package casino;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+import java.util.*;
 
 public class GamblingMachine implements IGamblingMachine {
 	private BettingRound betRound;
@@ -20,21 +17,21 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @param gameObject
 	 * @param banktellerObject
 	 */
-<span class="fc" id="L23">	public GamblingMachine(Game gameObject, BankTeller banktellerObject) {</span>
-<span class="fc" id="L24">		listOfBetsOfCurrentRound = new HashMap&lt;&gt;();</span>
-<span class="fc" id="L25">		this.bankTeller = banktellerObject;</span>
-<span class="fc" id="L26">		this.game = gameObject;</span>
-<span class="fc" id="L27">		betRound = null;</span>
-<span class="fc" id="L28">	}</span>
+<span class="fc" id="L20">	public GamblingMachine(Game gameObject, BankTeller banktellerObject) {</span>
+<span class="fc" id="L21">		listOfBetsOfCurrentRound = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L22">		this.bankTeller = banktellerObject;</span>
+<span class="fc" id="L23">		this.game = gameObject;</span>
+<span class="fc" id="L24">		betRound = null;</span>
+<span class="fc" id="L25">	}</span>
 
 	/**
 	 * return true if
 	 */
 	public boolean IsRoundFinished() {
-<span class="fc bfc" id="L34" title="All 2 branches covered.">		if(betRound==null){</span>
-<span class="fc" id="L35">			return false;</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">		if(betRound==null){</span>
+<span class="fc" id="L32">			return false;</span>
 		}else{
-<span class="fc" id="L37">			return true;</span>
+<span class="fc" id="L34">			return true;</span>
 		}
 	}
 
@@ -69,30 +66,30 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) throws Exception {
 
-<span class="fc" id="L72">		GamblerCard card = new GamblerCard();</span>
-<span class="pc bpc" id="L73" title="1 of 2 branches missed.">		if(this.IsRoundFinished()){</span>
+<span class="fc" id="L69">		GamblerCard card = new GamblerCard();</span>
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">		if(this.IsRoundFinished()){</span>
 
-<span class="nc" id="L75">			throw new NotificationException(&quot;Bets cannot be placed after bettingRound being finished&quot;);</span>
+<span class="nc" id="L72">			throw new NotificationException(&quot;Bets cannot be placed after bettingRound being finished&quot;);</span>
 
-<span class="pc bpc" id="L77" title="1 of 2 branches missed.">		}else if(bankTeller.getGamblingCard(gamblerCardID)==null){</span>
+<span class="pc bpc" id="L74" title="1 of 2 branches missed.">		}else if(bankTeller.getGamblingCard(gamblerCardID)==null){</span>
 
-<span class="nc" id="L79">			throw new NotificationException(&quot;The Card is Invalid for placing a bet&quot;);</span>
+<span class="nc" id="L76">			throw new NotificationException(&quot;The Card is Invalid for placing a bet&quot;);</span>
 
 		} else {
 
-<span class="pc bpc" id="L83" title="1 of 2 branches missed.">			if(listOfBetsOfCurrentRound.containsValue(gamblerCardID)){</span>
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">			if(listOfBetsOfCurrentRound.containsValue(gamblerCardID)){</span>
 
-<span class="nc" id="L85">				throw new NotificationException(&quot;It is not possible to put more than one bet per gamblerCard on each Game Round&quot;);</span>
+<span class="nc" id="L82">				throw new NotificationException(&quot;It is not possible to put more than one bet per gamblerCard on each Game Round&quot;);</span>
 
-<span class="pc bpc" id="L87" title="1 of 2 branches missed.">			}else if(!bankTeller.checkCredit(gamblerCardID,amount)){</span>
+<span class="pc bpc" id="L84" title="1 of 2 branches missed.">			}else if(!bankTeller.checkCredit(gamblerCardID,amount)){</span>
 
-<span class="nc" id="L89">				throw new NotificationException(&quot;Balance is insufficient for this amount of bet&quot;);</span>
+<span class="nc" id="L86">				throw new NotificationException(&quot;Balance is insufficient for this amount of bet&quot;);</span>
 
 			}else{
-<span class="fc" id="L92">				bankTeller.withdraw(gamblerCardID,amount);</span>
-<span class="fc" id="L93">				Bet bet = new Bet(amount,selectedNumber,bankTeller.getGamblingCard(gamblerCardID).toString());</span>
-<span class="fc" id="L94">				listOfBetsOfCurrentRound.putIfAbsent(bet,gamblerCardID);</span>
-<span class="fc" id="L95">				return true;</span>
+<span class="fc" id="L89">				bankTeller.withdraw(gamblerCardID,amount);</span>
+<span class="fc" id="L90">				Bet bet = new Bet(amount,selectedNumber,bankTeller.getGamblingCard(gamblerCardID).toString());</span>
+<span class="fc" id="L91">				listOfBetsOfCurrentRound.putIfAbsent(bet,gamblerCardID);</span>
+<span class="fc" id="L92">				return true;</span>
 			}
 		}
 	}
@@ -105,14 +102,14 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public BettingRound createBetRound() throws NotificationException {
 
-<span class="pc bpc" id="L108" title="1 of 2 branches missed.">		if(getNumberOfBetsInBettingRound()&lt;1){</span>
-<span class="nc" id="L109">			throw new NotificationException(&quot;It is not possible createBet when there is no bet in betRound&quot;);</span>
+<span class="pc bpc" id="L105" title="1 of 2 branches missed.">		if(getNumberOfBetsInBettingRound()&lt;1){</span>
+<span class="nc" id="L106">			throw new NotificationException(&quot;It is not possible createBet when there is no bet in betRound&quot;);</span>
 		}else{
-<span class="pc bpc" id="L111" title="1 of 2 branches missed.">			if(betRound!=null){</span>
-<span class="nc" id="L112">				throw new NotificationException(&quot;It is not possible to start another betRound before this betround being processed&quot;);</span>
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">			if(betRound!=null){</span>
+<span class="nc" id="L109">				throw new NotificationException(&quot;It is not possible to start another betRound before this betround being processed&quot;);</span>
 			}else{
-<span class="fc" id="L114">				betRound = game.createBetRound(listOfBetsOfCurrentRound);</span>
-<span class="fc" id="L115">				return  betRound;</span>
+<span class="fc" id="L111">				betRound = game.createBetRound(listOfBetsOfCurrentRound);</span>
+<span class="fc" id="L112">				return  betRound;</span>
 			}
 
 		}
@@ -123,7 +120,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 * Give the number of element in the listOfBetsOfGameRound
 	 */
 	public int getNumberOfBetsInBettingRound(){
-<span class="fc" id="L126">		return listOfBetsOfCurrentRound.size();</span>
+<span class="fc" id="L123">		return listOfBetsOfCurrentRound.size();</span>
 	}
 
 	/**
@@ -140,16 +137,19 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @exception throw NotificationException when the BetRound object has not been assigned.
 	 */
 	public void reward() throws NotificationException {
-<span class="pc bpc" id="L143" title="1 of 2 branches missed.">		if(IsRoundFinished()){</span>
-<span class="fc" id="L144">			listOfBetsOfCurrentRound.forEach((bet, s)-&gt;{</span>
-<span class="pc bpc" id="L145" title="1 of 2 branches missed.">				if (bet.getSelectedNumber()==betRound.getWinNr()){</span>
+<span class="pc bpc" id="L140" title="1 of 2 branches missed.">		if(IsRoundFinished()){</span>
+<span class="fc" id="L141">			listOfBetsOfCurrentRound.forEach((bet, s)-&gt;{</span>
+<span class="pc bpc" id="L142" title="1 of 2 branches missed.">				if (bet.getSelectedNumber()==betRound.getWinNr()){</span>
 					try {
-<span class="fc" id="L147">						bankTeller.deposit(s,bet.getInValue()*2);</span>
-<span class="nc" id="L148">					} catch (NotificationException e) {</span>
-<span class="nc" id="L149">						e.printStackTrace();</span>
-<span class="fc" id="L150">					}</span>
+<span class="fc" id="L144">						bet.setOutValue(bet.getInValue()*2);</span>
+<span class="fc" id="L145">						bankTeller.deposit(s,bet.getInValue()*2);</span>
+<span class="nc" id="L146">					} catch (NotificationException e) {</span>
+<span class="nc" id="L147">						e.printStackTrace();</span>
+<span class="fc" id="L148">					}</span>
 				}
-<span class="fc" id="L152">			});</span>
+<span class="fc" id="L150">			});</span>
+
+
 		}else{
 <span class="nc" id="L154">			throw new NotificationException(&quot;It is not possible start reward process until having the the GameRound finish&quot;);</span>
 		}
