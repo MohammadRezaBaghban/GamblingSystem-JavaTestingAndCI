@@ -127,6 +127,19 @@ public class GamblingMachineTest {
 
 
     /**
+     * Create a betRound make the currentBetRound in FinishedStatus
+     */
+    @Test //Direct Inputs
+    public void createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible(){
+
+        //Act
+        gamblingMachineSUT_object.createBetRound();
+
+        //
+        Assertions.assertTrue(gamblingMachineSUT_object.IsRoundFinished()==true,"The Gambling Machine does not terminate betting option");
+    }
+
+    /**
      * If the listOfBets Of Current Round be empty then it should not not be possible to create a Betting Round
      */
     @Test

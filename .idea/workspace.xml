@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1ea782-7ea7-4b0e-a9d2-37b2a0f35074" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/GamblingMachine.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/NotificationException.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/casino/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/jacocoHtml/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/GamblingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/GamblingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casino/IGamblingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casino/IGamblingMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/casino/GamblingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/casino/GamblingMachineTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -304,7 +294,7 @@
       <workItem from="1579419259006" duration="4210000" />
       <workItem from="1579426428103" duration="7776000" />
       <workItem from="1579453483137" duration="13419000" />
-      <workItem from="1579477878955" duration="4500000" />
+      <workItem from="1579477878955" duration="5074000" />
     </task>
     <task id="LOCAL-00001" summary="jacoco plugin added to the build.gradle">
       <created>1579360693771</created>
