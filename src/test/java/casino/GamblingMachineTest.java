@@ -60,8 +60,6 @@ public class GamblingMachineTest {
     }
 
 
-
-
     /**
      * When the bet amount is more than the credit on gambler's card, throw NotificationException
      *
@@ -145,18 +143,6 @@ public class GamblingMachineTest {
 
 
     /**
-     * Create a betRound make the currentBetRound in FinishedStatus
-     */
-    @Test //Direct Inputs
-    public void createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible(){
-        //Act
-        gamblingMachineSUT_object.createBetRound();
-
-        //Assert
-        Assertions.assertTrue(gamblingMachineSUT_object.IsRoundFinished()==true,"The Gambling Machine does not terminate betting option");
-    }
-
-    /**
      * If the listOfBets Of Current Round be empty then it should not not be possible to create a Betting Round
      */
     @Test
@@ -167,9 +153,21 @@ public class GamblingMachineTest {
             gamblingMachineSUT_object.createBetRound();
         });
         Assertions.assertTrue(exceptionThrown.getMessage().equals("It is not possible createBet when there is no bet in betRound"));
-
-
     }
+
+    /**
+     * Create a betRound make the currentBetRound in FinishedStatus
+     */
+    @Test //Direct Inputs
+    public void createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible() throws NotificationException {
+        //Act
+        gamblingMachineSUT_object.createBetRound();
+
+        //Assert
+        Assertions.assertTrue(gamblingMachineSUT_object.IsRoundFinished()==true,"The Gambling Machine does not terminate betting option");
+    }
+
+
 
 
     /**

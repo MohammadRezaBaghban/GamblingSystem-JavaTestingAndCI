@@ -103,9 +103,15 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @exception throws NotificationException on the empty list of bets of current round
 	 * @exception throws NotificationException if the betRound Object of the Gambling machine has already been assigned
 	 */
-	public BettingRound createBetRound() {
-		betRound = new BettingRound(new ArrayList<>(listOfBetsOfCurrentRound.keySet()));
-		return  betRound;
+	public BettingRound createBetRound() throws NotificationException {
+
+		if(getNumberOfBetsInBettingRound()<1){
+			throw new NotificationException("It is not possible createBet when there is no bet in betRound");
+		}else{
+			betRound = new BettingRound(new ArrayList<>(listOfBetsOfCurrentRound.keySet()));
+			return  betRound;
+		}
+
 	}
 
 	/**

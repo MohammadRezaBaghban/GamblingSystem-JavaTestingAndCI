@@ -103,16 +103,22 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @exception throws NotificationException on the empty list of bets of current round
 	 * @exception throws NotificationException if the betRound Object of the Gambling machine has already been assigned
 	 */
-	public BettingRound createBetRound() {
-<span class="fc" id="L107">		betRound = new BettingRound(new ArrayList&lt;&gt;(listOfBetsOfCurrentRound.keySet()));</span>
-<span class="fc" id="L108">		return  betRound;</span>
+	public BettingRound createBetRound() throws NotificationException {
+
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">		if(getNumberOfBetsInBettingRound()&lt;1){</span>
+<span class="fc" id="L109">			throw new NotificationException(&quot;It is not possible createBet when there is no bet in betRound&quot;);</span>
+		}else{
+<span class="nc" id="L111">			betRound = new BettingRound(new ArrayList&lt;&gt;(listOfBetsOfCurrentRound.keySet()));</span>
+<span class="nc" id="L112">			return  betRound;</span>
+		}
+
 	}
 
 	/**
 	 * Give the number of element in the listOfBetsOfGameRound
 	 */
 	public int getNumberOfBetsInBettingRound(){
-<span class="nc" id="L115">		return listOfBetsOfCurrentRound.size();</span>
+<span class="fc" id="L121">		return listOfBetsOfCurrentRound.size();</span>
 	}
 
 	/**
@@ -130,7 +136,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public void reward() {
 		// TODO - implement GamblingMachine.reward
-<span class="nc" id="L133">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L139">		throw new UnsupportedOperationException();</span>
 	}
 
 
