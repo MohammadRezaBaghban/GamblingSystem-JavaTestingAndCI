@@ -32,6 +32,7 @@ public class GamblingMachineTest {
 
         //Arrange
         createBetRound_Setup();
+        when(game_MockedObject.createBetRound(gamblingMachineSUT_object.listOfBetsOfCurrentRound)).thenReturn(mock(BettingRound.class));
 
         //Act
         gamblingMachineSUT_object.createBetRound();
@@ -153,7 +154,7 @@ public class GamblingMachineTest {
 
         //Arrange
         createBetRound_Setup();
-
+        when(game_MockedObject.createBetRound(gamblingMachineSUT_object.listOfBetsOfCurrentRound)).thenReturn(mock(BettingRound.class));
         //Act
         gamblingMachineSUT_object.createBetRound();
 
@@ -174,6 +175,7 @@ public class GamblingMachineTest {
     @Test
     public void createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException() throws Exception {
         //Arrange
+        when(game_MockedObject.createBetRound(gamblingMachineSUT_object.listOfBetsOfCurrentRound)).thenReturn(mock(BettingRound.class));
         reward_Setup();
 
         //Act & Assert
@@ -187,7 +189,6 @@ public class GamblingMachineTest {
     /**
      * throw notificationException on calling of reward method when the game round has not been closed.
      */
-    //Direct Output
     @Test
     public void reward_OnCallingWhenBetRoundHasNotBeenFinished_ThrowNotificationException(){
         //Act & Assert
@@ -200,9 +201,41 @@ public class GamblingMachineTest {
 
 
     /**
-     * It will check the GamblingMachine roundStatus if it is true as representation of starting of new game round
+     * Check if the prize of betRound would be sent to gamblerCard by bankTeller
+     */
+    //Indirect Output
+    @Test
+    public void reward_OnCall_theBankTellerCallDepositMethodWithCorrectGamblerCardID() throws Exception {
+
+        //Arrange
+        GamblerCard card = mock(GamblerCard.class);
+        when(card.getCardID()).thenReturn("first");
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(card);
+        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
+        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
+
+        Boolean result = gamblingMachineSUT_object.placeBet("first",20,20);
+
+
+        BettingRound bettingRound = mock(BettingRound.class);
+        when(bettingRound.getWinNr()).thenReturn(20);
+        when(game_MockedObject.createBetRound(gamblingMachineSUT_object.listOfBetsOfCurrentRound)).thenReturn(bettingRound);
+        gamblingMachineSUT_object.createBetRound();
+
+
+        //Act
+        gamblingMachineSUT_object.reward();
+
+        //Assert
+        verify(bankTeller_MockedObject,times(1)).deposit(card.getCardID(),40);
+
+    }
+
+    /**
+     * It will make the GamblingMachine Ready Again for another Gaming Round
      */
     //Direct Output
+    @Test
     public void reward_OnCallForReward_theGameBecomeReadyForAnotherRound(){
 
         //Arrange
@@ -213,19 +246,7 @@ public class GamblingMachineTest {
     }
 
 
-    /**
-     * Check if the prize of betRound would be sent to gamblerCard by bankTeller
-     */
-    //Indirect Output
-    public void reward_OnCall_theBankTellerCallDepositMethodWithCorrectGamblerCardID(){
 
-        //Arrange
-
-        //Act
-
-        //Assert
-
-    }
 
     // A set arrangement that is needed to able to call reward method to avoid Repeating Yourself
     public void reward_Setup() throws Exception {

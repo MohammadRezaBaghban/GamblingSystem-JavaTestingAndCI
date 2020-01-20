@@ -15,12 +15,14 @@ public class Bet {
 
 	/**
 	 * 
-	 * @param inValue
-	 * @param selectedNumber
+	 * @param InValue
+	 * @param SelectedNumber
 	 * @param cardInfo
 	 */
-	public Bet(double inValue, int selectedNumber, String cardInfo) {
-
+	public Bet(double InValue, int SelectedNumber, String cardInfo) {
+		inValue = InValue;
+		selectedNumber = SelectedNumber;
+		cardInformation = cardInfo;
 	}
 
 	public double getInValue() {

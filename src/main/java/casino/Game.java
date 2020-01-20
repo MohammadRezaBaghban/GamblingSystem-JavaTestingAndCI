@@ -19,7 +19,8 @@ public class Game {
 	public BettingRound createBetRound(Map<Bet, String> ListOfBets) {
 		listOfBets = ListOfBets;
 		ArrayList = new ArrayList<>(listOfBets.keySet());
-		return currentBetRound = new BettingRound(ArrayList);
+		currentBetRound = new BettingRound(ArrayList);
+		return currentBetRound;
 	}
 
 	/**

@@ -9,7 +9,7 @@ public class GamblingMachine implements IGamblingMachine {
 	private BettingRound betRound;
 	private BankTeller bankTeller;
 	private String machineID;
-	private Map<Bet, String> listOfBetsOfCurrentRound;
+	public Map<Bet, String> listOfBetsOfCurrentRound;
 	private Game game;
 
 
@@ -141,7 +141,15 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public void reward() throws NotificationException {
 		if(IsRoundFinished()){
-
+			listOfBetsOfCurrentRound.forEach((bet, s)->{
+				if (bet.getSelectedNumber()==betRound.getWinNr()){
+					try {
+						bankTeller.deposit(s,bet.getInValue()*2);
+					} catch (NotificationException e) {
+						e.printStackTrace();
+					}
+				}
+			});
 		}else{
 			throw new NotificationException("It is not possible start reward process until having the the GameRound finish");
 		}
