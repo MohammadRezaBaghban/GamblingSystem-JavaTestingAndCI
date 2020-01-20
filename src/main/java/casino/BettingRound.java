@@ -15,11 +15,10 @@ public class BettingRound {
 
 	/**
 	 * 
-	 * @param listOfBets
+	 * @param ListOfBets
 	 */
-	public BettingRound(List<Bet> listOfBets) {
-		// TODO - implement BettingRound.BettingRound
-		throw new UnsupportedOperationException();
+	public BettingRound(List<Bet> ListOfBets) {
+		listOfBets = ListOfBets;
 	}
 
 	public String getBettingRoundID() {

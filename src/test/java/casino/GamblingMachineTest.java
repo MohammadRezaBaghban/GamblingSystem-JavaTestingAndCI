@@ -135,7 +135,7 @@ public class GamblingMachineTest {
         //Act
         gamblingMachineSUT_object.createBetRound();
 
-        //
+        //Assert
         Assertions.assertTrue(gamblingMachineSUT_object.IsRoundFinished()==true,"The Gambling Machine does not terminate betting option");
     }
 

@@ -1,5 +1,8 @@
 package casino;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class GamblingMachine implements IGamblingMachine {
@@ -18,6 +21,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @param banktellerObject
 	 */
 	public GamblingMachine(Game gameObject, BankTeller banktellerObject) {
+		listOfBetsOfCurrentRound = new HashMap<>();
 		this.bankTeller = banktellerObject;
 		this.game = gameObject;
 		betRound = null;
@@ -81,8 +85,8 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @exception throws NotificationException if the betRound Object of the Gambling machine has already been assigned
 	 */
 	public BettingRound createBetRound() {
-		// TODO - implement GamblingMachine.createBetRound
-		throw new UnsupportedOperationException();
+		betRound = new BettingRound(new ArrayList<>(listOfBetsOfCurrentRound.keySet()));
+		return  betRound;
 	}
 
 

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GamblingMachine.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">casino</a> &gt; <span class="el_source">GamblingMachine.java</span></div><h1>GamblingMachine.java</h1><pre class="source lang-java linenums">package casino;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class GamblingMachine implements IGamblingMachine {
@@ -17,20 +20,21 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @param gameObject
 	 * @param banktellerObject
 	 */
-<span class="fc" id="L20">	public GamblingMachine(Game gameObject, BankTeller banktellerObject) {</span>
-<span class="fc" id="L21">		this.bankTeller = banktellerObject;</span>
-<span class="fc" id="L22">		this.game = gameObject;</span>
-<span class="fc" id="L23">		betRound = null;</span>
-<span class="fc" id="L24">	}</span>
+<span class="fc" id="L23">	public GamblingMachine(Game gameObject, BankTeller banktellerObject) {</span>
+<span class="fc" id="L24">		listOfBetsOfCurrentRound = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L25">		this.bankTeller = banktellerObject;</span>
+<span class="fc" id="L26">		this.game = gameObject;</span>
+<span class="fc" id="L27">		betRound = null;</span>
+<span class="fc" id="L28">	}</span>
 
 	/**
 	 * return true if
 	 */
 	public boolean IsRoundFinished() {
-<span class="nc bnc" id="L30" title="All 2 branches missed.">		if(betRound==null){</span>
-<span class="nc" id="L31">			return false;</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">		if(betRound==null){</span>
+<span class="nc" id="L35">			return false;</span>
 		}else{
-<span class="nc" id="L33">			return true;</span>
+<span class="fc" id="L37">			return true;</span>
 		}
 	}
 
@@ -67,10 +71,10 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @exception throw NotificationException when a GamblerCard want to put more than one bet on a BetRound
 	 */
 	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) throws NotificationException {
-<span class="pc bpc" id="L70" title="1 of 2 branches missed.">		if(bankTeller.getGamblingCard(gamblerCardID)==null){</span>
-<span class="fc" id="L71">			throw new NotificationException(&quot;The Card is Invalid for placing a bet&quot;);</span>
+<span class="nc bnc" id="L74" title="All 2 branches missed.">		if(bankTeller.getGamblingCard(gamblerCardID)==null){</span>
+<span class="nc" id="L75">			throw new NotificationException(&quot;The Card is Invalid for placing a bet&quot;);</span>
 		}else{
-<span class="nc" id="L73">			return true;</span>
+<span class="nc" id="L77">			return true;</span>
 		}
 	}
 
@@ -81,8 +85,8 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @exception throws NotificationException if the betRound Object of the Gambling machine has already been assigned
 	 */
 	public BettingRound createBetRound() {
-		// TODO - implement GamblingMachine.createBetRound
-<span class="nc" id="L85">		throw new UnsupportedOperationException();</span>
+<span class="fc" id="L88">		betRound = new BettingRound(new ArrayList&lt;&gt;(listOfBetsOfCurrentRound.keySet()));</span>
+<span class="fc" id="L89">		return  betRound;</span>
 	}
 
 
@@ -101,7 +105,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public void reward() {
 		// TODO - implement GamblingMachine.reward
-<span class="nc" id="L104">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L108">		throw new UnsupportedOperationException();</span>
 	}
 
 
