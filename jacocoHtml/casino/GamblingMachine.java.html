@@ -88,13 +88,13 @@ public class GamblingMachine implements IGamblingMachine {
 
 <span class="pc bpc" id="L89" title="1 of 2 branches missed.">			}else if(!bankTeller.checkCredit(gamblerCardID,amount)){</span>
 
-<span class="nc" id="L91">				throw new NotificationException(&quot;Balance is insufficient for this amount of bet&quot;);</span>
+<span class="fc" id="L91">				throw new NotificationException(&quot;Balance is insufficient for this amount of bet&quot;);</span>
 
 			}else{
-<span class="fc" id="L94">				bankTeller.withdraw(gamblerCardID,amount);</span>
-<span class="fc" id="L95">				Bet bet = new Bet(amount,selectedNumber,bankTeller.getGamblingCard(gamblerCardID).toString());</span>
-<span class="fc" id="L96">				listOfBetsOfCurrentRound.putIfAbsent(bet,gamblerCardID);</span>
-<span class="fc" id="L97">				return true;</span>
+<span class="nc" id="L94">				bankTeller.withdraw(gamblerCardID,amount);</span>
+<span class="nc" id="L95">				Bet bet = new Bet(amount,selectedNumber,bankTeller.getGamblingCard(gamblerCardID).toString());</span>
+<span class="nc" id="L96">				listOfBetsOfCurrentRound.putIfAbsent(bet,gamblerCardID);</span>
+<span class="nc" id="L97">				return true;</span>
 			}
 		}
 	}
@@ -110,6 +110,12 @@ public class GamblingMachine implements IGamblingMachine {
 <span class="nc" id="L110">		return  betRound;</span>
 	}
 
+	/**
+	 * Give the number of element in the listOfBetsOfGameRound
+	 */
+	public int getNumberOfBetsInBettingRound(){
+<span class="nc" id="L117">		return listOfBetsOfCurrentRound.size();</span>
+	}
 
 	/**
 	 * On the finishing of the Game round and generation of BetRound, it will process it and renew the game
@@ -126,7 +132,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public void reward() {
 		// TODO - implement GamblingMachine.reward
-<span class="nc" id="L129">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L135">		throw new UnsupportedOperationException();</span>
 	}
 
 

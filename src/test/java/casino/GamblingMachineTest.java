@@ -59,6 +59,24 @@ public class GamblingMachineTest {
     }
 
     /**
+     * When gamblerCard is exsist but was not assigned, then the bet can not be made
+     */
+    @Test
+    public void placeBet_OnGivingValidUnAssignedGamblerCard_ThrowNotificationException(){
+        //Arrange
+        GamblerCard card = mock(GamblerCard.class);
+        when(card.getAssignedStatus()).thenReturn(false);
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(card);
+        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(false);
+
+        //Act and Assert
+        Exception exceptionThrown = Assertions.assertThrows(NotificationException.class,()->{
+            gamblingMachineSUT_object.placeBet("first",20,20);
+        });
+        Assertions.assertTrue(exceptionThrown.getMessage().equals("The Card is not assigned yet! Invalid Card for Betting"));
+    }
+
+    /**
      * When the bet amount is more than the credit on gambler's card, throw NotificationException
      *
      */
@@ -122,14 +140,20 @@ public class GamblingMachineTest {
     /**
      * On Having All the requirements, A bet instance is created and be added to list of Bets
      */
-    @Test //Indirect Output
-    public void placeBet_OnHavingValidCardAndEnoughCredit_CreateAndAddBetTotheRoundlistOfBet(){
+    @Test //Indirect Output & IndirectInput
+    public void placeBet_OnHavingValidCardAndEnoughCredit_CreateAndAddBetTotheRoundlistOfBet() throws Exception {
 
         //Arrange
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
+        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
+        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
 
         //Act
+        Boolean result = gamblingMachineSUT_object.placeBet("first",20,20);
 
         //Assert
+        Assertions.assertTrue(gamblingMachineSUT_object.getNumberOfBetsInBettingRound()==1,"The bet was not added to list of bets of game round");
+        Assertions.assertTrue(result,"Placing the bet was not successful");
 
     }
 

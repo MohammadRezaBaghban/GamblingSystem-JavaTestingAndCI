@@ -110,6 +110,12 @@ public class GamblingMachine implements IGamblingMachine {
 		return  betRound;
 	}
 
+	/**
+	 * Give the number of element in the listOfBetsOfGameRound
+	 */
+	public int getNumberOfBetsInBettingRound(){
+		return listOfBetsOfCurrentRound.size();
+	}
 
 	/**
 	 * On the finishing of the Game round and generation of BetRound, it will process it and renew the game
