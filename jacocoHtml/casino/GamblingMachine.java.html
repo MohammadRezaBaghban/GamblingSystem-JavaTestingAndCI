@@ -148,13 +148,14 @@ public class GamblingMachine implements IGamblingMachine {
 <span class="fc" id="L148">					}</span>
 				}
 <span class="fc" id="L150">			});</span>
-
+<span class="fc" id="L151">			betRound = null;</span>
+<span class="fc" id="L152">			listOfBetsOfCurrentRound = new LinkedHashMap&lt;&gt;();</span>
 
 		}else{
-<span class="nc" id="L154">			throw new NotificationException(&quot;It is not possible start reward process until having the the GameRound finish&quot;);</span>
+<span class="nc" id="L155">			throw new NotificationException(&quot;It is not possible start reward process until having the the GameRound finish&quot;);</span>
 		}
 
-<span class="fc" id="L157">	}</span>
+<span class="fc" id="L158">	}</span>
 
 
 

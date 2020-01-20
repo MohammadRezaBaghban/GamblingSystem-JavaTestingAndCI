@@ -148,7 +148,8 @@ public class GamblingMachine implements IGamblingMachine {
 					}
 				}
 			});
-
+			betRound = null;
+			listOfBetsOfCurrentRound = new LinkedHashMap<>();
 
 		}else{
 			throw new NotificationException("It is not possible start reward process until having the the GameRound finish");

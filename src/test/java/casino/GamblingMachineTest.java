@@ -236,7 +236,7 @@ public class GamblingMachineTest {
      */
     //Direct Output
     @Test
-    public void () throws Exception {
+    public void reward_OnCallForReward_theGameBecomeReadyForAnotherRound() throws Exception {
 
         //Arrange
         GamblerCard card = mock(GamblerCard.class);
