@@ -64,7 +64,6 @@ public class GamblingMachineTest {
      */
     @Test //Indirect Output
     public void placeBet_gamblerCardDoesNotHaveEnoughBalance_ThrowsBalanceInsufficientNotificationException(){
-
         //Arrange
         when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
         when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(false);
@@ -75,8 +74,6 @@ public class GamblingMachineTest {
         });
         Assertions.assertTrue(exceptionThrown.getMessage().equals("Balance is insufficient for this amount of bet"));
         verify(bankTeller_MockedObject,times(1)).checkCredit("first",20);
-
-
     }
 
 
@@ -89,6 +86,8 @@ public class GamblingMachineTest {
 
         //Arrange
         when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
+        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
+        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
 
         //Act
         gamblingMachineSUT_object.placeBet("first",20,20);

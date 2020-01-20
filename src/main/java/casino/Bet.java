@@ -20,8 +20,7 @@ public class Bet {
 	 * @param cardInfo
 	 */
 	public Bet(double inValue, int selectedNumber, String cardInfo) {
-		// TODO - implement Bet.Bet
-		throw new UnsupportedOperationException();
+
 	}
 
 	public double getInValue() {
