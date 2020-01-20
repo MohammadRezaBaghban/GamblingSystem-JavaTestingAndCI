@@ -81,8 +81,11 @@ public class GamblingMachine implements IGamblingMachine {
 			throw new NotificationException("The Card is Invalid for placing a bet");
 
 		}else{
-
-			throw new NotificationException("");
+			if(!bankTeller.checkCredit(gamblerCardID,amount)){
+				throw new NotificationException("Balance is insufficient for this amount of bet");
+			}else{
+				return true;
+			}
 		}
 	}
 

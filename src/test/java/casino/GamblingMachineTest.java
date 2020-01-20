@@ -74,7 +74,7 @@ public class GamblingMachineTest {
             gamblingMachineSUT_object.placeBet("first",20,20);
         });
         Assertions.assertTrue(exceptionThrown.getMessage().equals("Balance is insufficient for this amount of bet"));
-
+        verify(bankTeller_MockedObject,times(1)).checkCredit("first",20);
 
 
     }
