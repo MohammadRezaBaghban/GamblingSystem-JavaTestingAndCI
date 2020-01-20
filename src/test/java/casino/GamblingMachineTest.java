@@ -159,7 +159,16 @@ public class GamblingMachineTest {
      * Create a betRound make the currentBetRound in FinishedStatus
      */
     @Test //Direct Inputs
-    public void createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible() throws NotificationException {
+    public void createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible() throws Exception {
+
+        //Arrange
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
+        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
+        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
+
+        //Act
+        Boolean result = gamblingMachineSUT_object.placeBet("first",20,20);
+
         //Act
         gamblingMachineSUT_object.createBetRound();
 
