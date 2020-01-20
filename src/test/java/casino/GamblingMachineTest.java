@@ -177,8 +177,6 @@ public class GamblingMachineTest {
     }
 
 
-
-
     /**
      *  the GamblingMachine createBetround method can not be called twice
      *
@@ -189,13 +187,21 @@ public class GamblingMachineTest {
      *  </p>
      */
     @Test
-    public void createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException(){
+    public void createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException() throws Exception {
 
         //Arrange
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
+        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
+        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
+        Boolean result = gamblingMachineSUT_object.placeBet("first",20,20);
+        gamblingMachineSUT_object.createBetRound();
 
-        //Act
+        //Act & Assert
+        Exception exceptionThrown = Assertions.assertThrows(NotificationException.class,()->{
+            gamblingMachineSUT_object.createBetRound();
+        });
+        Assertions.assertTrue(exceptionThrown.getMessage().equals("It is not possible to start another betRound before this betround being processed"));
 
-        //Assert
 
     }
 

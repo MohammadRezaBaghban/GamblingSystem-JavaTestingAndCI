@@ -124,13 +124,33 @@
       <recent name="C:\Users\User\Desktop\TCI\Casino\src\main\java\casino" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GamblingMachineTest.createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible">
+  <component name="RunManager" selected="Gradle.GamblingMachineTest.createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException">
     <configuration name="GamblingMachineTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;casino.GamblingMachineTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GamblingMachineTest.createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;casino.GamblingMachineTest.createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -171,26 +191,6 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;casino.GamblingMachineTest.createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="GamblingMachineTest.placeBet_AGamblerCardPutMoreThanOneBetOnSpecificBetRound_ThrowNotificationException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;casino.GamblingMachineTest.placeBet_AGamblerCardPutMoreThanOneBetOnSpecificBetRound_ThrowNotificationException&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -261,19 +261,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Whole project" />
-      <item itemvalue="Gradle.GamblingMachineTest.placeBet_AGamblerCardPutMoreThanOneBetOnSpecificBetRound_ThrowNotificationException" />
       <item itemvalue="Gradle.GamblingMachineTest.placeBet_OnGivingValidUnAssignedGamblerCard_ThrowNotificationException" />
       <item itemvalue="Gradle.GamblingMachineTest" />
       <item itemvalue="Gradle.GamblingMachineTest.createBetRound_OnEmptylistOfBetOfCurrentRound_ThrowBetNotificationException" />
       <item itemvalue="Gradle.GamblingMachineTest.createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible" />
+      <item itemvalue="Gradle.GamblingMachineTest.createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GamblingMachineTest.createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException" />
         <item itemvalue="Gradle.GamblingMachineTest.createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible" />
         <item itemvalue="Gradle.GamblingMachineTest.createBetRound_OnEmptylistOfBetOfCurrentRound_ThrowBetNotificationException" />
         <item itemvalue="Gradle.GamblingMachineTest" />
         <item itemvalue="Gradle.GamblingMachineTest.placeBet_OnGivingValidUnAssignedGamblerCard_ThrowNotificationException" />
-        <item itemvalue="Gradle.GamblingMachineTest.placeBet_AGamblerCardPutMoreThanOneBetOnSpecificBetRound_ThrowNotificationException" />
       </list>
     </recent_temporary>
   </component>
@@ -639,34 +639,34 @@
     <state x="716" y="296" key="FileChooserDialogImpl/0.0.2000.1293@0.0.2000.1293" timestamp="1579478841484" />
     <state x="617" y="206" key="FileChooserDialogImpl/70.0.1530.900@70.0.1530.900" timestamp="1578259030303" />
     <state x="618" y="206" key="FileChooserDialogImpl/71.0.1529.900@71.0.1529.900" timestamp="1579359222462" />
-    <state width="1957" height="352" key="GridCell.Tab.0.bottom" timestamp="1579492214605">
+    <state width="1957" height="352" key="GridCell.Tab.0.bottom" timestamp="1579492419936">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="352" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579492214605" />
+    <state width="1957" height="352" key="GridCell.Tab.0.bottom/0.0.2000.1293@0.0.2000.1293" timestamp="1579492419936" />
     <state width="1815" height="364" key="GridCell.Tab.0.bottom/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
     <state width="1493" height="267" key="GridCell.Tab.0.bottom/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.bottom/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
     <state width="1815" height="314" key="GridCell.Tab.0.bottom/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579472151474" />
-    <state width="1957" height="352" key="GridCell.Tab.0.center" timestamp="1579492214605">
+    <state width="1957" height="352" key="GridCell.Tab.0.center" timestamp="1579492419936">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="352" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579492214605" />
+    <state width="1957" height="352" key="GridCell.Tab.0.center/0.0.2000.1293@0.0.2000.1293" timestamp="1579492419936" />
     <state width="1815" height="364" key="GridCell.Tab.0.center/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
     <state width="1493" height="267" key="GridCell.Tab.0.center/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.center/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
     <state width="1815" height="314" key="GridCell.Tab.0.center/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579472151474" />
-    <state width="1957" height="352" key="GridCell.Tab.0.left" timestamp="1579492214605">
+    <state width="1957" height="352" key="GridCell.Tab.0.left" timestamp="1579492419936">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="352" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579492214605" />
+    <state width="1957" height="352" key="GridCell.Tab.0.left/0.0.2000.1293@0.0.2000.1293" timestamp="1579492419936" />
     <state width="1815" height="364" key="GridCell.Tab.0.left/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
     <state width="1493" height="267" key="GridCell.Tab.0.left/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.left/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
     <state width="1815" height="314" key="GridCell.Tab.0.left/72.0.1528.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579472151474" />
-    <state width="1957" height="352" key="GridCell.Tab.0.right" timestamp="1579492214605">
+    <state width="1957" height="352" key="GridCell.Tab.0.right" timestamp="1579492419936">
       <screen x="0" y="0" width="2000" height="1293" />
     </state>
-    <state width="1957" height="352" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579492214605" />
+    <state width="1957" height="352" key="GridCell.Tab.0.right/0.0.2000.1293@0.0.2000.1293" timestamp="1579492419936" />
     <state width="1815" height="364" key="GridCell.Tab.0.right/64.0.1536.900/722.-1080.1858.1080@722.-1080.1858.1080" timestamp="1579456684154" />
     <state width="1493" height="267" key="GridCell.Tab.0.right/64.0.1536.900@64.0.1536.900" timestamp="1579444598644" />
     <state width="1486" height="297" key="GridCell.Tab.0.right/71.0.1529.900@71.0.1529.900" timestamp="1579373887016" />
