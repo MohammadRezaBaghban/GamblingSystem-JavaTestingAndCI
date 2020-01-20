@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Convert;
 
 import java.sql.Timestamp;
@@ -59,6 +62,7 @@ public class GamblerCardTest {
 
 
         //Assert
+
         Assertions.assertTrue(GamblerCard_SUT_Object.getInitialAmount()==200,"The InitialAmount is not being set correctly");
         Assertions.assertTrue(GamblerCard_SUT_Object.getCredit()==200,"The Credit is not being set correctly");
         Assertions.assertTrue(GamblerCard_SUT_Object.getListOfBet().size()==0,"The bet list is not clear correctly");
@@ -109,6 +113,8 @@ public class GamblerCardTest {
         Assertions.assertTrue(GamblerCard_SUT_Object.getAssignedStatus()==false,"The Gambler assigned status is not reseted to false");
 
 
+
+
     }
 
     /**
@@ -149,7 +155,7 @@ public class GamblerCardTest {
      * Check if the number of items in betList has been increased our not.
      */
     @Test
-    //Indirect Inputs
+    //Indirect Inputs - Matcher Hamcerast
     public void addBet_OnAddingNonDuplicateBet_TheBetWouldBeAddedToBetList() throws NotificationException {
 
         //Arrange
@@ -161,7 +167,8 @@ public class GamblerCardTest {
         GamblerCard_SUT_Object.addBet("3");
         GamblerCard_SUT_Object.addBet("4");
         //Assert
-        Assertions.assertTrue(GamblerCard_SUT_Object.getListOfBet().size()==4,"bet was not added successfully");
+        assertThat("bet was not added successfully",GamblerCard_SUT_Object.getListOfBet().size(),is(4));
+
 
     }
 
@@ -202,7 +209,7 @@ public class GamblerCardTest {
     /**
      * On calling to string method on an assigned Gambler, the string includes all the Gambler card details
      */
-    @Test //Direct Output
+    @Test //Direct Output - Matcher Hamcerast
     public void ToString_OnCallingAnAssignedCard_IncludesAllImportantDetailOfGamblercard() throws NotificationException {
 
         //Arrange
@@ -213,11 +220,11 @@ public class GamblerCardTest {
 
 
         //Assert
-        Assertions.assertTrue(result.contains(GamblerCard_SUT_Object.getCardID()),"CardId is not included");
-        Assertions.assertTrue(result.contains(Double.toString(GamblerCard_SUT_Object.getCredit())),"Credit is not included");
-        Assertions.assertTrue(result.contains(Double.toString(GamblerCard_SUT_Object.getInitialAmount())),"InitialCredit is not included");
-        Assertions.assertTrue(result.contains(GamblerCard_SUT_Object.getTimeStamp().toString()),"TimeStamp is not included");
-        Assertions.assertTrue(result.contains(Integer.toString(GamblerCard_SUT_Object.getListOfBet().size())),"Number of Bet is not included");
+        assertThat("CardId is not included",result,containsString(GamblerCard_SUT_Object.getCardID()));
+        assertThat("Credit is not included",result,containsString(Double.toString(GamblerCard_SUT_Object.getCredit())));
+        assertThat("InitialCredit is not included",result,containsString(Double.toString(GamblerCard_SUT_Object.getInitialAmount())));
+        assertThat("TimeStamp is not included",result,containsString(GamblerCard_SUT_Object.getTimeStamp().toString()));
+        assertThat("Number of Bet is not included", result, containsString(Integer.toString(GamblerCard_SUT_Object.getListOfBet().size())));
 
 
     }

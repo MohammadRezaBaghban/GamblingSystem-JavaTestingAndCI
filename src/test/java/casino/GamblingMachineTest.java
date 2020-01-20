@@ -1,12 +1,15 @@
 package casino;
 
 
+import org.hamcrest.core.Is;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.internal.matchers.Not;
 
 import java.util.UUID;
-
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Mockito.*;
 
 public class GamblingMachineTest {
@@ -53,6 +56,7 @@ public class GamblingMachineTest {
      * </p>
      */
     @Test //Indirect Output
+
     public void placeBet_gamblerCardIdIsNotValid_ThrowNotificationException(){
         //Arrange
         when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(null);
@@ -123,13 +127,13 @@ public class GamblingMachineTest {
     /**
      * On Having All the requirements, A bet instance is created and be added to list of Bets
      */
-    @Test //Indirect Output & IndirectInput
+    @Test //Indirect Output & IndirectInput - Matcher Hamcerast
     public void placeBet_OnHavingValidCardAndEnoughCredit_CreateAndAddBetTotheRoundlistOfBet() throws Exception {
         //Arrange
         createBetRound_Setup();
 
         //Assert
-        Assertions.assertTrue(gamblingMachineSUT_object.getNumberOfBetsInBettingRound()==1,"The bet was not added to list of bets of game round");
+        assertThat("The bet was not added to list of bets of game round",gamblingMachineSUT_object.getNumberOfBetsInBettingRound(), is(1));
     }
 
 
@@ -259,7 +263,8 @@ public class GamblingMachineTest {
 
         //Assert
         Assertions.assertTrue(gamblingMachineSUT_object.getNumberOfBetsInBettingRound()==0);
-        Assertions.assertTrue(gamblingMachineSUT_object.IsRoundFinished()==false);
+        assertThat(gamblingMachineSUT_object.IsRoundFinished(), not(true));
+
     }
 
 

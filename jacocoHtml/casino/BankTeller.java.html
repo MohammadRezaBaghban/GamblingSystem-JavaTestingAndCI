@@ -16,20 +16,20 @@ public class BankTeller implements IBetLoggingAuthority {
 	/**
 	 * This class is responsible for managing gambling card information and logging all the activities.
 	 */
-<span class="nc" id="L19">	public BankTeller(IBetLoggingAuthority logger, GamblingAuthority gamblingAuthority) {</span>
-<span class="nc" id="L20">		this.logger = logger;</span>
-<span class="nc" id="L21">		this.gamblingAuthority = gamblingAuthority;</span>
-<span class="nc" id="L22">		this.listOfGamblerCard = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L23">	}</span>
+<span class="fc" id="L19">	public BankTeller(IBetLoggingAuthority logger, GamblingAuthority gamblingAuthority) {</span>
+<span class="fc" id="L20">		this.logger = logger;</span>
+<span class="fc" id="L21">		this.gamblingAuthority = gamblingAuthority;</span>
+<span class="fc" id="L22">		this.listOfGamblerCard = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L23">	}</span>
 
 	/**
 	 * The total amount of money credit is physically handed to the gambler
 	 * This method also logs the GamblingCard information.
 	 */
 	public void CashOut(String gamblerCardID) throws NotificationException {
-<span class="nc" id="L30">		this.logger.Log(&quot;/log.txt&quot;, gamblerCardID);</span>
-<span class="nc" id="L31">		this.clearCard(gamblerCardID);</span>
-<span class="nc" id="L32">	}</span>
+<span class="fc" id="L30">		this.logger.Log(&quot;/log.txt&quot;, gamblerCardID);</span>
+<span class="fc" id="L31">		this.clearCard(gamblerCardID);</span>
+<span class="fc" id="L32">	}</span>
 
 	/**
 	 * Get the list of all gambler cards
@@ -52,13 +52,13 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public boolean assignCard(String gamblerCardId, double amount, Timestamp timestamp) throws NotificationException {
-<span class="nc bnc" id="L55" title="All 2 branches missed.">		if(isGamblerCardValid(gamblerCardId))</span>
+<span class="pc bpc" id="L55" title="1 of 2 branches missed.">		if(isGamblerCardValid(gamblerCardId))</span>
 		{
-<span class="nc" id="L57">			GamblerCard gamblerCard = getGamblingCard(gamblerCardId);</span>
-<span class="nc bnc" id="L58" title="All 2 branches missed.">			if(gamblerCard.getAssignedStatus())</span>
-<span class="nc" id="L59">				throw new NotificationException(&quot;Card already assigned.&quot;);</span>
-<span class="nc" id="L60">			gamblerCard.AssignCard(amount, timestamp);</span>
-<span class="nc" id="L61">			return true;</span>
+<span class="fc" id="L57">			GamblerCard gamblerCard = getGamblingCard(gamblerCardId);</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">			if(gamblerCard.getAssignedStatus())</span>
+<span class="fc" id="L59">				throw new NotificationException(&quot;Card already assigned.&quot;);</span>
+<span class="fc" id="L60">			gamblerCard.AssignCard(amount, timestamp);</span>
+<span class="fc" id="L61">			return true;</span>
 		}
 <span class="nc" id="L63">		return false;</span>
 	}
@@ -68,14 +68,14 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardID
 	 */
 	public void clearCard(String gamblerCardID) throws NotificationException {
-<span class="nc bnc" id="L71" title="All 2 branches missed.">		if(isGamblerCardValid(gamblerCardID)){</span>
-<span class="nc" id="L72">			GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);</span>
-<span class="nc" id="L73">			gamblerCard.setCredit(0.0);</span>
-<span class="nc" id="L74">			gamblerCard.checkOut();</span>
-<span class="nc" id="L75">		}</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">		if(isGamblerCardValid(gamblerCardID)){</span>
+<span class="fc" id="L72">			GamblerCard gamblerCard = this.getGamblingCard(gamblerCardID);</span>
+<span class="fc" id="L73">			gamblerCard.setCredit(0.0);</span>
+<span class="fc" id="L74">			gamblerCard.checkOut();</span>
+<span class="fc" id="L75">		}</span>
 		else
-<span class="nc" id="L77">			throw new NotificationException(&quot;gamblerCard is Invalid.&quot;);</span>
-<span class="nc" id="L78">	}</span>
+<span class="fc" id="L77">			throw new NotificationException(&quot;gamblerCard is Invalid.&quot;);</span>
+<span class="fc" id="L78">	}</span>
 
 	/**
 	 * returns the GamblingCard object if the gamblerCardID exists in the gamblingCardList.
@@ -84,11 +84,11 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @return
 	 */
 	public GamblerCard getGamblingCard(String gamblerCardID) {
-<span class="nc" id="L87">		GamblerCard card = null;</span>
-<span class="nc bnc" id="L88" title="All 2 branches missed.">		for(GamblerCard c : listOfGamblerCard)</span>
-<span class="nc bnc" id="L89" title="All 2 branches missed.">			if (c.getCardID().equals(gamblerCardID))</span>
-<span class="nc" id="L90">				card = c;</span>
-<span class="nc" id="L91">		return card;</span>
+<span class="fc" id="L87">		GamblerCard card = null;</span>
+<span class="fc bfc" id="L88" title="All 2 branches covered.">		for(GamblerCard c : listOfGamblerCard)</span>
+<span class="fc bfc" id="L89" title="All 2 branches covered.">			if (c.getCardID().equals(gamblerCardID))</span>
+<span class="fc" id="L90">				card = c;</span>
+<span class="fc" id="L91">		return card;</span>
 	}
 
 	/**
@@ -97,14 +97,14 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public boolean checkCredit(String gamblerCardID, double amount) {
-<span class="nc bnc" id="L100" title="All 2 branches missed.">		if (isGamblerCardValid(gamblerCardID))</span>
+<span class="pc bpc" id="L100" title="1 of 2 branches missed.">		if (isGamblerCardValid(gamblerCardID))</span>
 		{
-<span class="nc" id="L102">			GamblerCard gamblerCard = getGamblingCard(gamblerCardID);</span>
-<span class="nc" id="L103">			double rest = gamblerCard.getCredit() - amount;</span>
-<span class="nc bnc" id="L104" title="All 2 branches missed.">			if(rest&gt;=0)</span>
-<span class="nc" id="L105">				return true;</span>
+<span class="fc" id="L102">			GamblerCard gamblerCard = getGamblingCard(gamblerCardID);</span>
+<span class="fc" id="L103">			double rest = gamblerCard.getCredit() - amount;</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">			if(rest&gt;=0)</span>
+<span class="fc" id="L105">				return true;</span>
 		}
-<span class="nc" id="L107">		return false;</span>
+<span class="fc" id="L107">		return false;</span>
 	}
 
 	/**
@@ -113,13 +113,13 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public void deposit(String gamblerCardID, double amount) throws NotificationException {
-<span class="nc bnc" id="L116" title="All 2 branches missed.">		if(amount &lt; 0.0)</span>
-<span class="nc" id="L117">			throw new NotificationException(&quot;Amount cannot be negative.&quot;);</span>
-<span class="nc bnc" id="L118" title="All 2 branches missed.">		if(isGamblerCardValid(gamblerCardID)) {</span>
-<span class="nc" id="L119">			GamblerCard gamblerCard = getGamblingCard(gamblerCardID);</span>
-<span class="nc" id="L120">			gamblerCard.setCredit(amount);</span>
+<span class="fc bfc" id="L116" title="All 2 branches covered.">		if(amount &lt; 0.0)</span>
+<span class="fc" id="L117">			throw new NotificationException(&quot;Amount cannot be negative.&quot;);</span>
+<span class="pc bpc" id="L118" title="1 of 2 branches missed.">		if(isGamblerCardValid(gamblerCardID)) {</span>
+<span class="fc" id="L119">			GamblerCard gamblerCard = getGamblingCard(gamblerCardID);</span>
+<span class="fc" id="L120">			gamblerCard.setCredit(amount);</span>
 		}
-<span class="nc" id="L122">	}</span>
+<span class="fc" id="L122">	}</span>
 
 	/**
 	 * withdraw amount from the card by cashier.
@@ -127,12 +127,12 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param amount
 	 */
 	public void withdraw(String gamblerCardID, double amount) throws NotificationException {
-<span class="nc" id="L130">		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);</span>
-<span class="nc bnc" id="L131" title="All 2 branches missed.">		if(gamblerCard.getCredit()&gt;=amount)</span>
-<span class="nc" id="L132">			gamblerCard.setCredit(gamblerCard.getCredit()-amount);</span>
+<span class="fc" id="L130">		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);</span>
+<span class="fc bfc" id="L131" title="All 2 branches covered.">		if(gamblerCard.getCredit()&gt;=amount)</span>
+<span class="fc" id="L132">			gamblerCard.setCredit(gamblerCard.getCredit()-amount);</span>
 		else
-<span class="nc" id="L134">			throw new NotificationException(&quot;Not sufficient balance on card.&quot;);</span>
-<span class="nc" id="L135">	}</span>
+<span class="fc" id="L134">			throw new NotificationException(&quot;Not sufficient balance on card.&quot;);</span>
+<span class="fc" id="L135">	}</span>
 
 	/**
 	 * Add bet to the Gambler card
@@ -140,20 +140,20 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param bet
 	 */
 	public void AddBetToGamblerCard(String gamblerCardID, Bet bet) throws NotificationException {
-<span class="nc bnc" id="L143" title="All 2 branches missed.">		if(!isGamblerCardValid(gamblerCardID))</span>
-<span class="nc" id="L144">			throw new NotificationException(&quot;Card is not valid.&quot;);</span>
-<span class="nc" id="L145">		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);</span>
-<span class="nc" id="L146">		gamblerCard.addBet(bet.getId());</span>
-<span class="nc" id="L147">	}</span>
+<span class="fc bfc" id="L143" title="All 2 branches covered.">		if(!isGamblerCardValid(gamblerCardID))</span>
+<span class="fc" id="L144">			throw new NotificationException(&quot;Card is not valid.&quot;);</span>
+<span class="fc" id="L145">		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);</span>
+<span class="fc" id="L146">		gamblerCard.addBet(bet.getId());</span>
+<span class="fc" id="L147">	}</span>
 
 	public Bet getBet(String betId){
 <span class="nc" id="L150">		return null; //to satisfy compiler</span>
 	}
 
 	public boolean isGamblerCardValid(String gamblerCardID) {
-<span class="nc bnc" id="L154" title="All 2 branches missed.">		if(this.getGamblingCard(gamblerCardID)!=null)</span>
-<span class="nc" id="L155">			return true;</span>
-<span class="nc" id="L156">		return false;</span>
+<span class="fc bfc" id="L154" title="All 2 branches covered.">		if(this.getGamblingCard(gamblerCardID)!=null)</span>
+<span class="fc" id="L155">			return true;</span>
+<span class="fc" id="L156">		return false;</span>
 	}
 
 	@Override
@@ -162,7 +162,7 @@ public class BankTeller implements IBetLoggingAuthority {
 <span class="nc" id="L162">	}</span>
 
 	public void addCard(GamblerCard gamblerCard) {
-<span class="nc" id="L165">		this.listOfGamblerCard.add(gamblerCard);</span>
-<span class="nc" id="L166">	}</span>
+<span class="fc" id="L165">		this.listOfGamblerCard.add(gamblerCard);</span>
+<span class="fc" id="L166">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

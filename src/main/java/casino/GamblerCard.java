@@ -80,8 +80,8 @@ public class GamblerCard {
 	 */
 	public void checkOut() throws NotificationException {
 		if(assignedStatus){
-			this.initialAmount = 0;
-			this.credit = 0;
+			this.initialAmount = 0.0;
+			this.credit = 0.0;
 			timeStamp = null;
 			listOfBet = null;
 			assignedStatus=false;
