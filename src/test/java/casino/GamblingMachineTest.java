@@ -28,7 +28,7 @@ public class GamblingMachineTest {
      * throw BetNotificationException on placing a bet when the betRound has already been assigned
      */
     @Test //Direct Input
-    public void placeBet_theBetRoundHasBeenAlreadyAssigned_ThrowNotificationException(){
+    public void placeBet_whentheBetRoundHasAlreadyFinished_ThrowNotificationException(){
 
         //Arrange
 
@@ -51,15 +51,13 @@ public class GamblingMachineTest {
      */
     @Test //Indirect Output
     public void placeBet_gamblerCardIdIsNotValid_ThrowNotificationException(){
-
         //Arrange
         when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(null);
 
         //Act & Assert
         Assertions.assertThrows(NotificationException.class,()->{
-            gamblingMachineSUT_object.placeBet("first",20,2);
-
-        });
+            gamblingMachineSUT_object.placeBet("first",20,2);},
+                "Invalid GamblerCard place a bet");
     }
 
 

@@ -14,12 +14,13 @@ public class GamblingMachine implements IGamblingMachine {
 
 	/**
 	 *
-	 * @param game
-	 * @param bankteller
+	 * @param gameObject
+	 * @param banktellerObject
 	 */
-	public GamblingMachine(Game game, BankTeller bankteller) {
-		// TODO - implement GamblingMachine.GamblingMachine
-		throw new UnsupportedOperationException();
+	public GamblingMachine(Game gameObject, BankTeller banktellerObject) {
+		this.bankTeller = banktellerObject;
+		this.game = gameObject;
+		betRound = null;
 	}
 
 	/**
@@ -65,9 +66,12 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @exception throw NotificationException when the user does not have enough credit for bet amount
 	 * @exception throw NotificationException when a GamblerCard want to put more than one bet on a BetRound
 	 */
-	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) {
-		// TODO - implement GamblingMachine.placeBet
-		throw new UnsupportedOperationException();
+	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) throws NotificationException {
+		if(bankTeller.getGamblingCard(gamblerCardID)==null){
+			throw new NotificationException("The Card is Invalid for placing a bet");
+		}else{
+			return true;
+		}
 	}
 
 	/**

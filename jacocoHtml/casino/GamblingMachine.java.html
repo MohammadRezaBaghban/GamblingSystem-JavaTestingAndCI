@@ -14,22 +14,23 @@ public class GamblingMachine implements IGamblingMachine {
 
 	/**
 	 *
-	 * @param game
-	 * @param bankteller
+	 * @param gameObject
+	 * @param banktellerObject
 	 */
-<span class="fc" id="L20">	public GamblingMachine(Game game, BankTeller bankteller) {</span>
-		// TODO - implement GamblingMachine.GamblingMachine
-<span class="fc" id="L22">		throw new UnsupportedOperationException();</span>
-	}
+<span class="fc" id="L20">	public GamblingMachine(Game gameObject, BankTeller banktellerObject) {</span>
+<span class="fc" id="L21">		this.bankTeller = banktellerObject;</span>
+<span class="fc" id="L22">		this.game = gameObject;</span>
+<span class="fc" id="L23">		betRound = null;</span>
+<span class="fc" id="L24">	}</span>
 
 	/**
 	 * return true if
 	 */
 	public boolean IsRoundFinished() {
-<span class="nc bnc" id="L29" title="All 2 branches missed.">		if(betRound==null){</span>
-<span class="nc" id="L30">			return false;</span>
+<span class="nc bnc" id="L30" title="All 2 branches missed.">		if(betRound==null){</span>
+<span class="nc" id="L31">			return false;</span>
 		}else{
-<span class="nc" id="L32">			return true;</span>
+<span class="nc" id="L33">			return true;</span>
 		}
 	}
 
@@ -65,9 +66,12 @@ public class GamblingMachine implements IGamblingMachine {
 	 * @exception throw NotificationException when the user does not have enough credit for bet amount
 	 * @exception throw NotificationException when a GamblerCard want to put more than one bet on a BetRound
 	 */
-	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) {
-		// TODO - implement GamblingMachine.placeBet
-<span class="nc" id="L70">		throw new UnsupportedOperationException();</span>
+	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) throws NotificationException {
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">		if(bankTeller.getGamblingCard(gamblerCardID)==null){</span>
+<span class="fc" id="L71">			throw new NotificationException(&quot;The Card is Invalid for placing a bet&quot;);</span>
+		}else{
+<span class="nc" id="L73">			return true;</span>
+		}
 	}
 
 	/**
@@ -78,7 +82,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public BettingRound createBetRound() {
 		// TODO - implement GamblingMachine.createBetRound
-<span class="nc" id="L81">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L85">		throw new UnsupportedOperationException();</span>
 	}
 
 
@@ -97,7 +101,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public void reward() {
 		// TODO - implement GamblingMachine.reward
-<span class="nc" id="L100">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L104">		throw new UnsupportedOperationException();</span>
 	}
 
 
