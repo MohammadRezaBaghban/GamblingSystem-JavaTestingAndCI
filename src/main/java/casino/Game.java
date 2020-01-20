@@ -1,5 +1,7 @@
 package casino;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class Game {
@@ -8,14 +10,16 @@ public class Game {
 	private GamblingAuthority gamblingAuthority;
 	private BettingRound currentBetRound;
 	private Map<Bet, String> listOfBets;
+	private List<Bet> ArrayList;
 
 	/**
 	 * 
-	 * @param listOfBets
+	 * @param ListOfBets
 	 */
-	public BettingRound createBetRound(Map<Bet, String> listOfBets) {
-		// TODO - implement Game.createBetRound
-		throw new UnsupportedOperationException();
+	public BettingRound createBetRound(Map<Bet, String> ListOfBets) {
+		listOfBets = ListOfBets;
+		ArrayList = new ArrayList<>(listOfBets.keySet());
+		return currentBetRound = new BettingRound(ArrayList);
 	}
 
 	/**

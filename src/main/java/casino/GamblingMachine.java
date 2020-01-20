@@ -111,7 +111,7 @@ public class GamblingMachine implements IGamblingMachine {
 			if(betRound!=null){
 				throw new NotificationException("It is not possible to start another betRound before this betround being processed");
 			}else{
-				betRound = new BettingRound(new ArrayList<>(listOfBetsOfCurrentRound.keySet()));
+				betRound = game.createBetRound(listOfBetsOfCurrentRound);
 				return  betRound;
 			}
 

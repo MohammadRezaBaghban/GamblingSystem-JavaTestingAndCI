@@ -28,7 +28,11 @@ public class GamblingMachineTest {
      *  on placing a bet when the betRound has already been assigned, throw BetNotificationException
      */
     @Test //Direct Input
-    public void placeBet_whentheBetRoundHasAlreadyFinished_ThrowNotificationException() throws NotificationException {
+    public void placeBet_whentheBetRoundHasAlreadyFinished_ThrowNotificationException() throws Exception {
+
+        //Arrange
+        createBetRound_Setup();
+
         //Act
         gamblingMachineSUT_object.createBetRound();
 
@@ -142,7 +146,7 @@ public class GamblingMachineTest {
     }
 
     /**
-     * Create a betRound make the currentBetRound in FinishedStatus
+     * Create a betRound mark the Game round status as finished and make it impossible to put another bet.
      */
     @Test //Direct Inputs
     public void createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible() throws Exception {
@@ -180,34 +184,17 @@ public class GamblingMachineTest {
     }
 
 
-
-    /**
-     * As start the game round, the createBet Round of Game would be called with ListOfBets as its arguments
-     */
-    @Test
-    //Indirect Output
-    public void createBetRound_OnHavingListOfBet_CallCreateBettingRoundOfGameWithListOfBets(){
-
-        //Arrange
-
-        //Act
-
-        //Assert
-
-    }
-
-
     /**
      * throw notificationException on calling of reward method when the game round has not been closed.
      */
     //Direct Output
+    @Test
     public void reward_OnCallingWhenBetRoundHasNotBeenFinished_ThrowNotificationException(){
-
-        //Arrange
-
-        //Act
-
-        //Assert
+        //Act & Assert
+        Exception exceptionThrown = Assertions.assertThrows(NotificationException.class,()->{
+            gamblingMachineSUT_object.reward();
+        });
+        Assertions.assertTrue(exceptionThrown.getMessage().equals("It is not possible start reward process until having the the GameRound finish"));
 
     }
 
