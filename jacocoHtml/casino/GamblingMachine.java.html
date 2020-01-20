@@ -8,7 +8,7 @@ public class GamblingMachine implements IGamblingMachine {
 	private String machineID;
 	private Map&lt;Bet, String&gt; listOfBetsOfCurrentRound;
 	private Game game;
-	private boolean roundStatus;
+
 
 
 
@@ -26,7 +26,11 @@ public class GamblingMachine implements IGamblingMachine {
 	 * return true if
 	 */
 	public boolean IsRoundFinished() {
-<span class="nc" id="L29">		return roundStatus;</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">		if(betRound==null){</span>
+<span class="nc" id="L30">			return false;</span>
+		}else{
+<span class="nc" id="L32">			return true;</span>
+		}
 	}
 
 	/**
@@ -63,7 +67,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) {
 		// TODO - implement GamblingMachine.placeBet
-<span class="nc" id="L66">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L70">		throw new UnsupportedOperationException();</span>
 	}
 
 	/**
@@ -74,7 +78,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public BettingRound createBetRound() {
 		// TODO - implement GamblingMachine.createBetRound
-<span class="nc" id="L77">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L81">		throw new UnsupportedOperationException();</span>
 	}
 
 
@@ -93,7 +97,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public void reward() {
 		// TODO - implement GamblingMachine.reward
-<span class="nc" id="L96">		throw new UnsupportedOperationException();</span>
+<span class="nc" id="L100">		throw new UnsupportedOperationException();</span>
 	}
 
 

@@ -1,13 +1,13 @@
 package casino;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
 import java.util.UUID;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class GamblingMachineTest {
 
@@ -52,6 +52,14 @@ public class GamblingMachineTest {
     @Test //Indirect Output
     public void placeBet_gamblerCardIdIsNotValid_ThrowNotificationException(){
 
+        //Arrange
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(null);
+
+        //Act & Assert
+        Assertions.assertThrows(NotificationException.class,()->{
+            gamblingMachineSUT_object.placeBet("first",20,2);
+
+        });
     }
 
 
@@ -63,6 +71,7 @@ public class GamblingMachineTest {
     public void placeBet_AGamblerCardPutMoreThanOneBetOnSpecificBetRound_ThrowNotificationException(){
 
         //Arrange
+        //when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(null);
 
         //Act
 

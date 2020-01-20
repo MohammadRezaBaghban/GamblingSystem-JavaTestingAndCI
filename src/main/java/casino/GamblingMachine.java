@@ -8,7 +8,7 @@ public class GamblingMachine implements IGamblingMachine {
 	private String machineID;
 	private Map<Bet, String> listOfBetsOfCurrentRound;
 	private Game game;
-	private boolean roundStatus;
+
 
 
 
@@ -26,7 +26,11 @@ public class GamblingMachine implements IGamblingMachine {
 	 * return true if
 	 */
 	public boolean IsRoundFinished() {
-		return roundStatus;
+		if(betRound==null){
+			return false;
+		}else{
+			return true;
+		}
 	}
 
 	/**

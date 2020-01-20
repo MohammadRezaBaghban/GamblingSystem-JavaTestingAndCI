@@ -35,7 +35,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * Get the list of all gambler cards
 	 */
 	public List<GamblerCard> getListOfGamblerCard() {
-		return null; // to satisfy the compiler
+		return listOfGamblerCard; // to satisfy the compiler
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardID
 	 * @return
 	 */
-	private GamblerCard getGamblingCard(String gamblerCardID) {
+	public GamblerCard getGamblingCard(String gamblerCardID) {
 		GamblerCard card = null;
 		for(GamblerCard c : listOfGamblerCard)
 			if (c.getCardID().equals(gamblerCardID))

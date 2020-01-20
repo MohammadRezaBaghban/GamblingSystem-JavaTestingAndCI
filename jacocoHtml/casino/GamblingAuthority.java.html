@@ -22,20 +22,20 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 */
 	private IBetLoggingAuthority logger;
 
-<span class="fc" id="L25">	public GamblingAuthority() {</span>
-<span class="fc" id="L26">		listOfBets = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L27">		listOfBettingRound = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L28">	}</span>
+<span class="nc" id="L25">	public GamblingAuthority() {</span>
+<span class="nc" id="L26">		listOfBets = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L27">		listOfBettingRound = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L28">	}</span>
 
 	/**
 	 * This method also logs this request.
 	 * @param bet
 	 */
 	public void addBet(Bet bet) {
-<span class="fc bfc" id="L35" title="All 2 branches covered.">		if(bet==null)</span>
-<span class="fc" id="L36">			throw new NullPointerException(&quot;Bet Can not be NUll&quot;);</span>
-<span class="fc" id="L37">		this.listOfBets.add(bet);</span>
-<span class="fc" id="L38">	}</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">		if(bet==null)</span>
+<span class="nc" id="L36">			throw new NullPointerException(&quot;Bet Can not be NUll&quot;);</span>
+<span class="nc" id="L37">		this.listOfBets.add(bet);</span>
+<span class="nc" id="L38">	}</span>
 
 	/**
 	 * it returns the unique token for the betting round and it should check the token status.
@@ -43,10 +43,10 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 * @param bettingRound
 	 */
 	public String getToken(BettingRound bettingRound) throws NotificationException {
-<span class="fc bfc" id="L46" title="All 2 branches covered.">		if(bettingRound==null)</span>
-<span class="fc" id="L47">			throw new NotificationException(&quot;Betting Round Can not be NUll&quot;);</span>
-<span class="fc" id="L48">		String id =  UUID.randomUUID().toString();</span>
-<span class="fc" id="L49">		return id;</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">		if(bettingRound==null)</span>
+<span class="nc" id="L47">			throw new NotificationException(&quot;Betting Round Can not be NUll&quot;);</span>
+<span class="nc" id="L48">		String id =  UUID.randomUUID().toString();</span>
+<span class="nc" id="L49">		return id;</span>
 	}
 
 	/**
@@ -54,8 +54,8 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 * @param bettingRound
 	 */
 	public void addBettingRound(BettingRound bettingRound) {
-<span class="fc" id="L57">		listOfBettingRound.add(bettingRound);</span>
-<span class="fc" id="L58">	}</span>
+<span class="nc" id="L57">		listOfBettingRound.add(bettingRound);</span>
+<span class="nc" id="L58">	}</span>
 
 	/**
 	 * it returns the whole integer as winning number. it should check the token status.
@@ -63,7 +63,7 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 	 * @param bettingRound
 	 */
 	public int getWinNo(BettingRound bettingRound) {
-<span class="fc" id="L66">		return 0; // to satisfy the compiler</span>
+<span class="nc" id="L66">		return 0; // to satisfy the compiler</span>
 	}
 
 	@Override
@@ -72,8 +72,8 @@ public class GamblingAuthority implements IBetTokenAuthority, IBetLoggingAuthori
 <span class="nc" id="L72">	}</span>
 
 	public ArrayList&lt;Bet&gt; getBetList() {
-<span class="fc" id="L75">		ArrayList&lt;Bet&gt; tempList = (ArrayList&lt;Bet&gt;) this.listOfBets;</span>
-<span class="fc" id="L76">		return tempList;</span>
+<span class="nc" id="L75">		ArrayList&lt;Bet&gt; tempList = (ArrayList&lt;Bet&gt;) this.listOfBets;</span>
+<span class="nc" id="L76">		return tempList;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
