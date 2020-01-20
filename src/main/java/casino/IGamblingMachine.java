@@ -12,6 +12,6 @@ public interface IGamblingMachine {
 
 	BettingRound createBetRound() throws NotificationException;
 
-	void reward();
+	void reward() throws NotificationException;
 
 }

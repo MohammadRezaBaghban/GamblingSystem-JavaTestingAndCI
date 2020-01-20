@@ -139,9 +139,13 @@ public class GamblingMachine implements IGamblingMachine {
 	 * </p>
 	 * @exception throw NotificationException when the BetRound object has not been assigned.
 	 */
-	public void reward() {
-		// TODO - implement GamblingMachine.reward
-		throw new UnsupportedOperationException();
+	public void reward() throws NotificationException {
+		if(IsRoundFinished()){
+
+		}else{
+			throw new NotificationException("It is not possible start reward process until having the the GameRound finish");
+		}
+
 	}
 
 

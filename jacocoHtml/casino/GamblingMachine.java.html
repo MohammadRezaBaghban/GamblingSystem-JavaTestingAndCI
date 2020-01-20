@@ -31,8 +31,8 @@ public class GamblingMachine implements IGamblingMachine {
 	 * return true if
 	 */
 	public boolean IsRoundFinished() {
-<span class="nc bnc" id="L34" title="All 2 branches missed.">		if(betRound==null){</span>
-<span class="nc" id="L35">			return false;</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">		if(betRound==null){</span>
+<span class="fc" id="L35">			return false;</span>
 		}else{
 <span class="nc" id="L37">			return true;</span>
 		}
@@ -139,10 +139,14 @@ public class GamblingMachine implements IGamblingMachine {
 	 * &lt;/p&gt;
 	 * @exception throw NotificationException when the BetRound object has not been assigned.
 	 */
-	public void reward() {
-		// TODO - implement GamblingMachine.reward
-<span class="fc" id="L144">		throw new UnsupportedOperationException();</span>
-	}
+	public void reward() throws NotificationException {
+<span class="pc bpc" id="L143" title="1 of 2 branches missed.">		if(IsRoundFinished()){</span>
+
+		}else{
+<span class="fc" id="L146">			throw new NotificationException(&quot;It is not possible start reward process until having the the GameRound finish&quot;);</span>
+		}
+
+<span class="nc" id="L149">	}</span>
 
 
 
