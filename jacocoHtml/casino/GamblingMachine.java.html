@@ -82,9 +82,9 @@ public class GamblingMachine implements IGamblingMachine {
 
 		}else{
 
-<span class="fc bfc" id="L85" title="All 2 branches covered.">			if(listOfBetsOfCurrentRound.containsValue(gamblerCardID)){</span>
+<span class="pc bpc" id="L85" title="1 of 2 branches missed.">			if(listOfBetsOfCurrentRound.containsValue(gamblerCardID)){</span>
 
-<span class="fc" id="L87">				throw new NotificationException(&quot;It is not possible to put more than one bet per gamblerCard on each Game Round&quot;);</span>
+<span class="nc" id="L87">				throw new NotificationException(&quot;It is not possible to put more than one bet per gamblerCard on each Game Round&quot;);</span>
 
 <span class="pc bpc" id="L89" title="1 of 2 branches missed.">			}else if(!bankTeller.checkCredit(gamblerCardID,amount)){</span>
 

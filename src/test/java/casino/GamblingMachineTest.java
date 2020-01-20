@@ -100,22 +100,22 @@ public class GamblingMachineTest {
 
     }
 
-
-
-
-
     /**
      * Verify the amount of bet has been subtractedFrom GamblerCard credit
      */
-    @Test //Indirect Output
-    public void placeBet_OnHavingEnoughCredit_TheWithdrawMethodWouldBeCalled(){
+    @Test //Indirect Output & Indirect Input
+    public void placeBet_OnHavingEnoughCredit_TheWithdrawMethodWouldBeCalled() throws Exception {
 
         //Arrange
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
+        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
+        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
 
         //Act
+        gamblingMachineSUT_object.placeBet("first",20,20);
 
         //Assert
-
+        verify(bankTeller_MockedObject,times(1)).withdraw("first",20);
     }
 
 
