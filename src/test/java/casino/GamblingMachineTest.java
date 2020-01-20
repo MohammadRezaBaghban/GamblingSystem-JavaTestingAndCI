@@ -4,7 +4,6 @@ package casino;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 
 import java.util.UUID;
 
@@ -109,12 +108,7 @@ public class GamblingMachineTest {
     public void placeBet_OnHavingEnoughCredit_TheWithdrawMethodWouldBeCalled() throws Exception {
 
         //Arrange
-        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
-        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
-        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
-
-        //Act
-        gamblingMachineSUT_object.placeBet("first",20,20);
+        createBetRound_Setup();
 
         //Assert
         verify(bankTeller_MockedObject,times(1)).withdraw("first",20);
@@ -126,19 +120,11 @@ public class GamblingMachineTest {
      */
     @Test //Indirect Output & IndirectInput
     public void placeBet_OnHavingValidCardAndEnoughCredit_CreateAndAddBetTotheRoundlistOfBet() throws Exception {
-
         //Arrange
-        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
-        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
-        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
-
-        //Act
-        Boolean result = gamblingMachineSUT_object.placeBet("first",20,20);
+        createBetRound_Setup();
 
         //Assert
         Assertions.assertTrue(gamblingMachineSUT_object.getNumberOfBetsInBettingRound()==1,"The bet was not added to list of bets of game round");
-        Assertions.assertTrue(result,"Placing the bet was not successful");
-
     }
 
 
@@ -162,12 +148,7 @@ public class GamblingMachineTest {
     public void createBetRound_WhenTheBetRoundHasNotFinished_MakeBettingImpossible() throws Exception {
 
         //Arrange
-        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
-        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
-        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
-
-        //Act
-        Boolean result = gamblingMachineSUT_object.placeBet("first",20,20);
+        createBetRound_Setup();
 
         //Act
         gamblingMachineSUT_object.createBetRound();
@@ -188,22 +169,16 @@ public class GamblingMachineTest {
      */
     @Test
     public void createBetRound_DuplicateCallingOfMethodWhileBetRoundHasNotBeenProcessed_ThrowNotificationException() throws Exception {
-
         //Arrange
-        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
-        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
-        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
-        Boolean result = gamblingMachineSUT_object.placeBet("first",20,20);
-        gamblingMachineSUT_object.createBetRound();
+        reward_Setup();
 
         //Act & Assert
         Exception exceptionThrown = Assertions.assertThrows(NotificationException.class,()->{
             gamblingMachineSUT_object.createBetRound();
         });
         Assertions.assertTrue(exceptionThrown.getMessage().equals("It is not possible to start another betRound before this betround being processed"));
-
-
     }
+
 
 
     /**
@@ -263,6 +238,23 @@ public class GamblingMachineTest {
 
         //Assert
 
+    }
+
+    // A set arrangement that is needed to able to call reward method to avoid Repeating Yourself
+    public void reward_Setup() throws Exception {
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
+        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
+        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
+        Boolean result = gamblingMachineSUT_object.placeBet("first",20,20);
+        gamblingMachineSUT_object.createBetRound();
+    }
+
+    //A set of arrangement that is needed to able to call createBetRound method to avoid Repeating Yourself
+    public void createBetRound_Setup() throws Exception {
+        when(bankTeller_MockedObject.getGamblingCard("first")).thenReturn(mock(GamblerCard.class));
+        when(bankTeller_MockedObject.checkCredit("first",20)).thenReturn(true);
+        when(bankTeller_MockedObject.getGamblingCard("first").toString()).thenReturn("sth");
+        Boolean result = gamblingMachineSUT_object.placeBet("first",20,20);
     }
 
 
