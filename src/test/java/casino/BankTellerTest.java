@@ -4,6 +4,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.internal.matchers.Not;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -247,7 +250,7 @@ public class BankTellerTest {
         bankTeller.withdraw(gamblerCardId, validAmount);
 
         //assert
-        verify(gamblerCard).withdrawCredit(validAmount);
+        verify(gamblerCard).setCredit(0);
     }
     /**
      * At calling the withdraw() method with higher amount It should throw Exception.
@@ -323,6 +326,7 @@ public class BankTellerTest {
         //arrange
         String gamblerCardId = "a2u7wqe3r4";
         Double validAmount = 20.0;
+        Timestamp timestamp = Timestamp.valueOf(LocalDateTime.now());
         GamblerCard gamblerCard = mock(GamblerCard.class);
         when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
         when(gamblerCard.getAssignedStatus()).thenReturn(true);// assigned already.
@@ -330,7 +334,7 @@ public class BankTellerTest {
 
         //act
         //assert
-        assertThrows(NotificationException.class, ()->bankTeller.assignCard(gamblerCardId, validAmount));// trying to assign the sameCard again.
+        assertThrows(NotificationException.class, ()->bankTeller.assignCard(gamblerCardId, validAmount,timestamp));// trying to assign the sameCard again.
     }
 
     /**
@@ -341,17 +345,17 @@ public class BankTellerTest {
     public void assignCard_BankTellerShouldBeAbleToAssignCard() throws NotificationException {
         //arrange
         String gamblerCardId = "a2u7wqe3r4";
+        Timestamp timestamp = Timestamp.valueOf(LocalDateTime.now());
         Double validAmount = 20.0;
         GamblerCard gamblerCard = mock(GamblerCard.class);
         when(gamblerCard.getCardID()).thenReturn(gamblerCardId);
         bankTeller.addCard(gamblerCard);
 
         //act
-        bankTeller.assignCard(gamblerCardId, validAmount);
+        bankTeller.assignCard(gamblerCardId, validAmount,timestamp);
 
         //assert
-        verify(gamblerCard).setCredit(validAmount);
-        verify(gamblerCard).setAssignedStatus();
+        verify(gamblerCard).AssignCard(validAmount,timestamp);
     }
 
 }

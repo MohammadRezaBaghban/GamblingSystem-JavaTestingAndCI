@@ -1,5 +1,7 @@
 package casino;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,14 +51,13 @@ public class BankTeller implements IBetLoggingAuthority {
 	 * @param gamblerCardId
 	 * @param amount
 	 */
-	public boolean assignCard(String gamblerCardId, double amount) throws NotificationException {
+	public boolean assignCard(String gamblerCardId, double amount, Timestamp timestamp) throws NotificationException {
 		if(isGamblerCardValid(gamblerCardId))
 		{
 			GamblerCard gamblerCard = getGamblingCard(gamblerCardId);
 			if(gamblerCard.getAssignedStatus())
 				throw new NotificationException("Card already assigned.");
-			gamblerCard.setCredit(amount);
-			gamblerCard.setAssignedStatus();
+			gamblerCard.AssignCard(amount, timestamp);
 			return true;
 		}
 		return false;
@@ -128,7 +129,7 @@ public class BankTeller implements IBetLoggingAuthority {
 	public void withdraw(String gamblerCardID, double amount) throws NotificationException {
 		GamblerCard gamblerCard = getGamblingCard(gamblerCardID);
 		if(gamblerCard.getCredit()>=amount)
-			gamblerCard.withdrawCredit(amount);
+			gamblerCard.setCredit(gamblerCard.getCredit()-amount);
 		else
 			throw new NotificationException("Not sufficient balance on card.");
 	}

@@ -1,7 +1,6 @@
 package casino;
 
-import org.junit.Assert;
-import org.junit.Before;
+import org.fest.assertions.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -60,11 +59,11 @@ public class GamblerCardTest {
 
 
         //Assert
-        Assert.assertTrue("The InitialAmount is not being set correctly",GamblerCard_SUT_Object.getInitialAmount()==200);
-        Assert.assertTrue("The Credit is not being set correctly",GamblerCard_SUT_Object.getCredit()==200);
-        Assert.assertTrue("The bet list is not clear correctly",GamblerCard_SUT_Object.getListOfBet().size()==0);
-        Assert.assertTrue("The timeStamp is not correctly set",GamblerCard_SUT_Object.getTimeStamp()==Valid_AssignmentMoment);
-        Assert.assertTrue("The Gambler assigned status is set to True",GamblerCard_SUT_Object.getAssignedStatus() == true);
+        Assertions.assertTrue(GamblerCard_SUT_Object.getInitialAmount()==200,"The InitialAmount is not being set correctly");
+        Assertions.assertTrue(GamblerCard_SUT_Object.getCredit()==200,"The Credit is not being set correctly");
+        Assertions.assertTrue(GamblerCard_SUT_Object.getListOfBet().size()==0,"The bet list is not clear correctly");
+        Assertions.assertTrue(GamblerCard_SUT_Object.getTimeStamp()==Valid_AssignmentMoment,"The timeStamp is not correctly set");
+        Assertions.assertTrue(GamblerCard_SUT_Object.getAssignedStatus() == true,"The Gambler assigned status is set to True");
     }
 
     /**
@@ -103,11 +102,11 @@ public class GamblerCardTest {
         GamblerCard_SUT_Object.checkOut();
 
         //Assert
-        Assert.assertTrue("Initial amount was not rested",GamblerCard_SUT_Object.getInitialAmount()==0);
-        Assert.assertTrue("The credit was not rested",GamblerCard_SUT_Object.getCredit()==0);
-        Assert.assertTrue("The timestamp was not cleared",GamblerCard_SUT_Object.getTimeStamp()==null);
-        Assert.assertTrue("The list of bets was not cleared",GamblerCard_SUT_Object.getListOfBet()==null);
-        Assert.assertTrue("The Gambler assigned status is not reseted to false",GamblerCard_SUT_Object.getAssignedStatus()==false);
+        Assertions.assertTrue(GamblerCard_SUT_Object.getInitialAmount()==0,"Initial amount was not rested");
+        Assertions.assertTrue(GamblerCard_SUT_Object.getCredit()==0,"The credit was not rested");
+        Assertions.assertTrue(GamblerCard_SUT_Object.getTimeStamp()==null,"The timestamp was not cleared");
+        Assertions.assertTrue(GamblerCard_SUT_Object.getListOfBet()==null,"The list of bets was not cleared");
+        Assertions.assertTrue(GamblerCard_SUT_Object.getAssignedStatus()==false,"The Gambler assigned status is not reseted to false");
 
 
     }
@@ -127,8 +126,8 @@ public class GamblerCardTest {
         Boolean result = GamblerCard_SUT_Object.setCredit(10);
 
         //Assert
-        Assert.assertTrue("The credit is not set correctly", GamblerCard_SUT_Object.getCredit() ==10);
-        Assert.assertTrue("It return false incorrectly",result=true);
+        Assertions.assertTrue(GamblerCard_SUT_Object.getCredit() ==10,"The credit is not set correctly");
+        Assertions.assertTrue(result=true,"It return false incorrectly");
     }
 
     /**
@@ -162,7 +161,7 @@ public class GamblerCardTest {
         GamblerCard_SUT_Object.addBet("3");
         GamblerCard_SUT_Object.addBet("4");
         //Assert
-        Assert.assertTrue("bet was not added successfully", GamblerCard_SUT_Object.getListOfBet().size()==4);
+        Assertions.assertTrue(GamblerCard_SUT_Object.getListOfBet().size()==4,"bet was not added successfully");
 
     }
 
@@ -197,7 +196,7 @@ public class GamblerCardTest {
         String result = GamblerCard_SUT_Object.toString();
 
         //Assert
-        Assert.assertTrue("The format is not correct", GamblerCard_SUT_Object.toString().equals("Card with cardId of "+GamblerCard_SUT_Object.getCardID()+" is unassigned"));
+        Assertions.assertTrue(GamblerCard_SUT_Object.toString().equals("Card with cardId of "+GamblerCard_SUT_Object.getCardID()+" is unassigned"),"The format is not correct");
     }
 
     /**
@@ -214,11 +213,11 @@ public class GamblerCardTest {
 
 
         //Assert
-        Assert.assertTrue("CardId is not included",result.contains(GamblerCard_SUT_Object.getCardID()));
-        Assert.assertTrue("Credit is not included",result.contains(Double.toString(GamblerCard_SUT_Object.getCredit())));
-        Assert.assertTrue("InitialCredit is not included",result.contains(Double.toString(GamblerCard_SUT_Object.getInitialAmount())));
-        Assert.assertTrue("TimeStamp is not included",result.contains(GamblerCard_SUT_Object.getTimeStamp().toString()));
-        Assert.assertTrue("Number of Bet is not included",result.contains(Integer.toString(GamblerCard_SUT_Object.getListOfBet().size())));
+        Assertions.assertTrue(result.contains(GamblerCard_SUT_Object.getCardID()),"CardId is not included");
+        Assertions.assertTrue(result.contains(Double.toString(GamblerCard_SUT_Object.getCredit())),"Credit is not included");
+        Assertions.assertTrue(result.contains(Double.toString(GamblerCard_SUT_Object.getInitialAmount())),"InitialCredit is not included");
+        Assertions.assertTrue(result.contains(GamblerCard_SUT_Object.getTimeStamp().toString()),"TimeStamp is not included");
+        Assertions.assertTrue(result.contains(Integer.toString(GamblerCard_SUT_Object.getListOfBet().size())),"Number of Bet is not included");
 
 
     }

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="Casino.main" target="1.8" />
-      <module name="Casino.test" target="1.8" />
+      <module name="Casino.main" target="11" />
+      <module name="Casino.test" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

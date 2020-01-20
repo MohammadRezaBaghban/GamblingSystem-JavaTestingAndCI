@@ -31,7 +31,7 @@ public class GamblingMachineTest {
     public void placeBet_theBetRoundHasBeenAlreadyAssigned_ThrowNotificationException(){
 
         //Arrange
-        
+
         //Act
 
         //Assert
@@ -50,17 +50,10 @@ public class GamblingMachineTest {
      * </p>
      */
     @Test //Indirect Output
-    public void placeBet_gamblerCardIdIsNotValid_ThrowNotificationException()
-
-    //Arrange
-    bankTeller_MockedObject.
-
-    //Act
-
-    //Assert
-    {
+    public void placeBet_gamblerCardIdIsNotValid_ThrowNotificationException(){
 
     }
+
 
     /**
      * A NotificationException should be throw, when a GamblerCard wants to put more than one Bet On the specific BetRound
