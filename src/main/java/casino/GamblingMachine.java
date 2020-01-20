@@ -72,6 +72,7 @@ public class GamblingMachine implements IGamblingMachine {
 	 */
 	public boolean placeBet(String gamblerCardID, double amount, Integer selectedNumber) throws Exception {
 
+		GamblerCard card = new GamblerCard();
 		if(this.IsRoundFinished()){
 
 			throw new NotificationException("Bets cannot be placed after bettingRound being finished");
@@ -80,7 +81,11 @@ public class GamblingMachine implements IGamblingMachine {
 
 			throw new NotificationException("The Card is Invalid for placing a bet");
 
-		}else{
+		} else if(!card.getAssignedStatus()) {
+
+			throw new NotificationException("The Card is not assigned yet! Invalid Card for Betting");
+
+		}else {
 
 			if(listOfBetsOfCurrentRound.containsValue(gamblerCardID)){
 
